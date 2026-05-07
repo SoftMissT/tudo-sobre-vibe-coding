@@ -76,6 +76,8 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 
 #### Implementações e Exemplos Práticos
 
+- **[Guia de Prompt: Pôster de Personagem](./Geração%20de%20imagens/Open%20Ai/Revista%20de%20anime.md)**: Um exemplo prático de engenharia de prompt para geração de imagens. Demonstra como criar um guia estruturado com um prompt otimizado, instruções claras e referências visuais para produzir resultados consistentes e de alta qualidade com IAs generativas.
+
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code): Coleção de recursos e exemplos para usar o Claude Code.
 
 - [pablodelucca/pixel-agents](https://github.com/pablodelucca/pixel-agents): Demonstração de agentes autônomos em um ambiente visual.

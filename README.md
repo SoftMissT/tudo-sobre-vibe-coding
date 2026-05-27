@@ -91,6 +91,19 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 
 ---
 
+## Repositórios de Apoio
+
+![Banner Gits](./assets/img/banner%20gits.png)
+
+Estes repositórios complementam o ecossistema com visualização, navegação de código, memória persistente e integração com Obsidian.
+
+- [safishamsi/graphify](https://github.com/safishamsi/graphify.git): referência para visualização e organização de relações em grafo.
+- [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus.git): referência para exploração e compreensão de repositórios.
+- [MemPalace/mempalace](https://github.com/MemPalace/mempalace.git): referência para memória, recuperação de contexto e organização persistente.
+- [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills.git): referência para skills conectadas a Obsidian e bases locais de conhecimento.
+
+---
+
 ## 🤖 Meus GPTS
 
 ![Meus GPTS](./assets/img/meus%20gpts.png)

@@ -91,6 +91,52 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 
 ---
 
+## 🤖 Meus GPTS
+
+![Meus GPTS](./assets/img/meus%20gpts.png)
+
+A pasta [Meus GPTS](./Meus%20GPTS/) reúne perfis e instruções de GPTs personalizados para tarefas criativas e técnicas.
+
+- [Artemis](./Meus%20GPTS/artemis.md): foco em direção de arte e engenharia de prompt para geração de imagens.
+- [Arthur Leywin](./Meus%20GPTS/arthur-leywin.md): foco em narrativa, worldbuilding, RPG, automação e Foundry VTT.
+
+- Guia da pasta: [Meus GPTS/README.md](./Meus%20GPTS/README.md)
+
+---
+
+## Claude Skills
+
+![Claude Skills](./assets/img/Claude%20Skills.png)
+
+A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne skills prontas para estender o Claude Code com fluxos especializados de arquitetura, escrita, programação, música, planejamento e otimização de prompts.
+
+- [Arthur](./Claude%20Code/Claude%20Skills/arthur/arthur/SKILL.md): arquitetura de sistemas, narrativa, RPG, worldbuilding, Quenya/Tengwar e documentação de intenção.
+- [Blueprint](./Claude%20Code/Claude%20Skills/blueprint/blueprint/SKILL.md): planos de construção para tarefas grandes, multi-sessão e multi-agente.
+- [Mozart](./Claude%20Code/Claude%20Skills/mozart/mozart/SKILL.md): criação musical, letras, prompts para Suno AI e direção de produção.
+- [Programação](./Claude%20Code/Claude%20Skills/programacao/programacao/SKILL.md): desenvolvimento full stack, automação, Foundry VTT, APIs, bancos e agentes de IA.
+- [Prompt Optimizer](./Claude%20Code/Claude%20Skills/prompt-optimizer/prompt-optimizer/SKILL.md): análise e melhoria de prompts prontos para copiar.
+- [Writing Clearly and Concisely](./Claude%20Code/Claude%20Skills/writing-clearly-and-concisely/writing-clearly-and-concisely/SKILL.md): escrita clara para documentação, mensagens, explicações e textos técnicos.
+
+- Guia da pasta: [Claude Code/Claude Skills/README.md](./Claude%20Code/Claude%20Skills/README.md)
+
+---
+
+## Agents
+
+![Banner Hive](./assets/img/hive/banner_hive.png)
+
+A pasta [Agents](./Agents/) reúne os arquivos `.soul.md` dos agentes da Hive para quem quiser estudar, adaptar ou usar a frota em seus próprios fluxos de IA.
+
+- [MAKO-MORI](./Agents/MAKO-MORI.soul.md): comandante e orquestradora da frota.
+- [AKENO](./Agents/AKENO.soul.md): direção visual, UI e design.
+- [ARTHUR](./Agents/ARTHUR.soul.md): arquitetura, narrativa e sistemas.
+- [SINON](./Agents/SINON.soul.md): programação, backend e precisão técnica.
+- [CARDINAL](./Agents/CARDINAL.soul.md): lore, consistência e regras do mundo.
+
+- Guia da pasta: [Agents/README.md](./Agents/README.md)
+
+---
+
 ## 🚀 Como Começar
 
 1. **Estude a Filosofia**: Leia os documentos na pasta `Claude Code` e `GSD 2` para internalizar os conceitos.

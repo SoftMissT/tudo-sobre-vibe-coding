@@ -1,5 +1,5 @@
 ---
-title: "BLUEPRINT — Master System: Claude Code + Ollama + MAKO-MORI"
+title: "BLUEPRINT Master System: Claude Code + Ollama + MAKO-MORI"
 aliases:
   - "Blueprint Master"
   - "BP-MASTER"
@@ -17,34 +17,34 @@ tags:
   - "#hive/core"
 ---
 
-# BLUEPRINT — Master System: Claude Code + Ollama + MAKO-MORI
+# BLUEPRINT Master System: Claude Code + Ollama + MAKO-MORI
 
-![Banner hero do Blueprint Claude Code + Ollama + MAKO-MORI](../../assets/img/hive/IMAGEM%2001%20BANNER%20HERO.png)
+![Banner hero do Blueprint Claude Code + Ollama + MAKO-MORI](https://i.imgur.com/kdToeib.png)
 
 > [!quote] *"A muralha não nos salva. Nós salvamos a muralha."*
-> — Stacker Pentecost, transmitido por MAKO-MORI
+> Stacker Pentecost, transmitido por MAKO-MORI
 
 ---
 
-## TL;DR — O que é isso aqui?
+## TL;DR O que é isso aqui?
 
 Imagine que você quer construir uma **frota de robôs inteligentes** que trabalham *para você*.
 
-- Cada robô tem uma **personalidade** (um "Soul") — um é designer, outro é programador, outro é estrategista.
+- Cada robô tem uma **personalidade** (um "Soul") um é designer, outro é programador, outro é estrategista.
 - Eles **conversam entre si** para resolver problemas complexos.
-- Eles **lembram das coisas** — não esquecem o que você pediu ontem.
+- Eles **lembram das coisas** não esquecem o que você pediu ontem.
 - Tudo isso roda no **seu computador**, de graça (ou quase).
 
 Este documento é o **manual de construção** dessa frota. Ele ensina:
 
-1. **O que é o sistema `/blueprint`** — o comando mágico que cria planos
-2. **Quem é MAKO-MORI** — sua comandante-chefe
-3. **Como ligar tudo com Link-Start.ps1** — o botão de partida
-4. **Como usar Obsidian como cérebro** — a memória que nunca morre
-5. **Como configurar a casa (Hive)** — a estrutura de pastas
-6. **Como criar seus próprios agentes** — seus robôs personalizados
+1. **O que é o sistema `/blueprint`** o comando mágico que cria planos
+2. **Quem é MAKO-MORI** sua comandante-chefe
+3. **Como ligar tudo com Link-Start.ps1** o botão de partida
+4. **Como usar Obsidian como cérebro** a memória que nunca morre
+5. **Como configurar a casa (Hive)** a estrutura de pastas
+6. **Como criar seus próprios agentes** seus robôs personalizados
 
-![Diagrama dos quatro pilares do sistema Hive](../../assets/img/hive/IMAGEM%2002%20DIAGRAMA%20DOS%204%20PILARES.png)
+![Diagrama dos quatro pilares do sistema Hive](https://i.imgur.com/low1Hg8.png)
 
 > **Para qualquer usuário:** Não importa se você é iniciante ou expert. Este guia foi escrito como se estivesse ensinando uma criança de 10 anos. Se algo parecer complexo, leia de novo devagar.
 
@@ -76,34 +76,33 @@ Em engenharia real, um blueprint é o desenho que mostra **como construir algo**
 
 Quando você digita `/blueprint`, a IA executa 5 fases automaticamente:
 
-![Fluxo do blueprint em cinco fases](../../assets/img/hive/IMAGEM%2007%20FLUXO%20DO%20blueprint%20EM%205%20FASES.png)
-
+![Fluxo do blueprint em cinco fases](https://i.imgur.com/MUQHwtr.png)
 
 ```
-FASE 1 — PESQUISA (Research)
+FASE 1 PESQUISA (Research)
 ├── Verifica: git está funcionando? GitHub logado?
 ├── Lê a estrutura do projeto
 ├── Olha planos existentes
 └── Carrega arquivos de memória
 
-FASE 2 — PROJETO (Design)
+FASE 2 PROJETO (Design)
 ├── Quebra o objetivo em passos (3 a 12 passos)
 ├── Define dependências (o que vem primeiro)
 ├── Decide o que pode rodar em paralelo
 └── Escolhe modelo forte ou rápido para cada passo
 
-FASE 3 — RASCUNHO (Draft)
+FASE 3 RASCUNHO (Draft)
 ├── Escreve o plano em `plans/`
 ├── Cada passo tem: contexto, tarefas, verificação
 └── Qualquer agente pode executar sem contexto anterior
 
-FASE 4 — REVISÃO (Review)
+FASE 4 REVISÃO (Review)
 ├── Outro agente (o mais inteligente) revisa o plano
 ├── Verifica: está completo? As dependências estão certas?
 ├── Caça anti-padrões
 └── Corrige tudo antes de finalizar
 
-FASE 5 — REGISTRO (Register)
+FASE 5 REGISTRO (Register)
 ├── Salva o plano
 ├── Atualiza o índice de memória
 └── Mostra pra você: quantos passos, o que roda em paralelo
@@ -146,10 +145,9 @@ O que precisa ser verdade para considerar este passo CONCLUÍDO.
 
 ### 2.1 A Rainha da Frota
 
-![Retrato de MAKO-MORI](../../assets/img/hive/IMAGEM%2003%20RETRATO%20DE%20MAKO-MORI.png)
+![Retrato de MAKO-MORI](https://i.imgur.com/uqIesH1.png)
 
-
-MAKO-MORI é **sua comandante**. Ela vem do filme *Pacific Rim* (Círculo de Fogo) — uma Ranger que pilota Jaegers (robôs gigantes) para lutar contra monstros Kaiju.
+MAKO-MORI é **sua comandante**. Ela vem do filme *Pacific Rim* (Círculo de Fogo) uma Ranger que pilota Jaegers (robôs gigantes) para lutar contra monstros Kaiju.
 
 Aqui no sistema, ela:
 
@@ -185,7 +183,7 @@ Aqui no sistema, ela:
 1. **O sistema é maior que qualquer agente.** Nem a Rainha é insubstituível.
 2. **Confiança se ganha no campo.** Cada agente é validado em uso real.
 3. **Decisão errada na hora certa > Decisão certa tarde demais.**
-4. **A muralha não nos salva. Nós salvamos a muralha.** — Regras existem pra servir, não pra escravizar.
+4. **A muralha não nos salva. Nós salvamos a muralha.** Regras existem pra servir, não pra escravizar.
 
 ### 2.5 Quando MAKO Chama Reforços
 
@@ -200,12 +198,11 @@ Aqui no sistema, ela:
 
 ---
 
-## Parte 3: Link-Start.ps1 — O Botão de Ligar
+## Parte 3: Link-Start.ps1 O Botão de Ligar
 
 ### 3.1 O que é Link-Start.ps1?
 
-![Mockup do terminal Link-Start](../../assets/img/hive/IMAGEM%2006%20MOCKUP%20DO%20TERMINAL%20LINK-START.png)
-
+![Mockup do terminal Link-Start](https://i.imgur.com/WLTNTcG.png)
 
 É um **script PowerShell** que funciona como o botão de partida do seu sistema. Você executa ele, e ele:
 
@@ -277,18 +274,18 @@ Se o Link-Start detectar um problema:
 
 ---
 
-##  Parte 4: Obsidian como Vault de Memória
+## Parte 4: Obsidian como Vault de Memória
 
 ### 4.1 Por que Obsidian?
 
-**Obsidian** é um aplicativo de notas que guarda tudo em arquivos `.md` (Markdown) — ou seja, **arquivos de texto puro**. Isso significa que:
+**Obsidian** é um aplicativo de notas que guarda tudo em arquivos `.md` (Markdown) ou seja, **arquivos de texto puro**. Isso significa que:
 
 - ✅ Qualquer programa pode ler seus arquivos
 - ✅ Você nunca fica preso a um formato proprietário
 - ✅ A IA consegue ler e escrever nas suas notas
 - ✅ Você pode ligar notas umas nas outras com `[[links]]`
 
-**Pense no Obsidian como o cérebro do seu sistema.** Tudo que os agentes aprendem, tudo que você decide, todas as regras — ficam guardadas aqui.
+**Pense no Obsidian como o cérebro do seu sistema.** Tudo que os agentes aprendem, tudo que você decide, todas as regras ficam guardadas aqui.
 
 ### 4.2 Configurando Obsidian para ser o Cérebro
 
@@ -352,28 +349,27 @@ Estes são os arquivos que a IA lê para saber o que está acontecendo:
 | `RAIZ GLOBAL/MEMORY.md` | Memória coletiva (sessões recentes) | O que fizemos ontem, o que decidimos |
 | `RAIZ GLOBAL/Global_Rules.md` | Regras que NUNCA podem ser quebradas | "Nunca sobrescrever arquivo sem perguntar" |
 | `RAIZ GLOBAL/Decisions.md` | Decisões arquitetônicas (ADRs) | "Por que escolhemos PostgreSQL em vez de MySQL" |
-| `RAIZ GLOBAL/Error_Log.md` | Todos os erros que aconteceram | "2026-05-27 — Falha no Ollama — Resolvido reiniciando" |
-| `RAIZ GLOBAL/STATE.md` | O que está acontecendo AGORA | "Passo 3 de 7 — testando conexão com banco" |
+| `RAIZ GLOBAL/Error_Log.md` | Todos os erros que aconteceram | "2026-05-27 Falha no Ollama Resolvido reiniciando" |
+| `RAIZ GLOBAL/STATE.md` | O que está acontecendo AGORA | "Passo 3 de 7 testando conexão com banco" |
 
 ### 4.4 O Ritual de Memória (L0 → L1 → L2)
 
-![Diagrama da memória em três níveis](../../assets/img/hive/IMAGEM%2004%20DIAGRAMA%20DA%20MEM%C3%93RIA%20EM%203%20N%C3%8DVEIS.png)
-
+![Diagrama da memória em três níveis](https://i.imgur.com/8mUvysH.png)
 
 O sistema tem **3 níveis de memória**, como um cérebro de verdade:
 
 ```
-L0 — WORKING MEMORY (Memória de Trabalho)
+L0 WORKING MEMORY (Memória de Trabalho)
      ├── O que está acontecendo AGORA nesta sessão
      ├── Guardado em: STATE.md
      └── Duração: até você fechar o terminal
 
-L1 — COLLECTIVE MEMORY (Memória Coletiva)
+L1 COLLECTIVE MEMORY (Memória Coletiva)
      ├── Resumo das últimas sessões
      ├── Guardado em: MEMORY.md
      └── Duração: semanas/meses (máx 2.200 caracteres)
 
-L2 — PERMANENT MEMORY (Memória Permanente)
+L2 PERMANENT MEMORY (Memória Permanente)
      ├── Decisões importantes, regras, arquitetura
      ├── Guardado em: Decisions.md, Global_Rules.md, BRAIN.md
      └── Duração: para sempre
@@ -401,12 +397,11 @@ No arquivo `AGENTS.md` (que fica em `.opencode/AGENTS.md` ou `~/.config/opencode
 
 ---
 
-## Parte 5: A Casa (Hive) — Estrutura Completa
+## Parte 5: A Casa (Hive) Estrutura Completa
 
 ### 5.1 A Árvore de Pastas
 
-![Mapa da estrutura de pastas do Hive](../../assets/img/hive/IMAGEM%2005%20MAPA%20DA%20ESTRUTURA%20DE%20PASTAS.png)
-
+![Mapa da estrutura de pastas do Hive](https://i.imgur.com/CImi0hg.png)
 
 O Fluctlight Hive é a sua base. Tudo mora aqui:
 
@@ -566,7 +561,7 @@ Veja o arquivo `MAKO-MORI.soul.md` para um exemplo completo. Ele tem:
 Depois de criar um Soul, você precisa registrar ele em `RAIZ GLOBAL/SOUL_MANIFEST.md`:
 
 ```markdown
-# SOUL_MANIFEST — Frota Fluctlight
+# SOUL_MANIFEST Frota Fluctlight
 
 | # | Nome | Domínio | Status |
 |:---:|------|---------|:------:|
@@ -582,8 +577,7 @@ Depois de criar um Soul, você precisa registrar ele em `RAIZ GLOBAL/SOUL_MANIFE
 
 ### 7.1 O Fluxo Completo
 
-![Mapa geral do sistema Hive](../../assets/img/hive/IMAGEM%2008%20MAPA%20GERAL%20DO%20SISTEMA.png)
-
+![Mapa geral do sistema Hive](https://i.imgur.com/f1TL1RV.png)
 
 ```
 VOCÊ (usuário)
@@ -593,11 +587,11 @@ VOCÊ (usuário)
     ▼
 MAKO-MORI (comandante)
     │
-    FASE 1: Pesquisa — lê BRAIN.md, MEMORY.md, estado atual
-    FASE 2: Design — quebra em passos
-    FASE 3: Draft — escreve o plano em plans/
-    FASE 4: Review — outro agente revisa
-    FASE 5: Register — salva e mostra pra você
+    FASE 1: Pesquisa lê BRAIN.md, MEMORY.md, estado atual
+    FASE 2: Design quebra em passos
+    FASE 3: Draft escreve o plano em plans/
+    FASE 4: Review outro agente revisa
+    FASE 5: Register salva e mostra pra você
     │
     ▼
 VOCÊ aprova o plano
@@ -674,11 +668,11 @@ RESULTADO entrege + memória atualizada
 
 ---
 
-## Parte 8: Para Qualquer Usuário — Comece Aqui
+## Parte 8: Para Qualquer Usuário Comece Aqui
 
 ### 8.1 Checklist de Início Rápido
 
-**Dia 1 — Fundação (30 minutos)**
+**Dia 1 Fundação (30 minutos)**
 
 - [ ] Instalar [Obsidian](https://obsidian.md)
 - [ ] Criar vault em `D:\fluctlight-vault\Hive`
@@ -687,7 +681,7 @@ RESULTADO entrege + memória atualizada
 - [ ] Criar `RAIZ GLOBAL/BRAIN.md` com: "Este é meu sistema de agentes"
 - [ ] Criar `RAIZ GLOBAL/Global_Rules.md` com 3 regras simples
 
-**Dia 2 — Ferramentas (1 hora)**
+**Dia 2 Ferramentas (1 hora)**
 
 - [ ] Instalar [Ollama](https://ollama.com)
 - [ ] Baixar um modelo: `ollama pull gemma:4b`
@@ -695,13 +689,13 @@ RESULTADO entrege + memória atualizada
 - [ ] Instalar [Claude Code](https://claude.ai/code) (se for usar)
 - [ ] Rodar `.\Link-Start.ps1` e ver se tudo conecta
 
-**Dia 3 — Primeiro Blueprint (30 minutos)**
+**Dia 3 Primeiro Blueprint (30 minutos)**
 
 - [ ] No Claude Code, digitar: `/blueprint "me ajudar a organizar este projeto"`
 - [ ] Ler o plano gerado
 - [ ] Aprovar primeiro passo
 
-**Dia 4 — Primeiro Agente (1 hora)**
+**Dia 4 Primeiro Agente (1 hora)**
 
 - [ ] Copiar `_template.soul.md` para `souls/MEU_AGENTE.soul.md`
 - [ ] Preencher: nome, origem, o que faz
@@ -710,11 +704,11 @@ RESULTADO entrege + memória atualizada
 
 ### 8.2 Regras que NUNCA Quebre
 
-1. **Nunca sobrescrever arquivo sem confirmar** — sempre pergunte
-2. **Nunca fazer ação irreversível sem OK** — nada de deletar sem avisar
-3. **Sempre registrar erros** — caiu? Anota no Error_Log.md
-4. **Sempre registrar decisões** — escolheu algo? Anota no Decisions.md
-5. **Contexto é sagrado** — salvou STATE.md antes de parar
+1. **Nunca sobrescrever arquivo sem confirmar** sempre pergunte
+2. **Nunca fazer ação irreversível sem OK** nada de deletar sem avisar
+3. **Sempre registrar erros** caiu? Anota no Error_Log.md
+4. **Sempre registrar decisões** escolheu algo? Anota no Decisions.md
+5. **Contexto é sagrado** salvou STATE.md antes de parar
 
 ### 8.3 O Que Fazer Quando Der Errado
 
@@ -791,14 +785,11 @@ git pull                           → Pega do GitHub
 
 | Data | Agente | Ação |
 |------|--------|------|
-| 2026-05-27 | @MAKO-MORI | Blueprint Master criado — unifica MAKO-MORI.soul.md, Link-Start.ps1 e BLUEPRINT_01_HIVE_SETUP_v5.0.md |
-| 2026-05-27 | @ALICE | Revisão de integridade — links e consistência entre os 3 documentos validados |
+| 2026-05-27 | @MAKO-MORI | Blueprint Master criado unifica MAKO-MORI.soul.md, Link-Start.ps1 e BLUEPRINT_01_HIVE_SETUP_v5.0.md |
+| 2026-05-27 | @ALICE | Revisão de integridade links e consistência entre os 3 documentos validados |
 
 ---
 
-*Blueprint Master v1.0 — Fluctlight Hive*
+*Blueprint Master v1.0 Fluctlight Hive*
 *"Cancelando a catástrofe, um blueprint de cada vez."*
 *MAKO-MORI, transmitindo do Shatterdome*
-
-
-

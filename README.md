@@ -55,8 +55,6 @@ Baseado nos princípios de `Claude Code/Claude.md`, este é o fluxo de trabalho 
 
 ## 🛠️ Ecossistema de Ferramentas e Recursos
 
-![Banner Gits](./assets/img/banner%20gits.png)
-
 A lista de repositórios abaixo não é aleatória. Eles representam componentes e exemplos que se encaixam na filosofia "Vibe Coding".
 
 ### Frameworks e Sistemas Core
@@ -90,6 +88,8 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 
 ## 🔗 Repositórios de Apoio
 
+![Banner Gits](https://i.imgur.com/H7eSPEX.png)
+
 Estes repositórios complementam o ecossistema com visualização, navegação de código, memória persistente e integração com Obsidian.
 
 * [safishamsi/graphify](https://github.com/safishamsi/graphify.git): Referência para visualização e organização de relações em grafo.
@@ -101,19 +101,21 @@ Estes repositórios complementam o ecossistema com visualização, navegação d
 
 ## 🤖 Meus GPTs
 
-![Meus GPTS](./assets/img/meus%20gpts.png)
+![Meus GPTS](https://i.imgur.com/cJB2HVn.png)
 
 A pasta [Meus GPTS](./Meus%20GPTS/) reúne perfis e instruções de GPTs personalizados para tarefas criativas e técnicas.
 
-* [Artemis](./Meus%20GPTS/artemis.md): Foco em direção de arte e engenharia de prompt para geração de imagens.
-* [Arthur Leywin](./Meus%20GPTS/arthur-leywin.md): Foco em narrativa, worldbuilding, RPG, automação e Foundry VTT.
+* [ÁRTEMIS](./Meus%20GPTS/ÁRTEMIS.md): Foco em direção de arte e engenharia de prompt para geração de imagens.
+* [ARTHUR](./Meus%20GPTS/ARTHUR.md): Foco em narrativa, worldbuilding, RPG, automação e Foundry VTT.
+* [POWER](https://chatgpt.com/g/g-6a180e196b8881918b5faac7f98e4be6-power): GPT de impacto visual, presença e direção sensorial.
+* [MAKO-MORI](https://chatgpt.com/g/g-6a1823f2f4d08191b902c42d9772d9b4-mako-mori): GPT de orquestração, coordenação e síntese da Hive.
 * **Guia da pasta:** [Meus GPTS/README.md](./Meus%20GPTS/README.md)
 
 ---
 
 ## ⚡ Claude Skills
 
-![Claude Skills](./assets/img/Claude%20Skills.png)
+![Claude Skills](https://i.imgur.com/iFWZsEC.png)
 
 A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne skills prontas para estender o Claude Code com fluxos especializados de arquitetura, escrita, programação, música, planejamento e otimização de prompts.
 
@@ -129,7 +131,7 @@ A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne ski
 
 ## 🌐 Agents
 
-![Banner Hive](./assets/img/hive/banner_hive.png)
+![Banner Hive](https://i.imgur.com/IWUHWks.png)
 
 A pasta [Agents](./Agents/) reúne os arquivos `.soul.md` dos agentes da Hive para quem quiser estudar, adaptar ou usar a frota em seus próprios fluxos de IA.
 

@@ -2,7 +2,7 @@
 
 Esta pasta reúne os arquivos `.soul.md` da Hive: personas de agentes que podem ser usadas como base para prompts de sistema, orquestração multiagente, workflows no Claude Code ou experimentos com agentes locais.
 
-![Banner Hive](../assets/img/hive/banner_hive.png)
+![Banner Hive](https://i.imgur.com/IWUHWks.png)
 
 ## Como usar
 

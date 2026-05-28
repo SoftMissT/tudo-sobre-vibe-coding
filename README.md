@@ -105,10 +105,10 @@ Estes repositórios complementam o ecossistema com visualização, navegação d
 
 A pasta [Meus GPTS](./Meus%20GPTS/) reúne perfis e instruções de GPTs personalizados para tarefas criativas e técnicas.
 
-* [ÁRTEMIS](./Meus%20GPTS/ÁRTEMIS.md): Foco em direção de arte e engenharia de prompt para geração de imagens.
-* [ARTHUR](./Meus%20GPTS/ARTHUR.md): Foco em narrativa, worldbuilding, RPG, automação e Foundry VTT.
-* [POWER](https://chatgpt.com/g/g-6a180e196b8881918b5faac7f98e4be6-power): GPT de impacto visual, presença e direção sensorial.
-* [MAKO-MORI](https://chatgpt.com/g/g-6a1823f2f4d08191b902c42d9772d9b4-mako-mori): GPT de orquestração, coordenação e síntese da Hive.
+* [ÁRTEMIS](https://chatgpt.com/g/g-6a0e4304c1348191a47b966d9db09536-artemis): GPT de direção de arte e engenharia de prompt para geração de imagens. [Arquivo local](./Meus%20GPTS/ÁRTEMIS.md).
+* [ARTHUR](https://chatgpt.com/g/g-6a164ae791f88191bcef62945889d6fd-arthur-leywin): GPT de narrativa, worldbuilding, RPG, automação e Foundry VTT. [Arquivo local](./Meus%20GPTS/ARTHUR.md).
+* [POWER](https://chatgpt.com/g/g-6a180e196b8881918b5faac7f98e4be6-power): GPT de impacto visual, presença e direção sensorial. [Arquivo local](./Meus%20GPTS/POWER.md).
+* [MAKO-MORI](https://chatgpt.com/g/g-6a1823f2f4d08191b902c42d9772d9b4-mako-mori): GPT de orquestração, coordenação e síntese da Hive. [Arquivo local](./Meus%20GPTS/MAKO-MORI.md).
 * **Guia da pasta:** [Meus GPTS/README.md](./Meus%20GPTS/README.md)
 
 ---

@@ -10,6 +10,7 @@ Esta pasta concentra os GPTs personalizados do projeto, com foco em produtividad
 
 ![GPT Artemis](https://i.imgur.com/p7ShO8e.png)
 
+- GPT público: [ÁRTEMIS](https://chatgpt.com/g/g-6a0e4304c1348191a47b966d9db09536-artemis)
 - Arquivo local: [ÁRTEMIS.md](./ÁRTEMIS.md)
 - Especialidade: prompts de imagem, direção de arte e adaptação por plataforma.
 - Uso ideal: Midjourney, Niji, OpenAI ImageGen/GPT, FLUX e workflows visuais.
@@ -18,6 +19,7 @@ Esta pasta concentra os GPTs personalizados do projeto, com foco em produtividad
 
 ![GPT Arthur](https://i.imgur.com/NDcwzhJ.png)
 
+- GPT público: [Arthur Leywin](https://chatgpt.com/g/g-6a164ae791f88191bcef62945889d6fd-arthur-leywin)
 - Arquivo local: [ARTHUR.md](./ARTHUR.md)
 - Especialidade: narrativa, worldbuilding, RPG, fichas e Foundry VTT.
 - Uso ideal: campanhas, criação de personagens, sistemas e automação com `/macro`.

@@ -1,6 +1,6 @@
 # 🩸 POWER Creative Entity Supreme
 
-![Descrição](./assets/img/power.png)
+![Descrição](https://i.imgur.com/13sMjaz.png)
 
 > *"Eu sou a entidade criativa suprema que transforma ideias em música, roteiro, VFX e glória audiovisual."*
 

@@ -1,6 +1,6 @@
 # Claude Skills
 
-![Claude Skills](https://i.imgur.com/iFWZsEC.png)
+![Claude Skills](https://i.imgur.com/FDel9M3.png)
 
 Esta pasta reúne skills para ampliar o Claude Code com comportamentos especializados. Cada skill fica em sua própria pasta e possui um `SKILL.md` com gatilhos, regras de uso e referências.
 

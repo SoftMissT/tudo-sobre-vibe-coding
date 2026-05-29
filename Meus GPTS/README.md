@@ -1,6 +1,6 @@
 # Meus GPTS
 
-![Meus GPTS](https://i.imgur.com/cJB2HVn.png)
+![Meus GPTS](https://i.imgur.com/zBqvolD.png)
 
 Esta pasta concentra os GPTs personalizados do projeto, com foco em produtividade criativa, direção técnica e consistência de estilo.
 
@@ -34,7 +34,7 @@ Esta pasta concentra os GPTs personalizados do projeto, com foco em produtividad
 
 ### MAKO-MORI
 
-![GPT MAKO-MORI](https://i.imgur.com/AXA3dZx.png)
+![GPT MAKO-MORI](https://i.imgur.com/bviEblx.png)
 
 - GPT público: [Mako-Mori](https://chatgpt.com/g/g-6a1823f2f4d08191b902c42d9772d9b4-mako-mori)
 - Arquivo local: [MAKO-MORI.md](./MAKO-MORI.md)

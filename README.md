@@ -1,4 +1,4 @@
-![Descrição](./assets/img/banner.png)
+![Descrição](https://i.imgur.com/9tnLAvA.png)
 
 # Tudo Sobre Vibe Coding
 
@@ -55,6 +55,8 @@ Baseado nos princípios de `Claude Code/Claude.md`, este é o fluxo de trabalho 
 
 ## 🛠️ Ecossistema de Ferramentas e Recursos
 
+![Banner Gits](https://i.imgur.com/9QtvWXG.png)
+
 A lista de repositórios abaixo não é aleatória. Eles representam componentes e exemplos que se encaixam na filosofia "Vibe Coding".
 
 ### Frameworks e Sistemas Core
@@ -88,8 +90,6 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 
 ## 🔗 Repositórios de Apoio
 
-![Banner Gits](https://i.imgur.com/H7eSPEX.png)
-
 Estes repositórios complementam o ecossistema com visualização, navegação de código, memória persistente e integração com Obsidian.
 
 * [safishamsi/graphify](https://github.com/safishamsi/graphify.git): Referência para visualização e organização de relações em grafo.
@@ -101,21 +101,19 @@ Estes repositórios complementam o ecossistema com visualização, navegação d
 
 ## 🤖 Meus GPTs
 
-![Meus GPTS](https://i.imgur.com/cJB2HVn.png)
+![Meus GPTS](https://i.imgur.com/zBqvolD.png)
 
 A pasta [Meus GPTS](./Meus%20GPTS/) reúne perfis e instruções de GPTs personalizados para tarefas criativas e técnicas.
 
-* [ÁRTEMIS](https://chatgpt.com/g/g-6a0e4304c1348191a47b966d9db09536-artemis): GPT de direção de arte e engenharia de prompt para geração de imagens. [Arquivo local](./Meus%20GPTS/ÁRTEMIS.md).
-* [ARTHUR](https://chatgpt.com/g/g-6a164ae791f88191bcef62945889d6fd-arthur-leywin): GPT de narrativa, worldbuilding, RPG, automação e Foundry VTT. [Arquivo local](./Meus%20GPTS/ARTHUR.md).
-* [POWER](https://chatgpt.com/g/g-6a180e196b8881918b5faac7f98e4be6-power): GPT de impacto visual, presença e direção sensorial. [Arquivo local](./Meus%20GPTS/POWER.md).
-* [MAKO-MORI](https://chatgpt.com/g/g-6a1823f2f4d08191b902c42d9772d9b4-mako-mori): GPT de orquestração, coordenação e síntese da Hive. [Arquivo local](./Meus%20GPTS/MAKO-MORI.md).
+* [Artemis](./Meus%20GPTS/artemis.md): Foco em direção de arte e engenharia de prompt para geração de imagens.
+* [Arthur Leywin](./Meus%20GPTS/arthur-leywin.md): Foco em narrativa, worldbuilding, RPG, automação e Foundry VTT.
 * **Guia da pasta:** [Meus GPTS/README.md](./Meus%20GPTS/README.md)
 
 ---
 
 ## ⚡ Claude Skills
 
-![Claude Skills](https://i.imgur.com/iFWZsEC.png)
+![Claude Skills](https://i.imgur.com/FDel9M3.png)
 
 A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne skills prontas para estender o Claude Code com fluxos especializados de arquitetura, escrita, programação, música, planejamento e otimização de prompts.
 
@@ -131,7 +129,7 @@ A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne ski
 
 ## 🌐 Agents
 
-![Banner Hive](https://i.imgur.com/IWUHWks.png)
+![Banner Hive](./assets/img/hive/banner_hive.png)
 
 A pasta [Agents](./Agents/) reúne os arquivos `.soul.md` dos agentes da Hive para quem quiser estudar, adaptar ou usar a frota em seus próprios fluxos de IA.
 

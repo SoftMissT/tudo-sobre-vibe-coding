@@ -86,6 +86,10 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 * [cheahjs/free-llm-api-resources](https://github.com/cheahjs/free-llm-api-resources): Lista de APIs de LLM gratuitas.
 * [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps): Aplicações inspiradoras construídas com LLMs.
 
+### Foundry VTT
+
+* **[Guia: Hospedar Foundry VTT Online com ngrok](./Foundry/Como%20instalar%20o%20ngrok.md):** Guia completo para expor o Foundry VTT pela internet usando ngrok — sem abrir portas, sem IP fixo, 100% gratuito.
+
 ---
 
 ## 🔗 Repositórios de Apoio

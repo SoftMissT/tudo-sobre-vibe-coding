@@ -7,364 +7,545 @@
   <meta name="description" content="Hub de conhecimento sobre vibe coding: GSD, memória persistente, orquestração de agentes, skills e ferramentas para desenvolvimento guiado por IA.">
   <meta property="og:title" content="Tudo Sobre Vibe Coding">
   <meta property="og:description" content="Programação guiada por IA, orquestração de agentes e engenharia de contexto.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/SoftMissT/tudo-sobre-vibe-coding/main/assets/img/banner-header.png">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:url" content="https://softmisst.github.io/tudo-sobre-vibe-coding/">
-    <meta property="og:site_name" content="Tudo Sobre Vibe Coding">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tudo Sobre Vibe Coding · Programação guiada por IA">
-    <meta name="twitter:description" content="Hub de conhecimento sobre vibe coding: GSD, memória persistente, orquestração de agentes, skills e ferramentas para desenvolvimento guiado por IA.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/SoftMissT/tudo-sobre-vibe-coding/main/assets/img/banner-header.png">
-  <meta name="theme-color" content="#0b0e12">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:image" content="https://raw.githubusercontent.com/SoftMissT/tudo-sobre-vibe-coding/main/assets/img/banner-header.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://softmisst.github.io/tudo-sobre-vibe-coding/">
+  <meta property="og:site_name" content="Tudo Sobre Vibe Coding">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tudo Sobre Vibe Coding · Programação guiada por IA">
+  <meta name="twitter:description" content="Hub de conhecimento sobre vibe coding: GSD, memória persistente, orquestração de agentes, skills e ferramentas para desenvolvimento guiado por IA.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/SoftMissT/tudo-sobre-vibe-coding/main/assets/img/banner-header.png">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" type="image/png" href="assets/lumenn-icon-filled.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Orbitron:wght@700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="topbar">
-    <div class="wrap topbar__inner">
-      <a class="topbar__brand" href="./">VIBE<span>CODING</span></a>
-      <nav class="topbar__nav" aria-label="Navegação principal">
-        <a href="#filosofia">Filosofia</a>
-        <a href="#pilares">Pilares</a>
-        <a href="#ecossistema">Ferramentas</a>
-        <a href="#mapa">Mapa</a>
-        <a href="#foundry">Foundry</a>
-        <a href="#comecar">Começar</a>
-      </nav>
-      <a class="topbar__cta" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">GitHub ↗</a>
-    </div>
+  <header class="nav">
+    <a class="nav__logo" href="#conteudo" aria-label="Tudo Sobre Vibe Coding · início">
+      <img class="nav__face" src="assets/lumenn-icon-filled.png" alt="" width="171" height="224">
+      <img src="assets/lumenn-wordmark-red-bg.png" alt="" width="639" height="212">
+    </a>
+    <ul class="nav__links">
+      <li><a href="#filosofia">Filosofia</a></li>
+      <li><a href="#pilares">Pilares</a></li>
+      <li><a href="#ecossistema">Ferramentas</a></li>
+      <li><a href="#mapa">Mapa</a></li>
+      <li><a href="#foundry">Foundry</a></li>
+      <li><a href="#comecar">Começar</a></li>
+    </ul>
+    <a class="nav__github" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">GitHub ↗</a>
   </header>
 
   <main id="conteudo">
     <section class="hero" aria-labelledby="hero-titulo">
-      <div class="hero__img">
+      <div class="hero__media">
         <img src="assets/img/banner-header.webp" alt="Banner da frota de agentes MAKO-MORI em estilo cyberpunk com o texto Link-Start" fetchpriority="high" width="1672" height="941">
       </div>
-      <div class="wrap hero__grid">
-        <div class="hero__text">
-          <p class="kicker">Hub de conhecimento · Open source</p>
-          <h1 id="hero-titulo">A vibe é sua.<br><em>A frota codifica.</em></h1>
-          <p class="hero__lead">Programação guiada por IA, orquestração de agentes e engenharia de contexto: do spec ao deploy, com memória que nunca esquece.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#comecar">Como começar</a>
-            <a class="btn btn--ghost" href="#filosofia">A filosofia</a>
-          </div>
+      <div class="hero__content">
+        <p class="eyebrow">Hub de conhecimento · Open source</p>
+        <h1 class="hero__title" id="hero-titulo">A vibe é sua.<br><em>A frota codifica.</em></h1>
+        <div class="meta">
+          <span class="badge">3 pilares<span class="sr">: GSD, memória, orquestração</span></span>
+          <span class="badge">4 skills · 20 almas<span class="sr"> na frota Hive</span></span>
+          <span class="badge">9 módulos<span class="sr"> próprios de Foundry VTT</span></span>
         </div>
-        <aside class="hero__panel" aria-label="Resumo do ecossistema">
-          <div class="stat"><span class="stat__num">3</span><span class="stat__lbl">pilares: GSD, memória, orquestração</span></div>
-          <div class="stat"><span class="stat__num">21</span><span class="stat__lbl">agentes na frota Hive</span></div>
-          <div class="stat"><span class="stat__num">9</span><span class="stat__lbl">módulos próprios de Foundry VTT</span></div>
-        </aside>
+        <p class="hero__synopsis">Programação guiada por IA, orquestração de agentes e engenharia de contexto: do spec ao deploy, com memória que nunca esquece.</p>
+        <div class="cta">
+          <a class="btn btn--play" href="#comecar">Como começar</a>
+          <a class="btn btn--glass" href="#filosofia">A filosofia</a>
+        </div>
       </div>
     </section>
 
-    <section class="band" id="filosofia" aria-labelledby="filosofia-titulo">
-      <div class="wrap">
-        <p class="kicker">🧠 A filosofia</p>
-        <h2 id="filosofia-titulo">O que é “Vibe Coding”?</h2>
+    <div class="rows">
+      <section class="block" id="filosofia" aria-labelledby="filosofia-titulo">
+        <div class="row__head">
+          <div>
+            <p class="row__kicker">🧠 A filosofia</p>
+            <h2 class="row__title row__title--lg" id="filosofia-titulo">O que é “Vibe Coding”?</h2>
+          </div>
+        </div>
         <blockquote class="quote">
           <p>Você define a <strong>vibe</strong> (a visão, as especificações e as regras) e uma orquestra de agentes de IA executa as tarefas, mantendo o contexto e aprendendo continuamente. O desenvolvedor deixa de ser codificador e vira <strong>arquiteto de sistemas cognitivos</strong>.</p>
         </blockquote>
         <div class="pilares" id="pilares">
-          <article class="pilar pilar--gsd">
+          <article class="pilar">
             <h3><span aria-hidden="true">①</span> GSD</h3>
             <p class="pilar__sub">Get Shit Done</p>
             <p>Nenhuma linha de código sem uma <code>SPEC.md</code> aprovada. Construir a coisa certa, não apenas construir rápido. Fases com plano, execução e verificação empírica.</p>
           </article>
-          <article class="pilar pilar--mem">
+          <article class="pilar">
             <h3><span aria-hidden="true">②</span> Memória</h3>
             <p class="pilar__sub">Persistente</p>
             <p>Três arquivos simples (<code>primer.md</code>, <code>.claude-memory.md</code> e <code>tasks/lessons.md</code>) dão à IA estado atual, histórico e autoaprendizado a cada sessão.</p>
           </article>
-          <article class="pilar pilar--orq">
+          <article class="pilar">
             <h3><span aria-hidden="true">③</span> Orquestração</h3>
             <p class="pilar__sub">Workflow colaborativo</p>
             <p>Planejar ➔ executar ➔ verificar. Planos em <code>tasks/todo.md</code>, lições em <code>tasks/lessons.md</code>, sub-agentes para o que é complexo.</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="band band--alt" id="ecossistema" aria-labelledby="eco-titulo">
-      <div class="wrap">
-        <p class="kicker">🛠️ Ecossistema</p>
-        <h2 id="eco-titulo">Ferramentas que se encaixam na filosofia</h2>
-        <ul class="cards">
-          <li class="card">
-            <a href="https://github.com/open-gsd/gsd-pi" target="_blank" rel="noopener">
-              <span class="card__tag">Core</span>
-              <strong>open-gsd/gsd-pi</strong>
-              <span>Casa atual do GSD: meta-prompting e spec-driven development (Spec-Driven).</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/upstash/context7" target="_blank" rel="noopener">
-              <span class="card__tag">Contexto</span>
-              <strong>upstash/context7</strong>
-              <span>Documentação de código atualizada, injetada direto nos prompts.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener">
-              <span class="card__tag">Memória</span>
-              <strong>akitaonrails/ai-memory</strong>
-              <span>Memória de longo prazo com handoff entre fornecedores de IA (Rust).</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/HKUDS/LightRAG" target="_blank" rel="noopener">
-              <span class="card__tag">RAG</span>
-              <strong>HKUDS/LightRAG</strong>
-              <span>Framework para construir pipelines de RAG.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/uphiago/recon-skills" target="_blank" rel="noopener">
-              <span class="card__tag">Skills</span>
-              <strong>uphiago/recon-skills</strong>
-              <span>Recon e pentest: CORS, XSS, SQLi, SSRF, RCE, WordPress, MCP, cloud.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/akitaonrails/ai-jail" target="_blank" rel="noopener">
-              <span class="card__tag">Segurança</span>
-              <strong>akitaonrails/ai-jail</strong>
-              <span>Sandbox multiplataforma para rodar agentes com restrições firmes.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Ollama" target="_blank" rel="noopener">
-              <span class="card__tag">Local</span>
-              <strong>Ollama + benchmark</strong>
-              <span>Rode modelos no seu PC: <code>check_local_llm.py</code> diz quais cabem, sem baixar nada.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Codex" target="_blank" rel="noopener">
-              <span class="card__tag">Harness</span>
-              <strong>Codex CLI</strong>
-              <span>Agente da OpenAI no terminal: <code>/init</code>, AGENTS.md, skills e plugins.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/DeepSeek%20Harness" target="_blank" rel="noopener">
-              <span class="card__tag">Harness</span>
-              <strong>DeepSeek Harness</strong>
-              <span>O <code>dsh</code>: tudo é plugin, Web UI local via <code>npx @deepseek-ai/dsh web</code>.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Dots" target="_blank" rel="noopener">
-              <span class="card__tag">OpenAI</span>
-              <strong>Dots + migração de GPTs</strong>
-              <span>Agentes always-on (29/09/2026) e o prazo de 11/12/2026 dos GPTs para plugins.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/MCP" target="_blank" rel="noopener">
-              <span class="card__tag">Conectores</span>
-              <strong>MCP na prática</strong>
-              <span>Do conceito ao primeiro servidor, com configs para Claude Code, Codex e Gemini CLI.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Plugins" target="_blank" rel="noopener">
-              <span class="card__tag">Plugins</span>
-              <strong>Ecossistema de Plugins</strong>
-              <span>Os 5 sistemas de plugin comparados e o formato de skill que é portátil.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Fine-tuning" target="_blank" rel="noopener">
-              <span class="card__tag">Modelos</span>
-              <strong>Fine-tuning local</strong>
-              <span>Quando treinar (e quando não): decisão, pipeline Unsloth → GGUF → Ollama.</span>
-            </a>
-          </li>
-        </ul>
-        <p class="more"><a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding#ecossistema-de-ferramentas-e-recursos" target="_blank" rel="noopener">Ver a lista completa no README →</a></p>
-      </div>
-    </section>
-
-    <section class="band" id="mapa" aria-labelledby="mapa-titulo">
-      <div class="wrap">
-        <p class="kicker">🗺️ Mapa do repositório</p>
-        <h2 id="mapa-titulo">Por empresa e por assunto</h2>
-        <h3>Por empresa</h3>
-        <ul class="cards">
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Claude%20Code" target="_blank" rel="noopener">
-              <span class="card__tag">Anthropic</span>
-              <strong>Claude Code</strong>
-              <span>Harness, memória persistente, skills e plugins.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Codex" target="_blank" rel="noopener">
-              <span class="card__tag">OpenAI</span>
-              <strong>Codex CLI</strong>
-              <span>Terminal, AGENTS.md, skills e plugins no repo.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/DeepSeek%20Harness" target="_blank" rel="noopener">
-              <span class="card__tag">DeepSeek</span>
-              <strong>DeepSeek Harness</strong>
-              <span>O <code>dsh</code> e sua arquitetura de plugins.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Ollama" target="_blank" rel="noopener">
-              <span class="card__tag">Local</span>
-              <strong>Ollama</strong>
-              <span>Modelos no seu PC, com benchmark de hardware.</span>
-            </a>
-          </li>
-        </ul>
-        <h3>Por assunto</h3>
-        <ul class="cards">
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/GSD%202" target="_blank" rel="noopener">
-              <span class="card__tag">Filosofia</span>
-              <strong>GSD e spec-driven</strong>
-              <span>Nenhuma linha de código sem SPEC aprovada.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/MCP" target="_blank" rel="noopener">
-              <span class="card__tag">Conectores</span>
-              <strong>MCP</strong>
-              <span>Conecte o agente a qualquer ferramenta.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Fine-tuning" target="_blank" rel="noopener">
-              <span class="card__tag">Modelos</span>
-              <strong>Fine-tuning</strong>
-              <span>Treine, avalie e rode no Ollama.</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Agents" target="_blank" rel="noopener">
-              <span class="card__tag">Agentes</span>
-              <strong>Frota Hive</strong>
-              <span>21 personas em arquivos .soul.md.</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="band" id="agents" aria-labelledby="agents-titulo">
-      <div class="wrap split">
-        <div class="split__media">
-          <img src="assets/img/hive/banner_hive.webp" alt="Banner da Hive: frota de agentes em arte cyberpunk com a lista MAKO-MORI, AKENO, ARTHUR, SINON e CARDINAL" loading="lazy">
+      </section>
+      <section class="row" id="ecossistema" aria-labelledby="eco-titulo">
+        <div class="row__head">
+          <div>
+            <p class="row__kicker">🛠️ Ecossistema</p>
+            <h2 class="row__title" id="eco-titulo">Ferramentas que se encaixam na filosofia</h2>
+          </div>
+          <a class="row__all" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding#ecossistema-de-ferramentas-e-recursos" target="_blank" rel="noopener">Ver a lista completa no README →</a>
         </div>
-        <div class="split__body">
-          <p class="kicker">🌐 Agents</p>
-          <h2 id="agents-titulo">A frota Hive</h2>
-          <p>Vinte e um agentes com papéis definidos, prontos para estudar, adaptar ou adotar. Arquivos <code>.soul.md</code> abertos no repositório.</p>
-          <ul class="frota">
-            <li><strong>MAKO-MORI</strong><span>Comandante e orquestradora</span></li>
-            <li><strong>AKENO</strong><span>Direção visual, UI e design</span></li>
-            <li><strong>ALICE</strong><span>Análise e organização</span></li>
-            <li><strong>ARTEMIS</strong><span>Prompts visuais e direção criativa</span></li>
-            <li><strong>ARTHUR</strong><span>Arquitetura, narrativa e sistemas</span></li>
-            <li><strong>ASUNA</strong><span>Execução cuidadosa e clareza</span></li>
-            <li><strong>CARDINAL</strong><span>Lore, consistência e regras</span></li>
-            <li><strong>DOKJA</strong><span>Narrativa e metacognição</span></li>
-            <li><strong>GANDALF</strong><span>Mentoria e estratégia</span></li>
-            <li><strong>JIN</strong><span>Planejamento e execução</span></li>
-            <li><strong>KIRITO</strong><span>Execução técnica e foco</span></li>
-            <li><strong>POWER</strong><span>Impacto visual e energia</span></li>
-            <li><strong>SAGA</strong><span>Estratégia de longo prazo</span></li>
-            <li><strong>SHAKA</strong><span>Crítica e julgamento rigoroso</span></li>
-            <li><strong>SINON</strong><span>Programação e precisão técnica</span></li>
-            <li><strong>SYLVIE</strong><span>Memória e continuidade</span></li>
-            <li><strong>TANG-ROU</strong><span>Automação e Foundry VTT</span></li>
-            <li><strong>TESSIA</strong><span>Validação e alinhamento</span></li>
-            <li><strong>XENOVIA</strong><span>Segurança e decisão</span></li>
-            <li><strong>YUI</strong><span>UX emocional e cuidado</span></li>
-            <li><strong>YUNA</strong><span>QA e observabilidade</span></li>
-          </ul>
-          <a class="btn btn--ghost" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Agents" target="_blank" rel="noopener">Ver os .soul.md ↗</a>
+        <div class="track">
+          <button class="row__arrow row__arrow--prev" aria-label="Rolar para a esquerda"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <button class="row__arrow row__arrow--next" aria-label="Rolar para a direita"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+          <div class="row__track">
+            <a class="card" style="--g1:#1A3A5C;--g2:#05070c;--x:70%;--y:30%" href="https://github.com/open-gsd/gsd-pi" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/open-gsd/gsd-pi" alt="">
+              <span class="tag">Core</span>
+              <strong class="card__label">open-gsd/gsd-pi</strong>
+              <span class="card__sub">Casa atual do GSD: meta-prompting e spec-driven development (Spec-Driven).</span>
+            </a>
+            <a class="card" style="--g1:#2D5FA3;--g2:#0b1524;--x:30%;--y:35%" href="https://github.com/upstash/context7" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/upstash/context7" alt="">
+              <span class="tag">Contexto</span>
+              <strong class="card__label">upstash/context7</strong>
+              <span class="card__sub">Documentação de código atualizada, injetada direto nos prompts.</span>
+            </a>
+            <a class="card" style="--g1:#4A1D7A;--g2:#0e0718;--x:80%;--y:60%" href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/akitaonrails/ai-memory" alt="">
+              <span class="tag">Memória</span>
+              <strong class="card__label">akitaonrails/ai-memory</strong>
+              <span class="card__sub">Memória de longo prazo com handoff entre fornecedores de IA (Rust).</span>
+            </a>
+            <a class="card" style="--g1:#0F4A3C;--g2:#04120e;--x:50%;--y:20%" href="https://github.com/HKUDS/LightRAG" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/HKUDS/LightRAG" alt="">
+              <span class="tag">RAG</span>
+              <strong class="card__label">HKUDS/LightRAG</strong>
+              <span class="card__sub">Framework para construir pipelines de RAG.</span>
+            </a>
+            <a class="card" style="--g1:#8B2020;--g2:#160808;--x:25%;--y:70%" href="https://github.com/uphiago/recon-skills" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/uphiago/recon-skills" alt="">
+              <span class="tag">Skills</span>
+              <strong class="card__label">uphiago/recon-skills</strong>
+              <span class="card__sub">Recon e pentest: CORS, XSS, SQLi, SSRF, RCE, WordPress, MCP, cloud.</span>
+            </a>
+            <a class="card" style="--g1:#3E4A5E;--g2:#0b0e14;--x:75%;--y:50%" href="https://github.com/akitaonrails/ai-jail" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/akitaonrails/ai-jail" alt="">
+              <span class="tag">Segurança</span>
+              <strong class="card__label">akitaonrails/ai-jail</strong>
+              <span class="card__sub">Sandbox multiplataforma para rodar agentes com restrições firmes.</span>
+            </a>
+            <a class="card" style="--g1:#4A4A2A;--g2:#12120a;--x:40%;--y:40%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Ollama" target="_blank" rel="noopener">
+              <span class="tag">Local</span>
+              <strong class="card__label">Ollama + benchmark</strong>
+              <span class="card__sub">Rode modelos no seu PC: <code>check_local_llm.py</code> diz quais cabem, sem baixar nada.</span>
+            </a>
+            <a class="card" style="--g1:#14485E;--g2:#071016;--x:60%;--y:25%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Codex" target="_blank" rel="noopener">
+              <span class="tag">Harness</span>
+              <strong class="card__label">Codex CLI</strong>
+              <span class="card__sub">Agente da OpenAI no terminal: <code>/init</code>, AGENTS.md, skills e plugins.</span>
+            </a>
+            <a class="card" style="--g1:#28345E;--g2:#0a0d1a;--x:80%;--y:45%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/DeepSeek%20Harness" target="_blank" rel="noopener">
+              <span class="tag">Harness</span>
+              <strong class="card__label">DeepSeek Harness</strong>
+              <span class="card__sub">O <code>dsh</code>: tudo é plugin, Web UI local via <code>npx @deepseek-ai/dsh web</code>.</span>
+            </a>
+            <a class="card" style="--g1:#8A6D1F;--g2:#14100a;--x:35%;--y:60%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Dots" target="_blank" rel="noopener">
+              <span class="tag">OpenAI</span>
+              <strong class="card__label">Dots + migração de GPTs</strong>
+              <span class="card__sub">Agentes always-on (29/09/2026) e o prazo de 11/12/2026 dos GPTs para plugins.</span>
+            </a>
+            <a class="card" style="--g1:#7B3FB5;--g2:#120a1e;--x:55%;--y:65%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/MCP" target="_blank" rel="noopener">
+              <span class="tag">Conectores</span>
+              <strong class="card__label">MCP na prática</strong>
+              <span class="card__sub">Do conceito ao primeiro servidor, com configs para Claude Code, Codex e Gemini CLI.</span>
+            </a>
+            <a class="card" style="--g1:#4A3B2A;--g2:#14100a;--x:70%;--y:55%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Plugins" target="_blank" rel="noopener">
+              <span class="tag">Plugins</span>
+              <strong class="card__label">Ecossistema de Plugins</strong>
+              <span class="card__sub">Os 5 sistemas de plugin comparados e o formato de skill que é portátil.</span>
+            </a>
+            <a class="card" style="--g1:#35618F;--g2:#0a1220;--x:45%;--y:25%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Fine-tuning" target="_blank" rel="noopener">
+              <span class="tag">Modelos</span>
+              <strong class="card__label">Fine-tuning local</strong>
+              <span class="card__sub">Quando treinar (e quando não): decisão, pipeline Unsloth → GGUF → Ollama.</span>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="band band--alt" id="foundry" aria-labelledby="foundry-titulo">
-      <div class="wrap">
-        <p class="kicker">🎲 Foundry VTT</p>
-        <h2 id="foundry-titulo">Módulos próprios</h2>
-        <img class="band__banner" src="assets/img/banner-04-foundry-vtt.webp" alt="Banner dos módulos Foundry VTT" loading="lazy">
-        <p class="band__lead">Nove módulos desenvolvidos para a mesa, do diagnóstico de conexão ao celular diegético.</p>
-        <ul class="mods">
-          <li><a href="https://github.com/SoftMissT/foundry-vtt-connection-guard" target="_blank" rel="noopener"><strong>Connection Guard: Abyss Link</strong><span>Latência, degradação preditiva e reconexão automática.</span></a></li>
-          <li><a href="https://github.com/SoftMissT/FoundryVTT-BatataOuN-o-V2" target="_blank" rel="noopener"><strong>Batata Ou Não</strong><span>Configura os gráficos conforme o PC do jogador.</span></a></li>
-          <li><a href="https://github.com/SoftMissT/Lumenn-Frame" target="_blank" rel="noopener"><strong>Lumenn Frame</strong><span>Editor de grafo cinemático de cenas e áudio.</span></a></li>
-          <li><a href="https://github.com/SoftMissT/lumenn-notify" target="_blank" rel="noopener"><strong>Lumenn Notify</strong><span>Mensagens narrativas, perfis e canais (v14+).</span></a></li>
-          <li><a href="https://github.com/SoftMissT/Lumenn-phone-hub" target="_blank" rel="noopener"><strong>Lumenn Phone Hub</strong><span>Celular diegético: msgs, redes, banco, notícias.</span></a></li>
-          <li><a href="https://github.com/SoftMissT/lumenn-lightweight" target="_blank" rel="noopener"><strong>Lumenn Lightweight</strong><span>Otimização de imagens em lote para WebP.</span></a></li>
-          <li><a href="https://github.com/SoftMissT/lumenn-roll-relay" target="_blank" rel="noopener"><strong>Lumenn Roll Relay</strong><span>Rolagens retransmitidas ao Discord com leaderboard.</span></a></li>
-          <li><a href="https://github.com/SoftMissT/night-assassins-csb-automation" target="_blank" rel="noopener"><strong>NS CSB Automation</strong><span>Rolagens e Habilidades Especiais para CSB.</span></a></li>
-          <li><a href="https://github.com/SoftMissT/night-assassins-system" target="_blank" rel="noopener"><strong>Night Assassins System</strong><span>Sistema completo para Foundry v14.</span></a></li>
-        </ul>
-        <p class="more"><a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Foundry" target="_blank" rel="noopener">Guias de Foundry (ngrok, hospedagem) →</a></p>
-      </div>
-    </section>
-
-    <section class="band" id="comecar" aria-labelledby="comecar-titulo">
-      <div class="wrap narrow">
-        <p class="kicker">🚀 Como começar</p>
-        <h2 id="comecar-titulo">Quatro passos</h2>
-        <img class="band__banner" src="assets/img/banner-05-como-comecar.webp" alt="Banner Como Começar" loading="lazy">
-        <ol class="passos">
-          <li><strong>Estude a filosofia</strong><span>Leia os guias de <code>Claude Code</code> e <code>GSD 2</code> para internalizar os conceitos.</span></li>
-          <li><strong>Configure a memória</strong><span>Siga o <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/Claude%20Code/Configura%C3%A7%C3%A3o%20de%20Mem%C3%B3ria%20Persistente.md" target="_blank" rel="noopener">guia de memória persistente</a> e crie a estrutura no seu projeto.</span></li>
-          <li><strong>Adote o workflow</strong><span>Ciclo <strong>Planejar ➔ Executar ➔ Verificar</strong>, com planos e lições documentados.</span></li>
-          <li><strong>Experimente</strong><span>Explore as ferramentas listadas e os guias de pasta (Codex, Ollama, DeepSeek Harness, Dots, MCP, Fine-tuning, Plugins) e veja o que cabe no seu fluxo.</span></li>
-        </ol>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">Abrir no GitHub ↗</a>
-          <a class="btn btn--ghost" href="#conteudo">Voltar ao topo</a>
+      <div class="block" id="mapa">
+        <div class="row__head">
+          <div>
+            <p class="row__kicker">🗺️ Mapa do repositório</p>
+            <h2 class="row__title row__title--lg">Por empresa e por assunto</h2>
+          </div>
         </div>
+        <section class="row" aria-label="Por empresa">
+          <div class="row__head">
+            <h3 class="row__title">Por empresa</h3>
+          </div>
+          <div class="track">
+            <button class="row__arrow row__arrow--prev" aria-label="Rolar para a esquerda"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+            <button class="row__arrow row__arrow--next" aria-label="Rolar para a direita"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+            <div class="row__track">
+              <a class="card" style="--g1:#14523F;--g2:#06120d;--x:70%;--y:35%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Claude%20Code" target="_blank" rel="noopener">
+                <span class="tag">Anthropic</span>
+                <strong class="card__label">Claude Code</strong>
+                <span class="card__sub">Harness, memória persistente, skills e plugins.</span>
+              </a>
+              <a class="card" style="--g1:#3A3F4A;--g2:#0d0f13;--x:30%;--y:40%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Codex" target="_blank" rel="noopener">
+                <span class="tag">OpenAI</span>
+                <strong class="card__label">Codex CLI</strong>
+                <span class="card__sub">Terminal, AGENTS.md, skills e plugins no repo.</span>
+              </a>
+              <a class="card" style="--g1:#28345E;--g2:#0a0d1a;--x:65%;--y:30%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/DeepSeek%20Harness" target="_blank" rel="noopener">
+                <span class="tag">DeepSeek</span>
+                <strong class="card__label">DeepSeek Harness</strong>
+                <span class="card__sub">O <code>dsh</code> e sua arquitetura de plugins.</span>
+              </a>
+              <a class="card" style="--g1:#4A4A2A;--g2:#12120a;--x:50%;--y:60%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Ollama" target="_blank" rel="noopener">
+                <span class="tag">Local</span>
+                <strong class="card__label">Ollama</strong>
+                <span class="card__sub">Modelos no seu PC, com benchmark de hardware.</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="row" aria-label="Por assunto">
+          <div class="row__head">
+            <h3 class="row__title">Por assunto</h3>
+          </div>
+          <div class="track">
+            <button class="row__arrow row__arrow--prev" aria-label="Rolar para a esquerda"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+            <button class="row__arrow row__arrow--next" aria-label="Rolar para a direita"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+            <div class="row__track">
+              <a class="card" style="--g1:#1A3A5C;--g2:#05070c;--x:75%;--y:25%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/GSD%202" target="_blank" rel="noopener">
+                <span class="tag">Filosofia</span>
+                <strong class="card__label">GSD e spec-driven</strong>
+                <span class="card__sub">Nenhuma linha de código sem SPEC aprovada.</span>
+              </a>
+              <a class="card" style="--g1:#7B3FB5;--g2:#120a1e;--x:35%;--y:55%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/MCP" target="_blank" rel="noopener">
+                <span class="tag">Conectores</span>
+                <strong class="card__label">MCP</strong>
+                <span class="card__sub">Conecte o agente a qualquer ferramenta.</span>
+              </a>
+              <a class="card" style="--g1:#4A3B2A;--g2:#14100a;--x:60%;--y:45%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Fine-tuning" target="_blank" rel="noopener">
+                <span class="tag">Modelos</span>
+                <strong class="card__label">Fine-tuning</strong>
+                <span class="card__sub">Treine, avalie e rode no Ollama.</span>
+              </a>
+              <a class="card" style="--g1:#0F4A3C;--g2:#04120e;--x:50%;--y:20%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Agents" target="_blank" rel="noopener">
+                <span class="tag">Hive</span>
+                <strong class="card__label">Frota Hive</strong>
+                <span class="card__sub">4 skills da frota + 20 almas em arquivos .soul.md.</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="row" aria-label="Skills do repositório">
+          <div class="row__head">
+            <h3 class="row__title">Skills do repositório</h3>
+          </div>
+          <div class="track">
+            <button class="row__arrow row__arrow--prev" aria-label="Rolar para a esquerda"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+            <button class="row__arrow row__arrow--next" aria-label="Rolar para a direita"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+            <div class="row__track">
+              <a class="card" style="--g1:#14523F;--g2:#06120d;--x:30%;--y:70%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/dispatching-parallel-agents" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">dispatching-parallel-agents</strong>
+                <span class="card__sub">Disparar 2+ subagentes em paralelo sem estado compartilhado.</span>
+              </a>
+              <a class="card" style="--g1:#3A3F4A;--g2:#0d0f13;--x:60%;--y:30%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/find-skills" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">find-skills</strong>
+                <span class="card__sub">Descobrir e instalar skills quando falta uma.</span>
+              </a>
+              <a class="card" style="--g1:#28345E;--g2:#0a0d1a;--x:45%;--y:55%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/frontend-design" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">frontend-design</strong>
+                <span class="card__sub">Interfaces front-end distintas e polidas, sem estética genérica.</span>
+              </a>
+              <a class="card" style="--g1:#4A4A2A;--g2:#12120a;--x:75%;--y:40%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/gpt-taste" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">gpt-taste</strong>
+                <span class="card__sub">Motion GSAP, grade editorial e rigor de layout AIDA.</span>
+              </a>
+              <a class="card" style="--g1:#1A3A5C;--g2:#05070c;--x:35%;--y:25%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/high-end-visual-design" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">high-end-visual-design</strong>
+                <span class="card__sub">Tipografia, sombras e estrutura de "site caro" — bloqueia defaults baratos.</span>
+              </a>
+              <a class="card" style="--g1:#7B3FB5;--g2:#120a1e;--x:65%;--y:60%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/image-to-code" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">image-to-code</strong>
+                <span class="card__sub">Gerar imagem de referência e implementar o site para casar com ela.</span>
+              </a>
+              <a class="card" style="--g1:#4A3B2A;--g2:#14100a;--x:50%;--y:45%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/imagegen-frontend-web" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">imagegen-frontend-web</strong>
+                <span class="card__sub">Direção de imagem de referência por seção para landing pages.</span>
+              </a>
+              <a class="card" style="--g1:#35618F;--g2:#0a1220;--x:25%;--y:35%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/no-ai-slop" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">no-ai-slop</strong>
+                <span class="card__sub">Regras anti-"AI slop" em design de UI, com eval.</span>
+              </a>
+              <a class="card" style="--g1:#0F4A3C;--g2:#04120e;--x:80%;--y:55%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/obsidian-markdown" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">obsidian-markdown</strong>
+                <span class="card__sub">Markdown Obsidian: wikilinks, callouts, properties.</span>
+              </a>
+              <a class="card" style="--g1:#14485E;--g2:#071016;--x:40%;--y:65%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/redesign-existing-projects" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">redesign-existing-projects</strong>
+                <span class="card__sub">Upgrade de design de sites existentes sem quebrar função.</span>
+              </a>
+              <a class="card" style="--g1:#4A1D7A;--g2:#0e0718;--x:55%;--y:20%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/stitch-design-taste" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">stitch-design-taste</strong>
+                <span class="card__sub">DESIGN.md semântico para Google Stitch: tipografia, cor, motion.</span>
+              </a>
+              <a class="card" style="--g1:#8B2020;--g2:#160808;--x:70%;--y:50%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/subagent-driven-development" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">subagent-driven-development</strong>
+                <span class="card__sub">Executar planos com subagentes: implementer, spec-reviewer, quality-reviewer.</span>
+              </a>
+              <a class="card" style="--g1:#8A6D1F;--g2:#14100a;--x:30%;--y:45%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/typesafe-ai" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">typesafe-ai</strong>
+                <span class="card__sub">TypeSafe/Jev: julgamentos tipados e probabilidades como primitivos.</span>
+              </a>
+              <a class="card" style="--g1:#3E4A5E;--g2:#0b0e14;--x:60%;--y:70%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Skills/using-superpowers" target="_blank" rel="noopener">
+                <span class="tag">Skill</span>
+                <strong class="card__label">using-superpowers</strong>
+                <span class="card__sub">Achar e usar skills — invocar a skill antes de responder.</span>
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+      <section class="row" id="agents" aria-labelledby="agents-titulo">
+        <div class="row__head">
+          <div>
+            <p class="row__kicker">🌐 Skills e almas</p>
+            <h2 class="row__title" id="agents-titulo">A frota Hive</h2>
+          </div>
+          <a class="row__all" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Agents" target="_blank" rel="noopener">Ver Agents/ no repo ↗</a>
+        </div>
+        <div class="row__head">
+          <h3 class="row__title">Skills da frota</h3>
+        </div>
+        <div class="track">
+          <button class="row__arrow row__arrow--prev" aria-label="Rolar para a esquerda"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <button class="row__arrow row__arrow--next" aria-label="Rolar para a direita"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+          <div class="row__track">
+            <a class="card card--agent" style="--x:70%;--y:30%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/Agents/agentes/TANG-ROU.md" target="_blank" rel="noopener"><span class="tag tag--ok">Pronta</span><strong class="card__label">TANG-ROU</strong><span class="card__sub">Foundry VTT: macros, módulos e auditoria · skill tang-rou</span></a>
+            <a class="card card--agent" style="--x:30%;--y:40%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/Agents/agentes/MAKO-MORI.md" target="_blank" rel="noopener"><span class="tag tag--wip">Em progresso</span><strong class="card__label">MAKO-MORI</strong><span class="card__sub">Coordenação da Hive: boot, delegação e síntese</span></a>
+            <a class="card card--agent" style="--x:60%;--y:25%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/Agents/agentes/ARTEMIS.md" target="_blank" rel="noopener"><span class="tag tag--wip">Em progresso</span><strong class="card__label">ARTEMIS</strong><span class="card__sub">Prompts de imagem e direção de arte</span></a>
+            <a class="card card--agent" style="--x:45%;--y:60%" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/Agents/agentes/SAGA.md" target="_blank" rel="noopener"><span class="tag tag--wip">Em progresso</span><strong class="card__label">SAGA</strong><span class="card__sub">RPG: mesas, lore e narrativa</span></a>
+          </div>
+        </div>
+        <div class="strip" style="--art:url('assets/img/hive/banner_hive.webp')">
+          <img src="assets/img/hive/banner_hive.webp" alt="Banner da Hive: frota de agentes em arte cyberpunk com a lista MAKO-MORI, AKENO, ARTHUR, SINON e CARDINAL" loading="lazy" width="1672" height="941">
+        </div>
+        <p class="row__note">Quatro skills da frota (TANG-ROU pronta) e vinte almas — personas em <code>.soul.md</code> prontas para estudar, adaptar ou adotar. Alma não é skill: skill executa, alma inspira.</p>
+        <div class="row__head">
+          <h3 class="row__title">Almas · 20 personas</h3>
+        </div>
+        <div class="track">
+          <button class="row__arrow row__arrow--prev" aria-label="Rolar para a esquerda"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <button class="row__arrow row__arrow--next" aria-label="Rolar para a direita"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+          <div class="row__track">
+            <div class="card card--agent" style="--x:70%;--y:30%"><span class="tag">Comando</span><strong class="card__label">MAKO-MORI</strong><span class="card__sub">Comandante e orquestradora</span></div>
+            <div class="card card--agent" style="--x:30%;--y:40%"><span class="tag">Visual</span><strong class="card__label">AKENO</strong><span class="card__sub">Direção visual, UI e design</span></div>
+            <div class="card card--agent" style="--x:60%;--y:25%"><span class="tag">Dados</span><strong class="card__label">ALICE</strong><span class="card__sub">Análise e organização</span></div>
+            <div class="card card--agent" style="--x:45%;--y:60%"><span class="tag">Criativo</span><strong class="card__label">ARTEMIS</strong><span class="card__sub">Prompts visuais e direção criativa</span></div>
+            <div class="card card--agent" style="--x:75%;--y:45%"><span class="tag">Arquitetura</span><strong class="card__label">ARTHUR</strong><span class="card__sub">Arquitetura, narrativa e sistemas</span></div>
+            <div class="card card--agent" style="--x:35%;--y:30%"><span class="tag">Execução</span><strong class="card__label">ASUNA</strong><span class="card__sub">Execução cuidadosa e clareza</span></div>
+            <div class="card card--agent" style="--x:55%;--y:55%"><span class="tag">Lore</span><strong class="card__label">CARDINAL</strong><span class="card__sub">Lore, consistência e regras</span></div>
+            <div class="card card--agent" style="--x:65%;--y:35%"><span class="tag">Narrativa</span><strong class="card__label">DOKJA</strong><span class="card__sub">Narrativa e metacognição</span></div>
+            <div class="card card--agent" style="--x:25%;--y:50%"><span class="tag">Mentoria</span><strong class="card__label">GANDALF</strong><span class="card__sub">Mentoria e estratégia</span></div>
+            <div class="card card--agent" style="--x:50%;--y:20%"><span class="tag">Planejamento</span><strong class="card__label">JIN</strong><span class="card__sub">Planejamento e execução</span></div>
+            <div class="card card--agent" style="--x:80%;--y:40%"><span class="tag">Técnico</span><strong class="card__label">KIRITO</strong><span class="card__sub">Execução técnica e foco</span></div>
+            <div class="card card--agent" style="--x:40%;--y:65%"><span class="tag">Criativo</span><strong class="card__label">POWER</strong><span class="card__sub">Impacto visual e energia</span></div>
+            <div class="card card--agent" style="--x:70%;--y:25%"><span class="tag">Estratégia</span><strong class="card__label">SAGA</strong><span class="card__sub">Estratégia de longo prazo</span></div>
+            <div class="card card--agent" style="--x:30%;--y:35%"><span class="tag">Crítica</span><strong class="card__label">SHAKA</strong><span class="card__sub">Crítica e julgamento rigoroso</span></div>
+            <div class="card card--agent" style="--x:60%;--y:50%"><span class="tag">Técnico</span><strong class="card__label">SINON</strong><span class="card__sub">Programação e precisão técnica</span></div>
+            <div class="card card--agent" style="--x:45%;--y:30%"><span class="tag">Memória</span><strong class="card__label">SYLVIE</strong><span class="card__sub">Memória e continuidade</span></div>
+            <div class="card card--agent" style="--x:75%;--y:60%"><span class="tag">Automação</span><strong class="card__label">TANG-ROU</strong><span class="card__sub">Automação e Foundry VTT</span></div>
+            <div class="card card--agent" style="--x:35%;--y:45%"><span class="tag">Validação</span><strong class="card__label">TESSIA</strong><span class="card__sub">Validação e alinhamento</span></div>
+            <div class="card card--agent" style="--x:55%;--y:25%"><span class="tag">Segurança</span><strong class="card__label">XENOVIA</strong><span class="card__sub">Segurança e decisão</span></div>
+            <div class="card card--agent" style="--x:25%;--y:60%"><span class="tag">UX</span><strong class="card__label">YUI</strong><span class="card__sub">UX emocional e cuidado</span></div>
+            <div class="card card--agent" style="--x:65%;--y:40%"><span class="tag">QA</span><strong class="card__label">YUNA</strong><span class="card__sub">QA e observabilidade</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row" id="foundry" aria-labelledby="foundry-titulo">
+        <div class="row__head">
+          <div>
+            <p class="row__kicker">🎲 Foundry VTT</p>
+            <h2 class="row__title" id="foundry-titulo">Módulos próprios</h2>
+          </div>
+          <a class="row__all" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Foundry" target="_blank" rel="noopener">Guias de Foundry (ngrok, hospedagem) →</a>
+        </div>
+        <div class="strip" style="--art:url('assets/img/banner-04-foundry-vtt.webp')">
+          <img src="assets/img/banner-04-foundry-vtt.webp" alt="Banner dos módulos Foundry VTT" loading="lazy" width="1672" height="941">
+        </div>
+        <p class="row__note">Nove módulos desenvolvidos para a mesa, do diagnóstico de conexão ao celular diegético.</p>
+        <div class="track">
+          <button class="row__arrow row__arrow--prev" aria-label="Rolar para a esquerda"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <button class="row__arrow row__arrow--next" aria-label="Rolar para a direita"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+          <div class="row__track">
+            <a class="card" style="--g1:#14485E;--g2:#071016;--x:70%;--y:30%" href="https://github.com/SoftMissT/foundry-vtt-connection-guard" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/SoftMissT/foundry-vtt-connection-guard" alt="">
+              <span class="tag">Rede</span>
+              <strong class="card__label">Connection Guard: Abyss Link</strong>
+              <span class="card__sub">Latência, degradação preditiva e reconexão automática.</span>
+            </a>
+            <a class="card" style="--g1:#4A4A2A;--g2:#12120a;--x:30%;--y:45%" href="https://github.com/SoftMissT/FoundryVTT-BatataOuN-o-V2" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/SoftMissT/FoundryVTT-BatataOuN-o-V2" alt="">
+              <span class="tag">Performance</span>
+              <strong class="card__label">Batata Ou Não</strong>
+              <span class="card__sub">Configura os gráficos conforme o PC do jogador.</span>
+            </a>
+            <a class="card" style="--g1:#7B3FB5;--g2:#120a1e;--x:60%;--y:25%" href="https://github.com/SoftMissT/Lumenn-Frame" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/SoftMissT/Lumenn-Frame" alt="">
+              <span class="tag">Narrativa</span>
+              <strong class="card__label">Lumenn Frame</strong>
+              <span class="card__sub">Editor de grafo cinemático de cenas e áudio.</span>
+            </a>
+            <a class="card" style="--g1:#14523F;--g2:#06120d;--x:45%;--y:60%" href="https://github.com/SoftMissT/lumenn-notify" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/SoftMissT/lumenn-notify" alt="">
+              <span class="tag">Notificações</span>
+              <strong class="card__label">Lumenn Notify</strong>
+              <span class="card__sub">Mensagens narrativas, perfis e canais (v14+).</span>
+            </a>
+            <a class="card" style="--g1:#2D5FA3;--g2:#0b1524;--x:75%;--y:40%" href="https://github.com/SoftMissT/Lumenn-phone-hub" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/SoftMissT/Lumenn-phone-hub" alt="">
+              <span class="tag">Diegético</span>
+              <strong class="card__label">Lumenn Phone Hub</strong>
+              <span class="card__sub">Celular diegético: msgs, redes, banco, notícias.</span>
+            </a>
+            <a class="card" style="--g1:#8A6D1F;--g2:#14100a;--x:35%;--y:30%" href="https://github.com/SoftMissT/lumenn-lightweight" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/SoftMissT/lumenn-lightweight" alt="">
+              <span class="tag">Imagens</span>
+              <strong class="card__label">Lumenn Lightweight</strong>
+              <span class="card__sub">Otimização de imagens em lote para WebP.</span>
+            </a>
+            <a class="card" style="--g1:#0F4A3C;--g2:#04120e;--x:55%;--y:55%" href="https://github.com/SoftMissT/lumenn-roll-relay" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/SoftMissT/lumenn-roll-relay" alt="">
+              <span class="tag">Discord</span>
+              <strong class="card__label">Lumenn Roll Relay</strong>
+              <span class="card__sub">Rolagens retransmitidas ao Discord com leaderboard.</span>
+            </a>
+            <a class="card" style="--g1:#8B2020;--g2:#160808;--x:65%;--y:35%" href="https://github.com/SoftMissT/night-assassins-csb-automation" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/SoftMissT/night-assassins-csb-automation" alt="">
+              <span class="tag">Sistema</span>
+              <strong class="card__label">NS CSB Automation</strong>
+              <span class="card__sub">Rolagens e Habilidades Especiais para CSB.</span>
+            </a>
+            <a class="card" style="--g1:#3A3F4A;--g2:#0d0f13;--x:25%;--y:50%" href="https://github.com/SoftMissT/night-assassins-system" target="_blank" rel="noopener">
+              <img class="card__bg" loading="lazy" decoding="async" src="https://opengraph.githubassets.com/1/SoftMissT/night-assassins-system" alt="">
+              <span class="tag">Sistema</span>
+              <strong class="card__label">Night Assassins System</strong>
+              <span class="card__sub">Sistema completo para Foundry v14.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="block" id="comecar" aria-labelledby="comecar-titulo">
+        <div class="row__head">
+          <div>
+            <p class="row__kicker">🚀 Como começar</p>
+            <h2 class="row__title row__title--lg" id="comecar-titulo">Quatro passos</h2>
+          </div>
+        </div>
+        <div class="strip" style="--art:url('assets/img/banner-05-como-comecar.webp')">
+          <img src="assets/img/banner-05-como-comecar.webp" alt="Banner Como Começar" loading="lazy" width="1672" height="941">
+        </div>
+        <div class="panel">
+          <ol class="passos">
+            <li class="passo">
+              <span class="passo__n" aria-hidden="true">01</span>
+              <div>
+                <h3>Estude a filosofia</h3>
+                <p>Leia os guias de <code>Claude Code</code> e <code>GSD 2</code> para internalizar os conceitos.</p>
+              </div>
+            </li>
+            <li class="passo">
+              <span class="passo__n" aria-hidden="true">02</span>
+              <div>
+                <h3>Configure a memória</h3>
+                <p>Siga o <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/Claude%20Code/Configura%C3%A7%C3%A3o%20de%20Mem%C3%B3ria%20Persistente.md" target="_blank" rel="noopener">guia de memória persistente</a> e crie a estrutura no seu projeto.</p>
+              </div>
+            </li>
+            <li class="passo">
+              <span class="passo__n" aria-hidden="true">03</span>
+              <div>
+                <h3>Adote o workflow</h3>
+                <p>Ciclo <strong>Planejar ➔ Executar ➔ Verificar</strong>, com planos e lições documentados.</p>
+              </div>
+            </li>
+            <li class="passo">
+              <span class="passo__n" aria-hidden="true">04</span>
+              <div>
+                <h3>Experimente</h3>
+                <p>Explore as ferramentas listadas e os guias de pasta (Codex, Ollama, DeepSeek Harness, Dots, MCP, Fine-tuning, Plugins) e veja o que cabe no seu fluxo.</p>
+              </div>
+            </li>
+          </ol>
+          <div class="cta">
+            <a class="btn btn--play" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">Abrir no GitHub ↗</a>
+            <a class="btn btn--glass" href="#conteudo">Voltar ao topo</a>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
-    <div class="wrap footer__inner">
-      <nav class="footer__nav" aria-label="Links do projeto">
-        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribuir</a>
-        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/SECURITY.md" target="_blank" rel="noopener">Segurança</a>
-        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener">Código de Conduta</a>
-        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/LICENSE" target="_blank" rel="noopener">Licença MIT</a>
-        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/LICENSE-CC-BY-4.0.txt" target="_blank" rel="noopener">Conteúdo CC BY 4.0</a>
-      </nav>
-      <p>Feito com vibe coding · <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">SoftMissT/tudo-sobre-vibe-coding</a></p>
-      <p class="footer__note">Conteúdo do README, servido como página estática, sem framework.</p>
+    <div class="footer__brand">
+      <img src="assets/lumenn-wordmark-red-bg.png" alt="" width="639" height="212">
+      <span>Feito com vibe coding · <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">SoftMissT/tudo-sobre-vibe-coding</a></span>
     </div>
+    <nav aria-label="Links do projeto">
+      <ul class="footer__links">
+        <li><a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribuir</a></li>
+        <li><a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/SECURITY.md" target="_blank" rel="noopener">Segurança</a></li>
+        <li><a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener">Código de Conduta</a></li>
+        <li><a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/LICENSE" target="_blank" rel="noopener">Licença MIT</a></li>
+        <li><a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/LICENSE-CC-BY-4.0.txt" target="_blank" rel="noopener">Conteúdo CC BY 4.0</a></li>
+      </ul>
+    </nav>
+    <p>Conteúdo do README, servido como página estática, sem framework.</p>
   </footer>
 
   <script>
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.documentElement.classList.add('js-reveal');
-      const io = new IntersectionObserver((entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
-        }
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.band .wrap').forEach((el) => {
-        el.classList.add('revealable');
-        io.observe(el);
-      });
-    }
+    const nav=document.querySelector('.nav'), onScroll=()=>nav.classList.toggle('is-solid',scrollY>10);
+    addEventListener('scroll',onScroll,{passive:1});
+    onScroll();
+    if(!matchMedia('(prefers-reduced-motion:reduce)').matches) addEventListener('pointerdown',e=>{
+      const b=e.target.closest('.btn');
+      if(!b) return;
+      const r=b.getBoundingClientRect(), s=Math.max(r.width,r.height)*2, p=document.createElement('span');
+      p.className='ripple';
+      p.style.cssText=`width:${s}px;height:${s}px;left:${e.clientX-r.left-s/2}px;top:${e.clientY-r.top-s/2}px`;
+      b.appendChild(p);
+      setTimeout(()=>p.remove(),320);
+    });
+    document.querySelectorAll('.track').forEach(t=>{
+      const l=t.querySelector('.row__track'), d=l.clientWidth*.8, go=v=>()=>l.scrollBy({left:v*d,behavior:'smooth'});
+      t.querySelector('.row__arrow--prev')?.addEventListener('click',go(-1));
+      t.querySelector('.row__arrow--next')?.addEventListener('click',go(1));
+    });
   </script>
 </body>
 </html>
+

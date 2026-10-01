@@ -1,49 +1,61 @@
 # Agents
 
-Esta pasta reúne os arquivos `.soul.md` da Hive: personas de agentes que podem ser usadas como base para prompts de sistema, orquestração multiagente, workflows no Claude Code ou experimentos com agentes locais.
+Estrutura da pasta:
+
+```
+Agents/
+├── almas/                    # 20 almas (.soul.md) + _template — personas, NÃO são skills
+├── agentes/                  # fichas de skill da frota (status) — em construção
+├── tang-rou-foundry-agent/   # pacote completo da TANG-ROU: SKILL.md, soul, papéis .claude/agents/
+└── README.md
+```
+
+**Alma ≠ skill.** Uma alma é uma persona em `.soul.md`: voz, domínio e limites, útil como base de prompts e experimentos. Uma skill da frota executa de verdade: definição própria, pipeline e status de prontidão.
 
 ![Banner Hive](../assets/img/hive/banner_hive.webp)
 
+## Skills da frota
+
+| Skill | Status | Ficha | Pacote |
+|---|---|---|---|
+| TANG-ROU | pronta | [agentes/TANG-ROU.md](./agentes/TANG-ROU.md) | [`tang-rou-foundry-agent/`](./tang-rou-foundry-agent/) |
+| MAKO-MORI | em progresso | [agentes/MAKO-MORI.md](./agentes/MAKO-MORI.md) | `hive-mako-mori` (opencode) |
+| ARTEMIS | em progresso | [agentes/ARTEMIS.md](./agentes/ARTEMIS.md) | `artemis` (opencode) |
+| SAGA | em progresso | [agentes/SAGA.md](./agentes/SAGA.md) | `saga` (opencode) |
+
+## Almas disponíveis
+
+| Alma | Arquivo | Papel |
+|---|---|---|
+| AKENO | [almas/AKENO.soul.md](./almas/AKENO.soul.md) | Design, UI, direção visual e experiência. |
+| ALICE | [almas/ALICE.soul.md](./almas/ALICE.soul.md) | Análise, organização e suporte conceitual. |
+| ARTEMIS | [almas/ARTEMIS.soul.md](./almas/ARTEMIS.soul.md) | Estratégia, prompts visuais e direção criativa. |
+| ARTHUR | [almas/ARTHUR.soul.md](./almas/ARTHUR.soul.md) | Arquitetura, narrativa, RPG e sistemas. |
+| ASUNA | [almas/ASUNA.soul.md](./almas/ASUNA.soul.md) | Execução cuidadosa, suporte e clareza operacional. |
+| CARDINAL | [almas/CARDINAL.soul.md](./almas/CARDINAL.soul.md) | Lore, regras, continuidade e consistência. |
+| DOKJA | [almas/DOKJA.soul.md](./almas/DOKJA.soul.md) | Narrativa, leitura de sistemas e metacognição. |
+| GANDALF | [almas/GANDALF.soul.md](./almas/GANDALF.soul.md) | Mentoria, decisões difíceis e sabedoria estratégica. |
+| JIN | [almas/JIN.soul.md](./almas/JIN.soul.md) | Planejamento, decomposição de tarefas e execução. |
+| KIRITO | [almas/KIRITO.soul.md](./almas/KIRITO.soul.md) | Execução técnica, foco e combate a bloqueios. |
+| MAKO-MORI | [almas/MAKO-MORI.soul.md](./almas/MAKO-MORI.soul.md) | Orquestração, comando e síntese da frota. |
+| POWER | [almas/POWER.soul.md](./almas/POWER.soul.md) | Impacto visual, presença e energia criativa. |
+| SAGA | [almas/SAGA.soul.md](./almas/SAGA.soul.md) | Estratégia, estrutura e leitura de longo prazo. |
+| SHAKA | [almas/SHAKA.soul.md](./almas/SHAKA.soul.md) | Crítica, precisão e julgamento rigoroso. |
+| SINON | [almas/SINON.soul.md](./almas/SINON.soul.md) | Código, backend, precisão e solução técnica. |
+| SYLVIE | [almas/SYLVIE.soul.md](./almas/SYLVIE.soul.md) | Memória, restauração de contexto e continuidade. |
+| TESSIA | [almas/TESSIA.soul.md](./almas/TESSIA.soul.md) | Validação de intenção, integridade e alinhamento. |
+| XENOVIA | [almas/XENOVIA.soul.md](./almas/XENOVIA.soul.md) | Força operacional, segurança e decisão. |
+| YUI | [almas/YUI.soul.md](./almas/YUI.soul.md) | Cuidado, UX emocional e suporte discreto. |
+| YUNA | [almas/YUNA.soul.md](./almas/YUNA.soul.md) | QA, observabilidade, bugs e experiência do usuário. |
+
 ## Como usar
 
-1. Escolha um agente pelo papel que você precisa.
-2. Abra o arquivo `.soul.md` correspondente.
-3. Use o conteúdo como base de persona, instruções de sistema ou referência de comportamento.
-4. Para criar um agente novo, copie [_template.soul.md](./_template.soul.md) e preencha identidade, domínio, voz, limites e habilidades.
-
-## Agentes disponíveis
-
-| Agente | Arquivo | Uso principal |
-|---|---|---|
-| AKENO | [AKENO.soul.md](./AKENO.soul.md) | Design, UI, direção visual e experiência. |
-| ALICE | [ALICE.soul.md](./ALICE.soul.md) | Análise, organização e suporte conceitual. |
-| ARTEMIS | [ARTEMIS.soul.md](./ARTEMIS.soul.md) | Estratégia, prompts visuais e direção criativa. |
-| ARTHUR | [ARTHUR.soul.md](./ARTHUR.soul.md) | Arquitetura, narrativa, RPG e sistemas. |
-| ASUNA | [ASUNA.soul.md](./ASUNA.soul.md) | Execução cuidadosa, suporte e clareza operacional. |
-| CARDINAL | [CARDINAL.soul.md](./CARDINAL.soul.md) | Lore, regras, continuidade e consistência. |
-| DOKJA | [DOKJA.soul.md](./DOKJA.soul.md) | Narrativa, leitura de sistemas e metacognição. |
-| GANDALF | [GANDALF.soul.md](./GANDALF.soul.md) | Mentoria, decisões difíceis e sabedoria estratégica. |
-| JIN | [JIN.soul.md](./JIN.soul.md) | Planejamento, decomposição de tarefas e execução. |
-| KIRITO | [KIRITO.soul.md](./KIRITO.soul.md) | Execução técnica, foco e combate a bloqueios. |
-| MAKO-MORI | [MAKO-MORI.soul.md](./MAKO-MORI.soul.md) | Orquestração, comando e síntese da frota. |
-| POWER | [POWER.soul.md](./POWER.soul.md) | Impacto visual, presença e energia criativa. |
-| SAGA | [SAGA.soul.md](./SAGA.soul.md) | Estratégia, estrutura e leitura de longo prazo. |
-| SHAKA | [SHAKA.soul.md](./SHAKA.soul.md) | Crítica, precisão e julgamento rigoroso. |
-| SINON | [SINON.soul.md](./SINON.soul.md) | Código, backend, precisão e solução técnica. |
-| SYLVIE | [SYLVIE.soul.md](./SYLVIE.soul.md) | Memória, restauração de contexto e continuidade. |
-| TANG-ROU | [TANG-ROU.soul.md](./TANG-ROU.soul.md) | Automação, macros, Foundry VTT e otimização. |
-| TESSIA | [TESSIA.soul.md](./TESSIA.soul.md) | Validação de intenção, integridade e alinhamento. |
-| XENOVIA | [XENOVIA.soul.md](./XENOVIA.soul.md) | Força operacional, segurança e decisão. |
-| YUI | [YUI.soul.md](./YUI.soul.md) | Cuidado, UX emocional e suporte discreto. |
-| YUNA | [YUNA.soul.md](./YUNA.soul.md) | QA, observabilidade, bugs e experiência do usuário. |
+1. Precisa que algo execute? Comece pelas [skills da frota](./agentes/) — confira o status.
+2. Quer só uma persona? Escolha uma alma pelo papel e use o `.soul.md` como base de prompt.
+3. Para criar uma alma nova, copie [`almas/_template.soul.md`](./almas/_template.soul.md) e preencha identidade, domínio, voz, limites e habilidades.
 
 ## Convenções
 
-- Cada agente vive em um arquivo `NOME.soul.md`.
-- O template base fica em [_template.soul.md](./_template.soul.md).
+- Alma vira `almas/NOME.soul.md`; skill da frota vira `agentes/NOME.md` + skill correspondente.
 - Mantenha domínio, voz, limites e gatilhos claros.
-- Evite duplicar agentes com o mesmo papel sem explicar a diferença.
-
-## Relação com o Hive
-
-Os agentes desta pasta formam a camada de personas da Hive. Eles podem ser combinados com blueprints, skills e GPTs personalizados para construir fluxos mais ricos, mantendo intenção, memória e especialização visíveis em Markdown.
+- Evite duplicar almas com o mesmo papel sem explicar a diferença.

@@ -104,7 +104,8 @@ Duas leituras do mesmo repositório: escolha a que te interessa agora.
 | :--- | :--- | :--- |
 | **Filosofia e execução** | [GSD 2/](./GSD%202/) | Spec-driven development: nenhuma linha sem `SPEC.md`. |
 | **Memória persistente** | [Claude Code/Configuração de Memória Persistente.md](./Claude%20Code/Configura%C3%A7%C3%A3o%20de%20Mem%C3%B3ria%20Persistente.md) | `primer.md`, histórico e autoaprendizado. |
-| **Orquestração de agentes** | [Agents/](./Agents/) | Os 21 `.soul.md` da frota Hive. |
+| **Orquestração de agentes** | [Agents/](./Agents/) | 4 skills da frota e 20 almas (`.soul.md`) da frota Hive. |
+| **Skills portáteis** | [Skills/](./Skills/) | 14 skills (`SKILL.md`) para harnesses e agentes: design, subagentes, Obsidian, TypeSafe. |
 | **Conectores e ferramentas** | [MCP/](./MCP/) | Model Context Protocol do conceito ao primeiro servidor, com configs por cliente. |
 | **Distribuição de capacidade** | [Plugins/](./Plugins/) | Comparativo dos 5 sistemas de plugin e a migração dos GPTs. |
 | **Treinar modelos** | [Fine-tuning/](./Fine-tuning/) | Quando fine-tunar x RAG x prompt, com pipeline local até o Ollama. |
@@ -256,31 +257,30 @@ A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne ski
 
 ![Banner Hive](./assets/img/hive/banner_hive.webp)
 
-A pasta [Agents](./Agents/) reúne os **21 arquivos `.soul.md`** da frota Hive: personas prontas para quem quiser estudar, adaptar ou usar agentes em seus próprios fluxos de IA.
+A pasta [Agents](./Agents/) reúne as **20 almas (`.soul.md`)** da frota Hive — mais o [`_template`](./Agents/almas/_template.soul.md) para criar novas — personas prontas para quem quiser estudar, adaptar ou usar em seus próprios fluxos de IA — e as **4 skills da frota** ([`Agents/agentes/`](./Agents/agentes/)), com definição executável e status de prontidão. Alma não é skill: skill executa, alma inspira.
 
-| Agente | Função |
+| Alma | Função |
 | :--- | :--- |
-| [MAKO-MORI](./Agents/MAKO-MORI.soul.md) | Comandante e orquestradora da frota. |
-| [SAGA](./Agents/SAGA.soul.md) | Estratégia, estrutura e leitura de longo prazo. |
-| [AKENO](./Agents/AKENO.soul.md) | Direção visual, UI e design. |
-| [SHAKA](./Agents/SHAKA.soul.md) | Crítica, precisão e julgamento rigoroso. |
-| [ALICE](./Agents/ALICE.soul.md) | Análise, organização e suporte conceitual. |
-| [SINON](./Agents/SINON.soul.md) | Programação, backend e precisão técnica. |
-| [ARTEMIS](./Agents/ARTEMIS.soul.md) | Estratégia, prompts visuais e direção criativa. |
-| [SYLVIE](./Agents/SYLVIE.soul.md) | Memória, restauração de contexto e continuidade. |
-| [ARTHUR](./Agents/ARTHUR.soul.md) | Arquitetura, narrativa, RPG e sistemas. |
-| [TANG-ROU](./Agents/TANG-ROU.soul.md) | Automação, macros, Foundry VTT e otimização. |
-| [ASUNA](./Agents/ASUNA.soul.md) | Execução cuidadosa, suporte e clareza operacional. |
-| [TESSIA](./Agents/TESSIA.soul.md) | Validação de intenção, integridade e alinhamento. |
-| [CARDINAL](./Agents/CARDINAL.soul.md) | Lore, consistência e regras do mundo. |
-| [XENOVIA](./Agents/XENOVIA.soul.md) | Força operacional, segurança e decisão. |
-| [DOKJA](./Agents/DOKJA.soul.md) | Narrativa, leitura de sistemas e metacognição. |
-| [YUI](./Agents/YUI.soul.md) | Cuidado, UX emocional e suporte discreto. |
-| [GANDALF](./Agents/GANDALF.soul.md) | Mentoria, decisões difíceis e sabedoria estratégica. |
-| [YUNA](./Agents/YUNA.soul.md) | QA, observabilidade, bugs e experiência do usuário. |
-| [JIN](./Agents/JIN.soul.md) | Planejamento, decomposição de tarefas e execução. |
-| [KIRITO](./Agents/KIRITO.soul.md) | Execução técnica, foco e combate a bloqueios. |
-| [POWER](./Agents/POWER.soul.md) | Impacto visual, presença e energia criativa. |
+| [MAKO-MORI](./Agents/almas/MAKO-MORI.soul.md) | Comandante e orquestradora da frota. |
+| [SAGA](./Agents/almas/SAGA.soul.md) | Estratégia, estrutura e leitura de longo prazo. |
+| [AKENO](./Agents/almas/AKENO.soul.md) | Direção visual, UI e design. |
+| [SHAKA](./Agents/almas/SHAKA.soul.md) | Crítica, precisão e julgamento rigoroso. |
+| [ALICE](./Agents/almas/ALICE.soul.md) | Análise, organização e suporte conceitual. |
+| [SINON](./Agents/almas/SINON.soul.md) | Programação, backend e precisão técnica. |
+| [ARTEMIS](./Agents/almas/ARTEMIS.soul.md) | Estratégia, prompts visuais e direção criativa. |
+| [SYLVIE](./Agents/almas/SYLVIE.soul.md) | Memória, restauração de contexto e continuidade. |
+| [ARTHUR](./Agents/almas/ARTHUR.soul.md) | Arquitetura, narrativa, RPG e sistemas. |
+| [ASUNA](./Agents/almas/ASUNA.soul.md) | Execução cuidadosa, suporte e clareza operacional. |
+| [TESSIA](./Agents/almas/TESSIA.soul.md) | Validação de intenção, integridade e alinhamento. |
+| [CARDINAL](./Agents/almas/CARDINAL.soul.md) | Lore, consistência e regras do mundo. |
+| [XENOVIA](./Agents/almas/XENOVIA.soul.md) | Força operacional, segurança e decisão. |
+| [DOKJA](./Agents/almas/DOKJA.soul.md) | Narrativa, leitura de sistemas e metacognição. |
+| [YUI](./Agents/almas/YUI.soul.md) | Cuidado, UX emocional e suporte discreto. |
+| [GANDALF](./Agents/almas/GANDALF.soul.md) | Mentoria, decisões difíceis e sabedoria estratégica. |
+| [YUNA](./Agents/almas/YUNA.soul.md) | QA, observabilidade, bugs e experiência do usuário. |
+| [JIN](./Agents/almas/JIN.soul.md) | Planejamento, decomposição de tarefas e execução. |
+| [KIRITO](./Agents/almas/KIRITO.soul.md) | Execução técnica, foco e combate a bloqueios. |
+| [POWER](./Agents/almas/POWER.soul.md) | Impacto visual, presença e energia criativa. |
 
 **Guia da pasta:** [Agents/README.md](./Agents/README.md)
 

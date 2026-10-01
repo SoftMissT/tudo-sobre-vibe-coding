@@ -33,18 +33,6 @@ def ram_reserve(total_gb):
     return min(max(total_gb * 0.25, RAM_RESERVE_MIN), RAM_RESERVE_MAX)
 
 
-def usable_mem(total_gb, reserve):
-    return max(total_gb - reserve, 0.0)
-
-
-def fits(size_gb, usable_gb):
-    return size_gb <= usable_gb
-
-
-def recommend(usable_gb):
-    return [m for m in MODELS if fits(m[0], usable_gb)]
-
-
 def detect_ram():
     """→ (total_gb, livre_gb). livre pode ser None quando não detectável."""
     sysname = platform.system()
@@ -131,13 +119,13 @@ def self_test():
     assert round(ram_reserve(8), 1) == 2.0
     assert round(ram_reserve(16), 1) == 4.0
     assert round(ram_reserve(4), 1) == 1.0
-    assert usable_mem(16, 4) == 12.0
-    assert not fits(9.0, 6.5)
-    assert fits(4.7, 6.5)
-    tags = [m[1] for m in recommend(6.5)]
+    assert max(16 - 4, 0.0) == 12.0
+    assert not 9.0 <= 6.5
+    assert 4.7 <= 6.5
+    tags = [m[1] for m in MODELS if m[0] <= 6.5]
     assert "llama3.1:8b" in tags and "qwen2.5:14b" not in tags
-    assert len(recommend(100)) == len(MODELS)
-    assert recommend(2.5) != []
+    assert len([m for m in MODELS if m[0] <= 100]) == len(MODELS)
+    assert any(m[0] <= 2.5 for m in MODELS)
     print("self-test OK (10 asserções)")
 
 
@@ -188,7 +176,7 @@ def main():
         return 1
 
     reserve = ram_reserve(total_ram)
-    cpu_usable = usable_mem(total_ram, reserve)
+    cpu_usable = max(total_ram - reserve, 0.0)
 
     best_gpu, gpu_usable = None, 0.0
     unified = platform.system() == "Darwin"
@@ -196,10 +184,10 @@ def main():
         effective = vram if vram else (total_ram if unified else 0.0)
         if effective > gpu_usable:
             best_gpu, gpu_usable = name, effective
-    gpu_usable = usable_mem(gpu_usable, VRAM_RESERVE if best_gpu and not unified else 0.0)
+    gpu_usable = max(gpu_usable - (VRAM_RESERVE if best_gpu and not unified else 0.0), 0.0)
 
-    gpu_fit = [m for m in MODELS if fits(m[0], gpu_usable)]
-    cpu_fit = [m for m in MODELS if fits(m[0], cpu_usable)]
+    gpu_fit = [m for m in MODELS if m[0] <= gpu_usable]
+    cpu_fit = [m for m in MODELS if m[0] <= cpu_usable]
 
     print("\n--- NO SEU PC VOCÊ CONSEGUE RODAR ---")
     if gpu_fit:

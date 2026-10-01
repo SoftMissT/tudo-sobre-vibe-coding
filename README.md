@@ -6,8 +6,12 @@
 [![Forks](https://img.shields.io/github/forks/SoftMissT/tudo-sobre-vibe-coding?style=flat-square)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/network/members)
 [![Issues](https://img.shields.io/github/issues/SoftMissT/tudo-sobre-vibe-coding?style=flat-square)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/issues)
 [![Last commit](https://img.shields.io/github/last-commit/SoftMissT/tudo-sobre-vibe-coding?style=flat-square)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/commits/main)
+[![Website](https://img.shields.io/badge/site-GitHub%20Pages-c026d3?style=flat-square)](https://softmisst.github.io/tudo-sobre-vibe-coding/)
+[![License: MIT + CC BY 4.0](https://img.shields.io/badge/license-MIT%20%2B%20CC%20BY%204.0-86efac?style=flat-square)](./LICENSE)
 
 **Um hub de conhecimento sobre programação guiada por IA, orquestração de agentes e engenharia de contexto.**
+
+> 🌐 **Site ao vivo:** [softmisst.github.io/tudo-sobre-vibe-coding](https://softmisst.github.io/tudo-sobre-vibe-coding/) — este README servido como página estática (GitHub Pages).
 
 Este repositório reúne guias, configurações e experimentos focados em workflows de desenvolvimento onde a IA não é apenas uma ferramenta, mas uma parceira colaborativa. Exploramos conceitos como memória persistente para agentes, desenvolvimento orientado por especificações (Spec-Driven) e orquestração multi-agente.
 
@@ -25,6 +29,7 @@ Este repositório reúne guias, configurações e experimentos focados em workfl
 - [🌐 Agents](#agents)
 - [🎲 Foundry VTT](#foundry-vtt)
 - [🚀 Como Começar](#como-começar)
+- [🤝 Comunidade e Licença](#comunidade-e-licença)
 
 ---
 
@@ -227,3 +232,17 @@ Módulos desenvolvidos para Foundry VTT, mantidos no GitHub [SoftMissT](https://
 2. **Configure a Memória:** Siga o guia em `Claude Code/Configuração de Memória Persistente.md` para criar a estrutura de memória no seu projeto.
 3. **Adote o Workflow:** Comece a usar o ciclo **Planejar ➔ Executar ➔ Verificar** em suas tarefas, documentando os planos em `tasks/todo.md` e as lições em `tasks/lessons.md`.
 4. **Experimente:** Explore as ferramentas listadas para ver como elas podem aprimorar seu fluxo de trabalho.
+
+---
+
+## 🤝 Comunidade e Licença
+
+| | |
+| :--- | :--- |
+| **Contribuir** | [CONTRIBUTING.md](./CONTRIBUTING.md) · abrir issues e PRs |
+| **Conduta** | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) |
+| **Segurança** | [SECURITY.md](./SECURITY.md) — reporte vulnerabilidades em privado |
+| **Forks** | [FORKS.md](./FORKS.md) — política permissiva com checklist |
+| **Changelog** | [CHANGELOG.md](./CHANGELOG.md) |
+
+**Licença dual:** código sob [MIT](./LICENSE), conteúdo sob [CC BY 4.0](./LICENSE-CC-BY-4.0.txt).

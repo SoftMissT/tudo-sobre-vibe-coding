@@ -7,8 +7,15 @@
   <meta name="description" content="Hub de conhecimento sobre vibe coding: GSD, memória persistente, orquestração de agentes, skills e ferramentas para desenvolvimento guiado por IA.">
   <meta property="og:title" content="Tudo Sobre Vibe Coding">
   <meta property="og:description" content="Programação guiada por IA, orquestração de agentes e engenharia de contexto.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/SoftMissT/tudo-sobre-vibe-coding/main/assets/img/banner-header.png">
-  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/SoftMissT/tudo-sobre-vibe-coding/main/assets/img/banner-header.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://softmisst.github.io/tudo-sobre-vibe-coding/">
+    <meta property="og:site_name" content="Tudo Sobre Vibe Coding">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tudo Sobre Vibe Coding — Programação guiada por IA">
+    <meta name="twitter:description" content="Hub de conhecimento sobre vibe coding: GSD, memória persistente, orquestração de agentes, skills e ferramentas para desenvolvimento guiado por IA.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/SoftMissT/tudo-sobre-vibe-coding/main/assets/img/banner-header.png">
   <meta name="theme-color" content="#0b0e12">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +28,7 @@
 
   <header class="topbar">
     <div class="wrap topbar__inner">
-      <a class="topbar__brand" href="#">VIBE<span>CODING</span></a>
+      <a class="topbar__brand" href="./">VIBE<span>CODING</span></a>
       <nav class="topbar__nav" aria-label="Navegação principal">
         <a href="#filosofia">Filosofia</a>
         <a href="#pilares">Pilares</a>
@@ -35,8 +42,8 @@
 
   <main id="conteudo">
     <section class="hero" aria-labelledby="hero-titulo">
-      <div class="hero__img" role="img" aria-label="Banner: MAKO-MORI — Link-Start, a rede de agentes">
-        <img src="assets/img/banner-header.png" alt="Banner da frota de agentes MAKO-MORI em estilo cyberpunk com o texto Link-Start" fetchpriority="high">
+      <div class="hero__img">
+        <img src="assets/img/banner-header.webp" alt="Banner da frota de agentes MAKO-MORI em estilo cyberpunk com o texto Link-Start" fetchpriority="high" width="1672" height="941">
       </div>
       <div class="wrap hero__grid">
         <div class="hero__text">
@@ -198,9 +205,31 @@
 
   <footer class="footer">
     <div class="wrap footer__inner">
+      <nav class="footer__nav" aria-label="Links do projeto">
+        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribuir</a>
+        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/SECURITY.md" target="_blank" rel="noopener">Segurança</a>
+        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener">Código de Conduta</a>
+        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/LICENSE" target="_blank" rel="noopener">Licença MIT</a>
+        <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/blob/main/LICENSE-CC-BY-4.0.txt" target="_blank" rel="noopener">Conteúdo CC BY 4.0</a>
+      </nav>
       <p>Feito com vibe coding · <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">SoftMissT/tudo-sobre-vibe-coding</a></p>
       <p class="footer__note">Conteúdo do README, servido como página estática — sem framework.</p>
     </div>
   </footer>
+
+  <script>
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-reveal');
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        }
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.band .wrap').forEach((el) => {
+        el.classList.add('revealable');
+        io.observe(el);
+      });
+    }
+  </script>
 </body>
 </html>

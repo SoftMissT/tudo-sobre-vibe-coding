@@ -1,0 +1,16 @@
+name: Sugestão
+description: Propor melhoria, novo conteúdo ou recurso
+labels: [enhancement]
+body:
+  - type: textarea
+    id: ideia
+    attributes:
+      label: O que você sugere?
+      description: Descreva a ideia e o problema que ela resolve.
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+      description: Opcional — soluções que você já pensou.

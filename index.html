@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tudo Sobre Vibe Coding — Programação guiada por IA</title>
+  <meta name="description" content="Hub de conhecimento sobre vibe coding: GSD, memória persistente, orquestração de agentes, skills e ferramentas para desenvolvimento guiado por IA.">
+  <meta property="og:title" content="Tudo Sobre Vibe Coding">
+  <meta property="og:description" content="Programação guiada por IA, orquestração de agentes e engenharia de contexto.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/SoftMissT/tudo-sobre-vibe-coding/main/assets/img/banner-header.png">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b0e12">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="topbar__brand" href="#">VIBE<span>CODING</span></a>
+      <nav class="topbar__nav" aria-label="Navegação principal">
+        <a href="#filosofia">Filosofia</a>
+        <a href="#pilares">Pilares</a>
+        <a href="#ecossistema">Ferramentas</a>
+        <a href="#foundry">Foundry</a>
+        <a href="#comecar">Começar</a>
+      </nav>
+      <a class="topbar__cta" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero__img" role="img" aria-label="Banner: MAKO-MORI — Link-Start, a rede de agentes">
+        <img src="assets/img/banner-header.png" alt="Banner da frota de agentes MAKO-MORI em estilo cyberpunk com o texto Link-Start" fetchpriority="high">
+      </div>
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="kicker">Hub de conhecimento · Open source</p>
+          <h1 id="hero-titulo">A vibe é sua.<br><em>A frota codifica.</em></h1>
+          <p class="hero__lead">Programação guiada por IA, orquestração de agentes e engenharia de contexto — do spec ao deploy, com memória que nunca esquece.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#comecar">Como começar</a>
+            <a class="btn btn--ghost" href="#filosofia">A filosofia</a>
+          </div>
+        </div>
+        <aside class="hero__panel" aria-label="Resumo do ecossistema">
+          <div class="stat"><span class="stat__num">3</span><span class="stat__lbl">pilares: GSD, memória, orquestração</span></div>
+          <div class="stat"><span class="stat__num">5</span><span class="stat__lbl">agentes na frota Hive</span></div>
+          <div class="stat"><span class="stat__num">9</span><span class="stat__lbl">módulos próprios de Foundry VTT</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="band" id="filosofia" aria-labelledby="filosofia-titulo">
+      <div class="wrap">
+        <p class="kicker">🧠 A filosofia</p>
+        <h2 id="filosofia-titulo">O que é “Vibe Coding”?</h2>
+        <blockquote class="quote">
+          <p>Você define a <strong>vibe</strong> — a visão, as especificações e as regras — e uma orquestra de agentes de IA executa as tarefas, mantendo o contexto e aprendendo continuamente. O desenvolvedor deixa de ser codificador e vira <strong>arquiteto de sistemas cognitivos</strong>.</p>
+        </blockquote>
+        <div class="pilares" id="pilares">
+          <article class="pilar pilar--gsd">
+            <h3><span aria-hidden="true">①</span> GSD</h3>
+            <p class="pilar__sub">Get Shit Done</p>
+            <p>Nenhuma linha de código sem uma <code>SPEC.md</code> aprovada. Construir a coisa certa, não apenas construir rápido — fases com plano, execução e verificação empírica.</p>
+          </article>
+          <article class="pilar pilar--mem">
+            <h3><span aria-hidden="true">②</span> Memória</h3>
+            <p class="pilar__sub">Persistente</p>
+            <p>Três arquivos simples — <code>primer.md</code>, <code>.claude-memory.md</code> e <code>tasks/lessons.md</code> — dão à IA estado atual, histórico e autoaprendizado a cada sessão.</p>
+          </article>
+          <article class="pilar pilar--orq">
+            <h3><span aria-hidden="true">③</span> Orquestração</h3>
+            <p class="pilar__sub">Workflow colaborativo</p>
+            <p>Planejar ➔ executar ➔ verificar. Planos em <code>tasks/todo.md</code>, lições em <code>tasks/lessons.md</code>, sub-agentes para o que é complexo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--alt" id="ecossistema" aria-labelledby="eco-titulo">
+      <div class="wrap">
+        <p class="kicker">🛠️ Ecossistema</p>
+        <h2 id="eco-titulo">Ferramentas que se encaixam na filosofia</h2>
+        <ul class="cards">
+          <li class="card">
+            <a href="https://github.com/gsd-build/gsd-2" target="_blank" rel="noopener">
+              <span class="card__tag">Core</span>
+              <strong>gsd-build/gsd-2</strong>
+              <span>Implementação de referência do framework GSD (Spec-Driven).</span>
+            </a>
+          </li>
+          <li class="card">
+            <a href="https://github.com/upstash/context7" target="_blank" rel="noopener">
+              <span class="card__tag">Contexto</span>
+              <strong>upstash/context7</strong>
+              <span>Documentação de código atualizada, injetada direto nos prompts.</span>
+            </a>
+          </li>
+          <li class="card">
+            <a href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener">
+              <span class="card__tag">Memória</span>
+              <strong>akitaonrails/ai-memory</strong>
+              <span>Memória de longo prazo com handoff entre fornecedores de IA (Rust).</span>
+            </a>
+          </li>
+          <li class="card">
+            <a href="https://github.com/HKUDS/LightRAG" target="_blank" rel="noopener">
+              <span class="card__tag">RAG</span>
+              <strong>HKUDS/LightRAG</strong>
+              <span>Framework para construir pipelines de RAG.</span>
+            </a>
+          </li>
+          <li class="card">
+            <a href="https://github.com/uphiago/recon-skills" target="_blank" rel="noopener">
+              <span class="card__tag">Skills</span>
+              <strong>uphiago/recon-skills</strong>
+              <span>Recon e pentest: CORS, XSS, SQLi, SSRF, RCE, WordPress, MCP, cloud.</span>
+            </a>
+          </li>
+          <li class="card">
+            <a href="https://github.com/akitaonrails/ai-jail" target="_blank" rel="noopener">
+              <span class="card__tag">Segurança</span>
+              <strong>akitaonrails/ai-jail</strong>
+              <span>Sandbox multiplataforma para rodar agentes com restrições firmes.</span>
+            </a>
+          </li>
+        </ul>
+        <p class="more"><a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding#ecossistema-de-ferramentas-e-recursos" target="_blank" rel="noopener">Ver a lista completa no README →</a></p>
+      </div>
+    </section>
+
+    <section class="band" id="agents" aria-labelledby="agents-titulo">
+      <div class="wrap split">
+        <div class="split__media">
+          <img src="assets/img/hive/banner_hive.webp" alt="Banner da Hive: frota de agentes em arte cyberpunk com a lista MAKO-MORI, AKENO, ARTHUR, SINON e CARDINAL" loading="lazy">
+        </div>
+        <div class="split__body">
+          <p class="kicker">🌐 Agents</p>
+          <h2 id="agents-titulo">A frota Hive</h2>
+          <p>Cinco agentes com papéis definidos, prontos para estudar, adaptar ou adotar. Arquivos <code>.soul.md</code> abertos no repositório.</p>
+          <ul class="frota">
+            <li><strong>MAKO-MORI</strong><span>Comandante e orquestradora</span></li>
+            <li><strong>AKENO</strong><span>Direção visual, UI e design</span></li>
+            <li><strong>ARTHUR</strong><span>Arquitetura, narrativa e sistemas</span></li>
+            <li><strong>SINON</strong><span>Programação, backend e precisão técnica</span></li>
+            <li><strong>CARDINAL</strong><span>Lore, consistência e regras do mundo</span></li>
+          </ul>
+          <a class="btn btn--ghost" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Agents" target="_blank" rel="noopener">Ver os .soul.md ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--alt" id="foundry" aria-labelledby="foundry-titulo">
+      <div class="wrap">
+        <p class="kicker">🎲 Foundry VTT</p>
+        <h2 id="foundry-titulo">Módulos próprios</h2>
+        <img class="band__banner" src="assets/img/banner-04-foundry-vtt.webp" alt="Banner dos módulos Foundry VTT" loading="lazy">
+        <p class="band__lead">Nove módulos desenvolvidos para a mesa — do diagnóstico de conexão ao celular diegético.</p>
+        <ul class="mods">
+          <li><a href="https://github.com/SoftMissT/foundry-vtt-connection-guard" target="_blank" rel="noopener"><strong>Connection Guard: Abyss Link</strong><span>Latência, degradação preditiva e reconexão automática.</span></a></li>
+          <li><a href="https://github.com/SoftMissT/FoundryVTT-BatataOuN-o-V2" target="_blank" rel="noopener"><strong>Batata Ou Não</strong><span>Configura os gráficos conforme o PC do jogador.</span></a></li>
+          <li><a href="https://github.com/SoftMissT/Lumenn-Frame" target="_blank" rel="noopener"><strong>Lumenn Frame</strong><span>Editor de grafo cinemático de cenas e áudio.</span></a></li>
+          <li><a href="https://github.com/SoftMissT/lumenn-notify" target="_blank" rel="noopener"><strong>Lumenn Notify</strong><span>Mensagens narrativas, perfis e canais (v14+).</span></a></li>
+          <li><a href="https://github.com/SoftMissT/Lumenn-phone-hub" target="_blank" rel="noopener"><strong>Lumenn Phone Hub</strong><span>Celular diegético: msgs, redes, banco, notícias.</span></a></li>
+          <li><a href="https://github.com/SoftMissT/lumenn-lightweight" target="_blank" rel="noopener"><strong>Lumenn Lightweight</strong><span>Otimização de imagens em lote para WebP.</span></a></li>
+          <li><a href="https://github.com/SoftMissT/lumenn-roll-relay" target="_blank" rel="noopener"><strong>Lumenn Roll Relay</strong><span>Rolagens retransmitidas ao Discord com leaderboard.</span></a></li>
+          <li><a href="https://github.com/SoftMissT/night-assassins-csb-automation" target="_blank" rel="noopener"><strong>NS CSB Automation</strong><span>Rolagens e Habilidades Especiais para CSB.</span></a></li>
+          <li><a href="https://github.com/SoftMissT/night-assassins-system" target="_blank" rel="noopener"><strong>Night Assassins System</strong><span>Sistema completo para Foundry v14.</span></a></li>
+        </ul>
+        <p class="more"><a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding/tree/main/Foundry" target="_blank" rel="noopener">Guias de Foundry (ngrok, hospedagem) →</a></p>
+      </div>
+    </section>
+
+    <section class="band" id="comecar" aria-labelledby="comecar-titulo">
+      <div class="wrap narrow">
+        <p class="kicker">🚀 Como começar</p>
+        <h2 id="comecar-titulo">Quatro passos</h2>
+        <img class="band__banner" src="assets/img/banner-05-como-comecar.webp" alt="Banner Como Começar" loading="lazy">
+        <ol class="passos">
+          <li><strong>Estude a filosofia</strong><span>Leia <code>Claude Code</code> e <code>GSD 2</code> para internalizar os conceitos.</span></li>
+          <li><strong>Configure a memória</strong><span>Siga o guia de memória persistente e crie a estrutura no seu projeto.</span></li>
+          <li><strong>Adote o workflow</strong><span>Ciclo <strong>Planejar ➔ Executar ➔ Verificar</strong>, com planos e lições documentados.</span></li>
+          <li><strong>Experimente</strong><span>Explore as ferramentas listadas e veja o que cabe no seu fluxo.</span></li>
+        </ol>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">Abrir no GitHub ↗</a>
+          <a class="btn btn--ghost" href="#conteudo">Voltar ao topo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>Feito com vibe coding · <a href="https://github.com/SoftMissT/tudo-sobre-vibe-coding" target="_blank" rel="noopener">SoftMissT/tudo-sobre-vibe-coding</a></p>
+      <p class="footer__note">Conteúdo do README, servido como página estática — sem framework.</p>
+    </div>
+  </footer>
+</body>
+</html>

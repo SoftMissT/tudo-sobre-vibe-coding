@@ -3,6 +3,28 @@
 Todas as mudanças notáveis deste repositório.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [1.1.0] - 2026-10-01
+
+### Adicionado
+
+- Guia `GSD 2/README.md` com o estado atual do GSD (`open-gsd/gsd-pi`, `gsd-core`, comandos e workflow)
+- `Claude Code/Configuração de Memória Persistente.md` — guia das duas camadas de memória (3 arquivos manuais + `/memory`, `#`, `CLAUDE.md`, `.claude/rules/`)
+- READMEs-guia explicando e orientando em `Claude Code/`, `Foundry/` e `Geração de imagens/`
+- 11 repositórios novos no ecossistema: `open-gsd/gsd-pi`, `open-gsd/gsd-core`, `affaan-m/ECC`, `tamaratran/fast-jev-compaction`, `supermemoryai/supermemory`, `RyanCodrai/turbovec`, `nexu-io/open-design`, `eugeniughelbur/obsidian-second-brain`, `NamVr/DiscordBot-Template`, `Mini-Kraken/Bot-Template`, `dice-roller/rpg-dice-roller`
+- Seções **Design e Mídia com Agentes** e **Automação e Bots** no README
+
+### Atualizado
+
+- Frota de 5 → **21 agentes** no README e na landing page (lista completa, stats e grid em 2 colunas)
+- Links do GSD → `open-gsd/gsd-pi` (o antigo `gsd-build/gsd-2` foi movido)
+- `safishamsi/graphify` → `Graphify-Labs/graphify` e `everything-claude-code` → `ECC` (renomeações oficiais)
+- `Claude Code/Claude.md` com o Claude Code atual: `AGENTS.md`, `.claude/rules/`, skills = slash commands
+- Banners da Hive e dos GPTs nos READMEs das pastas agora usam imagens locais (`assets/img/`)
+
+### Removido
+
+- `GSD 2/GSD_2.md` — snapshot obsoleto (estatísticas antigas + resíduo de transcrição de LLM)
+
 ## [1.0.0] - 2026-10-01
 
 ### Adicionado

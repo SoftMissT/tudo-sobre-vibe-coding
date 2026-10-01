@@ -369,17 +369,20 @@ code {
   list-style: none;
   margin: 1.5rem 0 2rem;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  column-gap: 2rem;
 }
 .frota li {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.7rem 0;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.55rem 0;
   border-bottom: 1px dashed var(--line);
 }
 .frota li:last-child { border-bottom: 0; }
 .frota strong { color: var(--accent-soft); letter-spacing: 0.04em; }
-.frota span { color: var(--ink-dim); text-align: right; font-size: 0.95rem; }
+.frota span { color: var(--ink-dim); text-align: left; font-size: 0.95rem; }
 
 /* módulos foundry */
 .mods {

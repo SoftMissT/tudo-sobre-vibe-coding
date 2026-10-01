@@ -51,7 +51,7 @@ Os três pilares deste ecossistema são:
 
 ### 1. GSD (Get Shit Done): O Framework de Execução
 
-Inspirado no [gsd-build/gsd-2](https://github.com/gsd-build/gsd-2), o GSD é uma abordagem de **desenvolvimento orientado por especificações (Spec-Driven Development)**.
+Inspirado no [open-gsd/gsd-pi](https://github.com/open-gsd/gsd-pi) (continuação oficial do GSD 2; o GSD clássico vive em [open-gsd/gsd-core](https://github.com/open-gsd/gsd-core)), o GSD é uma abordagem de **desenvolvimento orientado por especificações (Spec-Driven Development)**.
 
 * **Filosofia:** Nenhuma linha de código é escrita sem uma especificação (`SPEC.md`) clara e aprovada. O foco é construir a coisa certa, em vez de construir rápido.
 * **Processo:** O trabalho é dividido em fases, cada uma com seu próprio plano, execução e verificação, garantindo que os resultados sejam validados empiricamente contra os critérios de aceite.
@@ -88,7 +88,10 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 
 ### Frameworks e Sistemas Core
 
-* [gsd-build/gsd-2](https://github.com/gsd-build/gsd-2): A implementação de referência do framework GSD.
+| Repositório | O quê |
+| :--- | :--- |
+| [open-gsd/gsd-pi](https://github.com/open-gsd/gsd-pi) | **Casa atual do GSD** — meta-prompting, context engineering e spec-driven development para agentes autônomos ([guia local](./GSD%202/)). |
+| [open-gsd/gsd-core](https://github.com/open-gsd/gsd-core) | Evolução do GSD clássico (64k+ ⭐) — comandos e workflows para Claude Code. |
 
 ### Desenvolvimento de Agentes e Skills
 
@@ -98,6 +101,7 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | Coleção de "skills" para o Claude extensibilidade de agentes. |
 | [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | Inspiração para conectar skills a uma base de conhecimento. |
 | [uphiago/recon-skills](https://github.com/uphiago/recon-skills) | Skills de recon e pentest: CORS, XSS, SQLi, SSRF, RCE, WordPress, MCP, cloud. Testado em campo, MIT. |
+| [affaan-m/ECC](https://github.com/affaan-m/ECC) | Otimização de harness de agente: skills, instintos, memória e segurança para Claude Code, Codex, OpenCode e Cursor (antes `everything-claude-code`). |
 
 ### Engenharia de Contexto e RAG (Retrieval-Augmented Generation)
 
@@ -106,11 +110,26 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 | [upstash/context7](https://github.com/upstash/context7) | Documentação de código atualizada e específica de versão, injetada direto nos prompts de LLMs. |
 | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) | Framework para construir pipelines de RAG. |
 | [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory) | Memória de longo prazo para CLIs de agente, com handoff entre fornecedores de IA (Rust). |
+| [tamaratran/fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) | Plugin Claude Code que substitui o resumo de compactação por decisões pontuadas — descarta o obsoleto, mantém verbatim o que importa. |
+| [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) | Motor de memória e contexto para a era da IA — rápida, escalável e rodando 100% local. |
+| [RyanCodrai/turbovec](https://github.com/RyanCodrai/turbovec) | Índice vetorial em Rust com bindings Python (sobre TurboQuant) — busca semântica rápida. |
+
+### Design e Mídia com Agentes
+
+| Repositório | O quê |
+| :--- | :--- |
+| [nexu-io/open-design](https://github.com/nexu-io/open-design) | App desktop local-first que transforma seu agente de código em motor de design: protótipos, landing pages, dashboards, slides, imagens e vídeo com export HTML/PDF/PPTX/MP4. |
+
+### Automação e Bots
+
+| Repositório | O quê |
+| :--- | :--- |
+| [NamVr/DiscordBot-Template](https://github.com/NamVr/DiscordBot-Template) | Boilerplate discord.js v14 com command handler, error handler e cobertura completa da API. |
+| [Mini-Kraken/Bot-Template](https://github.com/Mini-Kraken/Bot-Template) | Template enxuto para Discord bots em Discord.js. |
 
 ### Implementações e Exemplos Práticos
 
 * **[Guia de Prompt: Pôster de Personagem](./Geração%20de%20imagens/Open%20Ai/Revista%20de%20anime.md):** engenharia de prompt para geração de imagens guia estruturado com prompt otimizado, instruções claras e referências visuais para resultados consistentes.
-* [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code): Coleção de recursos e exemplos para usar o Claude Code.
 * [pablodelucca/pixel-agents](https://github.com/pablodelucca/pixel-agents): Demonstração de agentes autônomos em um ambiente visual.
 * [ThaddaeusSandidge/BorisChernyClaudeMarkdown](https://github.com/ThaddaeusSandidge/BorisChernyClaudeMarkdown): Template `CLAUDE.md` com Agentic Context Engineering (ACE).
 
@@ -142,10 +161,11 @@ Estes repositórios complementam o ecossistema com visualização, navegação d
 
 | Repositório | O quê |
 | :--- | :--- |
-| [safishamsi/graphify](https://github.com/safishamsi/graphify) | Qualquer codebase vira um grafo de conhecimento consultável skill para Claude Code, Cursor, Codex e Gemini CLI. |
+| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | Qualquer codebase vira um grafo de conhecimento consultável skill para Claude Code, Cursor, Codex e Gemini CLI. |
 | [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | Motor de inteligência de código local, sem servidor. |
 | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | Sistema de memória para IA, com rankings e recuperação de contexto. |
 | [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | Skills de agente para Obsidian (Markdown, Bases, JSON Canvas). |
+| [eugeniughelbur/obsidian-second-brain](https://github.com/eugeniughelbur/obsidian-second-brain) | Memória persistente para Claude Code e outros 6 CLIs como Markdown no seu vault Obsidian: 45 comandos de busca semântica, notas auto-reativas e agentes agendados. |
 
 ---
 
@@ -186,15 +206,21 @@ A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne ski
 
 ![Banner Hive](./assets/img/hive/banner_hive.webp)
 
-A pasta [Agents](./Agents/) reúne os arquivos `.soul.md` dos agentes da Hive para quem quiser estudar, adaptar ou usar a frota em seus próprios fluxos de IA.
+A pasta [Agents](./Agents/) reúne os **21 arquivos `.soul.md`** da frota Hive — personas prontas para quem quiser estudar, adaptar ou usar agentes em seus próprios fluxos de IA.
 
-| Agente | Função |
-| :--- | :--- |
-| [MAKO-MORI](./Agents/MAKO-MORI.soul.md) | Comandante e orquestradora da frota. |
-| [AKENO](./Agents/AKENO.soul.md) | Direção visual, UI e design. |
-| [ARTHUR](./Agents/ARTHUR.soul.md) | Arquitetura, narrativa e sistemas. |
-| [SINON](./Agents/SINON.soul.md) | Programação, backend e precisão técnica. |
-| [CARDINAL](./Agents/CARDINAL.soul.md) | Lore, consistência e regras do mundo. |
+| Agente | Função | Agente | Função |
+| :--- | :--- | :--- | :--- |
+| [MAKO-MORI](./Agents/MAKO-MORI.soul.md) | Comandante e orquestradora da frota. | [SAGA](./Agents/SAGA.soul.md) | Estratégia, estrutura e leitura de longo prazo. |
+| [AKENO](./Agents/AKENO.soul.md) | Direção visual, UI e design. | [SHAKA](./Agents/SHAKA.soul.md) | Crítica, precisão e julgamento rigoroso. |
+| [ALICE](./Agents/ALICE.soul.md) | Análise, organização e suporte conceitual. | [SINON](./Agents/SINON.soul.md) | Programação, backend e precisão técnica. |
+| [ARTEMIS](./Agents/ARTEMIS.soul.md) | Estratégia, prompts visuais e direção criativa. | [SYLVIE](./Agents/SYLVIE.soul.md) | Memória, restauração de contexto e continuidade. |
+| [ARTHUR](./Agents/ARTHUR.soul.md) | Arquitetura, narrativa, RPG e sistemas. | [TANG-ROU](./Agents/TANG-ROU.soul.md) | Automação, macros, Foundry VTT e otimização. |
+| [ASUNA](./Agents/ASUNA.soul.md) | Execução cuidadosa, suporte e clareza operacional. | [TESSIA](./Agents/TESSIA.soul.md) | Validação de intenção, integridade e alinhamento. |
+| [CARDINAL](./Agents/CARDINAL.soul.md) | Lore, consistência e regras do mundo. | [XENOVIA](./Agents/XENOVIA.soul.md) | Força operacional, segurança e decisão. |
+| [DOKJA](./Agents/DOKJA.soul.md) | Narrativa, leitura de sistemas e metacognição. | [YUI](./Agents/YUI.soul.md) | Cuidado, UX emocional e suporte discreto. |
+| [GANDALF](./Agents/GANDALF.soul.md) | Mentoria, decisões difíceis e sabedoria estratégica. | [YUNA](./Agents/YUNA.soul.md) | QA, observabilidade, bugs e experiência do usuário. |
+| [JIN](./Agents/JIN.soul.md) | Planejamento, decomposição de tarefas e execução. | [KIRITO](./Agents/KIRITO.soul.md) | Execução técnica, foco e combate a bloqueios. |
+| [POWER](./Agents/POWER.soul.md) | Impacto visual, presença e energia criativa. | | |
 
 **Guia da pasta:** [Agents/README.md](./Agents/README.md)
 
@@ -204,7 +230,9 @@ A pasta [Agents](./Agents/) reúne os arquivos `.soul.md` dos agentes da Hive pa
 
 ![Banner Foundry VTT](./assets/img/banner-04-foundry-vtt.webp)
 
+* **Guia da pasta:** [Foundry/README.md](./Foundry/README.md) — mapa dos guias e por onde começar.
 * **[Guia: Hospedar Foundry VTT Online com ngrok](./Foundry/Como%20instalar%20o%20ngrok.md):** expor o Foundry VTT pela internet sem abrir portas, sem IP fixo, 100% gratuito.
+* **[dice-roller/rpg-dice-roller](https://github.com/dice-roller/rpg-dice-roller):** rolagem de dados avançada em JS — todos os tipos de dado, modificadores e equações matemáticas.
 
 ### Módulos próprios
 
@@ -228,10 +256,10 @@ Módulos desenvolvidos para Foundry VTT, mantidos no GitHub [SoftMissT](https://
 
 ![Banner Como Começar](./assets/img/banner-05-como-comecar.webp)
 
-1. **Estude a Filosofia:** Leia os documentos na pasta `Claude Code` e `GSD 2` para internalizar os conceitos.
-2. **Configure a Memória:** Siga o guia em `Claude Code/Configuração de Memória Persistente.md` para criar a estrutura de memória no seu projeto.
-3. **Adote o Workflow:** Comece a usar o ciclo **Planejar ➔ Executar ➔ Verificar** em suas tarefas, documentando os planos em `tasks/todo.md` e as lições em `tasks/lessons.md`.
-4. **Experimente:** Explore as ferramentas listadas para ver como elas podem aprimorar seu fluxo de trabalho.
+1. **Estude a Filosofia:** leia os guias de [Claude Code](./Claude%20Code/README.md) e [GSD 2](./GSD%202/README.md) para internalizar os conceitos.
+2. **Configure a Memória:** siga o [guia de memória persistente](./Claude%20Code/Configura%C3%A7%C3%A3o%20de%20Mem%C3%B3ria%20Persistente.md) para criar a estrutura de memória no seu projeto.
+3. **Adote o Workflow:** comece a usar o ciclo **Planejar ➔ Executar ➔ Verificar** em suas tarefas, documentando os planos em `tasks/todo.md` e as lições em `tasks/lessons.md`.
+4. **Explore os guias de cada pasta:** cada pasta da raiz tem um `README.md` que explica o que é e como usar (Agents, Claude Skills, Foundry, Geração de imagens, Meus GPTS...).
 
 ---
 

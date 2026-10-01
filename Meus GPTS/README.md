@@ -1,6 +1,6 @@
 # Meus GPTS
 
-![Meus GPTS](https://i.imgur.com/zBqvolD.png)
+![Meus GPTS](../assets/img/banner-gpts.webp)
 
 Esta pasta concentra os GPTs personalizados do projeto, com foco em produtividade criativa, direção técnica e consistência de estilo.
 

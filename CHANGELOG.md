@@ -3,6 +3,21 @@
 Todas as mudanças notáveis deste repositório.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [1.2.0] - 2026-10-01
+
+### Adicionado
+
+- `Ollama/check_local_llm.py`: benchmark de requisitos em Python (stdlib, **sem download**) — CPU/RAM/VRAM/disco → modelos Ollama que o PC roda (GPU vs CPU) + `--self-test`
+- Guias `Ollama/README.md`, `Codex/README.md` e `DeepSeek Harness/README.md` (instalação, comandos, encaixe no fluxo)
+- `Dots/README.md`: guia dos agentes always-on da OpenAI (DevDay 29/09/2026, GPT-6 Astra) com riscos e comparativo Dots x GPTs x Plugins x Codex
+- `Meus GPTS/README.md`: guia de migração GPTs → plugins (aposentadoria 11/12/2026; modelo não migra, original fica read-only)
+- `Claude Code/README.md`: seção Plugins com o JEV (compactação por pontuação de tool calls)
+- README raiz: subseção "Harnesses e Execução Local" + aviso de migração na seção dos GPTs
+
+### Atualizado
+
+- "Como começar" cita os novos guias de pasta (Codex, DeepSeek Harness, Ollama, Dots)
+
 ## [1.1.0] - 2026-10-01
 
 ### Adicionado

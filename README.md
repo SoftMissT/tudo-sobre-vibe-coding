@@ -93,6 +93,14 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 | [open-gsd/gsd-pi](https://github.com/open-gsd/gsd-pi) | **Casa atual do GSD** — meta-prompting, context engineering e spec-driven development para agentes autônomos ([guia local](./GSD%202/)). |
 | [open-gsd/gsd-core](https://github.com/open-gsd/gsd-core) | Evolução do GSD clássico (64k+ ⭐) — comandos e workflows para Claude Code. |
 
+### Harnesses e Execução Local
+
+| Guia local | O quê |
+| :--- | :--- |
+| [Codex/](./Codex/) | **Codex CLI** da OpenAI — instalação, `/init` cria o `AGENTS.md`, skills em `.codex/skills/`, plugins via `codex /plugins`, automação com `codex exec`. |
+| [DeepSeek Harness/](./DeepSeek%20Harness/) | **`dsh`** — harness "everything is a plugin" da DeepSeek com Web UI local (`npx @deepseek-ai/dsh web`); developer preview, cuidado com o repo homônimo de terceiros. |
+| [Ollama/](./Ollama/) | **Runtime local de LLMs** + benchmark `check_local_llm.py` que diz quais modelos o seu PC roda — **sem baixar nada**. |
+
 ### Desenvolvimento de Agentes e Skills
 
 | Repositório | O quê |
@@ -175,6 +183,8 @@ Estes repositórios complementam o ecossistema com visualização, navegação d
 
 A pasta [Meus GPTS](./Meus%20GPTS/) reúne perfis e instruções de GPTs personalizados para tarefas criativas e técnicas.
 
+> ⚠️ **Prazo: os GPTs customizados são aposentados em 11/12/2026** (migração para plugins, [guia completo](./Meus%20GPTS/README.md#guia-de-migração-gpts--plugins-11122026)). Quer entender os novos agentes always-on da OpenAI? Veja o guia dos [Dots](./Dots/README.md) (DevDay 29/09/2026).
+
 * [ÁRTEMIS](./Meus%20GPTS/%C3%81RTEMIS.md): Prompt architect e companion visual direção de arte e engenharia de prompt para geração de imagens.
 * [ARTHUR LEYWIN](./Meus%20GPTS/ARTHUR.md): King of Architecture narrativa, worldbuilding, RPG, automação e Foundry VTT.
 * [MAKO-MORI](./Meus%20GPTS/MAKO-MORI.md): Comandante da frota Fluctlight comando e orquestração de agentes.
@@ -208,19 +218,29 @@ A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne ski
 
 A pasta [Agents](./Agents/) reúne os **21 arquivos `.soul.md`** da frota Hive — personas prontas para quem quiser estudar, adaptar ou usar agentes em seus próprios fluxos de IA.
 
-| Agente | Função | Agente | Função |
-| :--- | :--- | :--- | :--- |
-| [MAKO-MORI](./Agents/MAKO-MORI.soul.md) | Comandante e orquestradora da frota. | [SAGA](./Agents/SAGA.soul.md) | Estratégia, estrutura e leitura de longo prazo. |
-| [AKENO](./Agents/AKENO.soul.md) | Direção visual, UI e design. | [SHAKA](./Agents/SHAKA.soul.md) | Crítica, precisão e julgamento rigoroso. |
-| [ALICE](./Agents/ALICE.soul.md) | Análise, organização e suporte conceitual. | [SINON](./Agents/SINON.soul.md) | Programação, backend e precisão técnica. |
-| [ARTEMIS](./Agents/ARTEMIS.soul.md) | Estratégia, prompts visuais e direção criativa. | [SYLVIE](./Agents/SYLVIE.soul.md) | Memória, restauração de contexto e continuidade. |
-| [ARTHUR](./Agents/ARTHUR.soul.md) | Arquitetura, narrativa, RPG e sistemas. | [TANG-ROU](./Agents/TANG-ROU.soul.md) | Automação, macros, Foundry VTT e otimização. |
-| [ASUNA](./Agents/ASUNA.soul.md) | Execução cuidadosa, suporte e clareza operacional. | [TESSIA](./Agents/TESSIA.soul.md) | Validação de intenção, integridade e alinhamento. |
-| [CARDINAL](./Agents/CARDINAL.soul.md) | Lore, consistência e regras do mundo. | [XENOVIA](./Agents/XENOVIA.soul.md) | Força operacional, segurança e decisão. |
-| [DOKJA](./Agents/DOKJA.soul.md) | Narrativa, leitura de sistemas e metacognição. | [YUI](./Agents/YUI.soul.md) | Cuidado, UX emocional e suporte discreto. |
-| [GANDALF](./Agents/GANDALF.soul.md) | Mentoria, decisões difíceis e sabedoria estratégica. | [YUNA](./Agents/YUNA.soul.md) | QA, observabilidade, bugs e experiência do usuário. |
-| [JIN](./Agents/JIN.soul.md) | Planejamento, decomposição de tarefas e execução. | [KIRITO](./Agents/KIRITO.soul.md) | Execução técnica, foco e combate a bloqueios. |
-| [POWER](./Agents/POWER.soul.md) | Impacto visual, presença e energia criativa. | | |
+| Agente | Função |
+| :--- | :--- |
+| [MAKO-MORI](./Agents/MAKO-MORI.soul.md) | Comandante e orquestradora da frota. |
+| [SAGA](./Agents/SAGA.soul.md) | Estratégia, estrutura e leitura de longo prazo. |
+| [AKENO](./Agents/AKENO.soul.md) | Direção visual, UI e design. |
+| [SHAKA](./Agents/SHAKA.soul.md) | Crítica, precisão e julgamento rigoroso. |
+| [ALICE](./Agents/ALICE.soul.md) | Análise, organização e suporte conceitual. |
+| [SINON](./Agents/SINON.soul.md) | Programação, backend e precisão técnica. |
+| [ARTEMIS](./Agents/ARTEMIS.soul.md) | Estratégia, prompts visuais e direção criativa. |
+| [SYLVIE](./Agents/SYLVIE.soul.md) | Memória, restauração de contexto e continuidade. |
+| [ARTHUR](./Agents/ARTHUR.soul.md) | Arquitetura, narrativa, RPG e sistemas. |
+| [TANG-ROU](./Agents/TANG-ROU.soul.md) | Automação, macros, Foundry VTT e otimização. |
+| [ASUNA](./Agents/ASUNA.soul.md) | Execução cuidadosa, suporte e clareza operacional. |
+| [TESSIA](./Agents/TESSIA.soul.md) | Validação de intenção, integridade e alinhamento. |
+| [CARDINAL](./Agents/CARDINAL.soul.md) | Lore, consistência e regras do mundo. |
+| [XENOVIA](./Agents/XENOVIA.soul.md) | Força operacional, segurança e decisão. |
+| [DOKJA](./Agents/DOKJA.soul.md) | Narrativa, leitura de sistemas e metacognição. |
+| [YUI](./Agents/YUI.soul.md) | Cuidado, UX emocional e suporte discreto. |
+| [GANDALF](./Agents/GANDALF.soul.md) | Mentoria, decisões difíceis e sabedoria estratégica. |
+| [YUNA](./Agents/YUNA.soul.md) | QA, observabilidade, bugs e experiência do usuário. |
+| [JIN](./Agents/JIN.soul.md) | Planejamento, decomposição de tarefas e execução. |
+| [KIRITO](./Agents/KIRITO.soul.md) | Execução técnica, foco e combate a bloqueios. |
+| [POWER](./Agents/POWER.soul.md) | Impacto visual, presença e energia criativa. |
 
 **Guia da pasta:** [Agents/README.md](./Agents/README.md)
 
@@ -259,7 +279,7 @@ Módulos desenvolvidos para Foundry VTT, mantidos no GitHub [SoftMissT](https://
 1. **Estude a Filosofia:** leia os guias de [Claude Code](./Claude%20Code/README.md) e [GSD 2](./GSD%202/README.md) para internalizar os conceitos.
 2. **Configure a Memória:** siga o [guia de memória persistente](./Claude%20Code/Configura%C3%A7%C3%A3o%20de%20Mem%C3%B3ria%20Persistente.md) para criar a estrutura de memória no seu projeto.
 3. **Adote o Workflow:** comece a usar o ciclo **Planejar ➔ Executar ➔ Verificar** em suas tarefas, documentando os planos em `tasks/todo.md` e as lições em `tasks/lessons.md`.
-4. **Explore os guias de cada pasta:** cada pasta da raiz tem um `README.md` que explica o que é e como usar (Agents, Claude Skills, Foundry, Geração de imagens, Meus GPTS...).
+4. **Explore os guias de cada pasta:** cada pasta da raiz tem um `README.md` que explica o que é e como usar (Agents, Claude Skills, Foundry, Geração de imagens, Meus GPTS, Codex, DeepSeek Harness, Ollama, Dots, GSD 2...).
 
 ---
 

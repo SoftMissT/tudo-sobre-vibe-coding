@@ -29,6 +29,10 @@
 - **Regras fatiadas** em `.claude/rules/*.md` com glob por arquivo.
 - **Plugins** empacotam `commands/`, `agents/`, `skills/`, `hooks/` + `.claude-plugin/plugin.json`.
 
+## Plugins
+
+- **JEV — [`tamaratran/fast-jev-compaction`](https://github.com/tamaratran/fast-jev-compaction)** (~7 mil ⭐): substitui o resumo padrão da **compactação** de contexto por "Jev decisions" — cada tool call e resultado é **pontuado num request rápido**, o obsoleto é descartado/truncado e o que importa fica verbatim. Resultado: sessões longas sem perder o fio. Instale como plugin e use nos maratonas do workflow GSD (o `[x]` de tarefa grande depende do contexto sobreviver).
+
 ## Ver também
 
 - Docs oficiais: <https://claude.com/docs/claude-code>

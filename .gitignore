@@ -1,0 +1,32 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Segredos e credenciais (nunca commitar)
+.env
+.env.*
+*.pem
+*.key
+*.p12
+.npmrc
+.netrc
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Artefatos de ferramentas e agentes
+.playwright-mcp/
+*.log
+.opencode/
+.ai-memory/
+
+# Rascunhos locais — não publicar
+/Geração de imagens/Open Ai/Prompts Banners/

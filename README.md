@@ -30,7 +30,7 @@ Este repositório reúne guias, configurações e experimentos focados em workfl
 
 ## 🧠 A Filosofia: O que é "Vibe Coding"?
 
-> **Vibe Coding** é um paradigma onde o desenvolvedor define a "vibe" — a visão, as especificações e as regras do projeto — e uma orquestra de agentes de IA executa as tarefas, mantendo o contexto e aprendendo continuamente. O objetivo é elevar o papel do desenvolvedor de "codificador" para **arquiteto de sistemas cognitivos**.
+> **Vibe Coding** é um paradigma onde o desenvolvedor define a "vibe" a visão, as especificações e as regras do projeto e uma orquestra de agentes de IA executa as tarefas, mantendo o contexto e aprendendo continuamente. O objetivo é elevar o papel do desenvolvedor de "codificador" para **arquiteto de sistemas cognitivos**.
 
 Os três pilares deste ecossistema são:
 
@@ -90,7 +90,7 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 | Repositório | O quê |
 | :--- | :--- |
 | [microsoft/agent-lightning](https://github.com/microsoft/agent-lightning) | Framework para construção de agentes de IA. |
-| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | Coleção de "skills" para o Claude — extensibilidade de agentes. |
+| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | Coleção de "skills" para o Claude extensibilidade de agentes. |
 | [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | Inspiração para conectar skills a uma base de conhecimento. |
 | [uphiago/recon-skills](https://github.com/uphiago/recon-skills) | Skills de recon e pentest: CORS, XSS, SQLi, SSRF, RCE, WordPress, MCP, cloud. Testado em campo, MIT. |
 
@@ -104,7 +104,7 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 
 ### Implementações e Exemplos Práticos
 
-* **[Guia de Prompt: Pôster de Personagem](./Geração%20de%20imagens/Open%20Ai/Revista%20de%20anime.md):** engenharia de prompt para geração de imagens — guia estruturado com prompt otimizado, instruções claras e referências visuais para resultados consistentes.
+* **[Guia de Prompt: Pôster de Personagem](./Geração%20de%20imagens/Open%20Ai/Revista%20de%20anime.md):** engenharia de prompt para geração de imagens guia estruturado com prompt otimizado, instruções claras e referências visuais para resultados consistentes.
 * [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code): Coleção de recursos e exemplos para usar o Claude Code.
 * [pablodelucca/pixel-agents](https://github.com/pablodelucca/pixel-agents): Demonstração de agentes autônomos em um ambiente visual.
 * [ThaddaeusSandidge/BorisChernyClaudeMarkdown](https://github.com/ThaddaeusSandidge/BorisChernyClaudeMarkdown): Template `CLAUDE.md` com Agentic Context Engineering (ACE).
@@ -114,7 +114,7 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 | Repositório | O quê |
 | :--- | :--- |
 | [jtig37/free-llm-api-resources](https://github.com/jtig37/free-llm-api-resources) | Lista de APIs de LLM gratuitas (sucessora do antigo `cheahjs/free-llm-api-resources`, que saiu do ar). |
-| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 100+ agentes, skills e apps de RAG — open source. |
+| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 100+ agentes, skills e apps de RAG open source. |
 | [akitaonrails/llm-coding-benchmark](https://github.com/akitaonrails/llm-coding-benchmark) | Benchmark dos LLMs de código mais populares, com automação via OpenCode (Python). |
 
 ### Segurança, Monitoramento e Ambientes
@@ -137,7 +137,7 @@ Estes repositórios complementam o ecossistema com visualização, navegação d
 
 | Repositório | O quê |
 | :--- | :--- |
-| [safishamsi/graphify](https://github.com/safishamsi/graphify) | Qualquer codebase vira um grafo de conhecimento consultável — skill para Claude Code, Cursor, Codex e Gemini CLI. |
+| [safishamsi/graphify](https://github.com/safishamsi/graphify) | Qualquer codebase vira um grafo de conhecimento consultável skill para Claude Code, Cursor, Codex e Gemini CLI. |
 | [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | Motor de inteligência de código local, sem servidor. |
 | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | Sistema de memória para IA, com rankings e recuperação de contexto. |
 | [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | Skills de agente para Obsidian (Markdown, Bases, JSON Canvas). |
@@ -150,10 +150,10 @@ Estes repositórios complementam o ecossistema com visualização, navegação d
 
 A pasta [Meus GPTS](./Meus%20GPTS/) reúne perfis e instruções de GPTs personalizados para tarefas criativas e técnicas.
 
-* [ÁRTEMIS](./Meus%20GPTS/%C3%81RTEMIS.md): Prompt architect e companion visual — direção de arte e engenharia de prompt para geração de imagens.
-* [ARTHUR LEYWIN](./Meus%20GPTS/ARTHUR.md): King of Architecture — narrativa, worldbuilding, RPG, automação e Foundry VTT.
-* [MAKO-MORI](./Meus%20GPTS/MAKO-MORI.md): Comandante da frota Fluctlight — comando e orquestração de agentes.
-* [POWER](./Meus%20GPTS/POWER.md): Creative Entity Supreme — música, roteiro, VFX e produção audiovisual.
+* [ÁRTEMIS](./Meus%20GPTS/%C3%81RTEMIS.md): Prompt architect e companion visual direção de arte e engenharia de prompt para geração de imagens.
+* [ARTHUR LEYWIN](./Meus%20GPTS/ARTHUR.md): King of Architecture narrativa, worldbuilding, RPG, automação e Foundry VTT.
+* [MAKO-MORI](./Meus%20GPTS/MAKO-MORI.md): Comandante da frota Fluctlight comando e orquestração de agentes.
+* [POWER](./Meus%20GPTS/POWER.md): Creative Entity Supreme música, roteiro, VFX e produção audiovisual.
 * **Guia da pasta:** [Meus GPTS/README.md](./Meus%20GPTS/README.md)
 
 ---
@@ -199,7 +199,7 @@ A pasta [Agents](./Agents/) reúne os arquivos `.soul.md` dos agentes da Hive pa
 
 ![Banner Foundry VTT](./assets/img/banner-04-foundry-vtt.webp)
 
-* **[Guia: Hospedar Foundry VTT Online com ngrok](./Foundry/Como%20instalar%20o%20ngrok.md):** expor o Foundry VTT pela internet — sem abrir portas, sem IP fixo, 100% gratuito.
+* **[Guia: Hospedar Foundry VTT Online com ngrok](./Foundry/Como%20instalar%20o%20ngrok.md):** expor o Foundry VTT pela internet sem abrir portas, sem IP fixo, 100% gratuito.
 
 ### Módulos próprios
 
@@ -211,7 +211,7 @@ Módulos desenvolvidos para Foundry VTT, mantidos no GitHub [SoftMissT](https://
 | [Batata Ou Não](https://github.com/SoftMissT/FoundryVTT-BatataOuN-o-V2) | Detecta se o computador do jogador é uma batata e configura os gráficos automaticamente. |
 | [Lumenn Frame](https://github.com/SoftMissT/Lumenn-Frame) | Editor de grafo cinemático: cenas, áudio e notas com fluxo narrativo direcional. |
 | [Lumenn Notify](https://github.com/SoftMissT/lumenn-notify) | Mensagens narrativas, perfis e canais (Sistema e Constelações) para Foundry v14+. |
-| [Lumenn Phone Hub](https://github.com/SoftMissT/Lumenn-phone-hub) | Celular diegético: mensagens, redes sociais, banco e notícias — independente de sistema (v13–v14). |
+| [Lumenn Phone Hub](https://github.com/SoftMissT/Lumenn-phone-hub) | Celular diegético: mensagens, redes sociais, banco e notícias independente de sistema (v13–v14). |
 | [Lumenn Lightweight](https://github.com/SoftMissT/lumenn-lightweight) | Otimiza imagens para WebP com modo lote e hook de upload automático. |
 | [Lumenn Roll Relay](https://github.com/SoftMissT/lumenn-roll-relay) | Retransmite rolagens para o Discord, com leaderboard. |
 | [Night Assassins CSB Automation](https://github.com/SoftMissT/night-assassins-csb-automation) | Automação de rolagens, dano, atributos e Habilidades Especiais para Foundry + Custom System Builder. |

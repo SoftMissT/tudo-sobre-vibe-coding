@@ -11,7 +11,7 @@
 
 **Um hub de conhecimento sobre programação guiada por IA, orquestração de agentes e engenharia de contexto.**
 
-> 🌐 **Site ao vivo:** [softmisst.github.io/tudo-sobre-vibe-coding](https://softmisst.github.io/tudo-sobre-vibe-coding/) — este README servido como página estática (GitHub Pages).
+> 🌐 **Site ao vivo:** [softmisst.github.io/tudo-sobre-vibe-coding](https://softmisst.github.io/tudo-sobre-vibe-coding/), este README servido como página estática (GitHub Pages).
 
 Este repositório reúne guias, configurações e experimentos focados em workflows de desenvolvimento onde a IA não é apenas uma ferramenta, mas uma parceira colaborativa. Exploramos conceitos como memória persistente para agentes, desenvolvimento orientado por especificações (Spec-Driven) e orquestração multi-agente.
 
@@ -22,6 +22,7 @@ Este repositório reúne guias, configurações e experimentos focados em workfl
   - [1. GSD (Get Shit Done)](#1-gsd-get-shit-done-o-framework-de-execução)
   - [2. Memória Persistente](#2-memória-persistente-o-cérebro-do-agente)
   - [3. Orquestração de Agentes](#3-orquestração-de-agentes-o-workflow-colaborativo)
+- [🗺️ Mapa por Empresa e por Assunto](#mapa-por-empresa-e-por-assunto)
 - [🛠️ Ecossistema de Ferramentas e Recursos](#ecossistema-de-ferramentas-e-recursos)
 - [🔗 Repositórios de Apoio](#repositórios-de-apoio)
 - [🤖 Meus GPTs](#meus-gpts)
@@ -80,6 +81,37 @@ Baseado nos princípios de `Claude Code/Claude.md`, este é o fluxo de trabalho 
 
 ---
 
+## 🗺️ Mapa por Empresa e por Assunto
+
+Duas leituras do mesmo repositório: escolha a que te interessa agora.
+
+### Por empresa
+
+| Empresa | Guia local | O quê |
+| :--- | :--- | :--- |
+| **Anthropic** | [Claude Code/](./Claude%20Code/) | Harness do Claude, CLAUDE.md, memória persistente, plugins e JEV. |
+| **Anthropic** | [Claude Code/Claude Skills/](./Claude%20Code/Claude%20Skills/) | Skills prontas: Arthur, Blueprint, Mozart, Prompt Optimizer, entre outras. |
+| **OpenAI** | [Codex/](./Codex/) | Codex CLI no terminal: `/init`, AGENTS.md, skills e plugins. |
+| **OpenAI** | [Dots/](./Dots/) | Agentes always-on (DevDay 29/09/2026) e a aposentadoria dos GPTs. |
+| **OpenAI** | [Meus GPTS/](./Meus%20GPTS/) | Perfis dos GPTs e guia de migração GPTs → plugins (11/12/2026). |
+| **DeepSeek** | [DeepSeek Harness/](./DeepSeek%20Harness/) | `dsh`: Web UI local e arquitetura "everything is a plugin". |
+| **Meta / Comunidade** | [Ollama/](./Ollama/) | Runtime local de LLMs + benchmark `check_local_llm.py`. |
+| **Fantasy Grounds / VTT** | [Foundry/](./Foundry/) | Guias de Foundry VTT, ngrok e os 9 módulos próprios. |
+
+### Por assunto
+
+| Assunto | Guia local | O quê |
+| :--- | :--- | :--- |
+| **Filosofia e execução** | [GSD 2/](./GSD%202/) | Spec-driven development: nenhuma linha sem `SPEC.md`. |
+| **Memória persistente** | [Claude Code/Configuração de Memória Persistente.md](./Claude%20Code/Configura%C3%A7%C3%A3o%20de%20Mem%C3%B3ria%20Persistente.md) | `primer.md`, histórico e autoaprendizado. |
+| **Orquestração de agentes** | [Agents/](./Agents/) | Os 21 `.soul.md` da frota Hive. |
+| **Conectores e ferramentas** | [MCP/](./MCP/) | Model Context Protocol do conceito ao primeiro servidor, com configs por cliente. |
+| **Distribuição de capacidade** | [Plugins/](./Plugins/) | Comparativo dos 5 sistemas de plugin e a migração dos GPTs. |
+| **Treinar modelos** | [Fine-tuning/](./Fine-tuning/) | Quando fine-tunar x RAG x prompt, com pipeline local até o Ollama. |
+| **Mídia com IA** | [Geração de imagens/](./Gera%C3%A7%C3%A3o%20de%20imagens/) | Prompts de banner, personagem e direção de arte. |
+
+---
+
 ## 🛠️ Ecossistema de Ferramentas e Recursos
 
 ![Banner Gits](./assets/img/banner-gits.webp)
@@ -90,16 +122,24 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 
 | Repositório | O quê |
 | :--- | :--- |
-| [open-gsd/gsd-pi](https://github.com/open-gsd/gsd-pi) | **Casa atual do GSD** — meta-prompting, context engineering e spec-driven development para agentes autônomos ([guia local](./GSD%202/)). |
-| [open-gsd/gsd-core](https://github.com/open-gsd/gsd-core) | Evolução do GSD clássico (64k+ ⭐) — comandos e workflows para Claude Code. |
+| [open-gsd/gsd-pi](https://github.com/open-gsd/gsd-pi) | **Casa atual do GSD**: meta-prompting, context engineering e spec-driven development para agentes autônomos ([guia local](./GSD%202/)). |
+| [open-gsd/gsd-core](https://github.com/open-gsd/gsd-core) | Evolução do GSD clássico (64k+ ⭐): comandos e workflows para Claude Code. |
 
 ### Harnesses e Execução Local
 
 | Guia local | O quê |
 | :--- | :--- |
-| [Codex/](./Codex/) | **Codex CLI** da OpenAI — instalação, `/init` cria o `AGENTS.md`, skills em `.codex/skills/`, plugins via `codex /plugins`, automação com `codex exec`. |
-| [DeepSeek Harness/](./DeepSeek%20Harness/) | **`dsh`** — harness "everything is a plugin" da DeepSeek com Web UI local (`npx @deepseek-ai/dsh web`); developer preview, cuidado com o repo homônimo de terceiros. |
-| [Ollama/](./Ollama/) | **Runtime local de LLMs** + benchmark `check_local_llm.py` que diz quais modelos o seu PC roda — **sem baixar nada**. |
+| [Codex/](./Codex/) | **Codex CLI** da OpenAI: instalação, `/init` cria o `AGENTS.md`, skills em `.codex/skills/`, plugins via `codex /plugins`, automação com `codex exec`. |
+| [DeepSeek Harness/](./DeepSeek%20Harness/) | **`dsh`**: harness "everything is a plugin" da DeepSeek com Web UI local (`npx @deepseek-ai/dsh web`); developer preview, cuidado com o repo homônimo de terceiros. |
+| [Ollama/](./Ollama/) | **Runtime local de LLMs** + benchmark `check_local_llm.py` que diz quais modelos o seu PC roda: **sem baixar nada**. |
+
+### Conectores, Plugins e Treinamento
+
+| Guia local | O quê |
+| :--- | :--- |
+| [MCP/](./MCP/) | **Model Context Protocol**: o "USB-C da IA": arquitetura, configs verificadas para Claude Code/Desktop, Codex e Gemini CLI, primeiro servidor em Python ou TypeScript e segurança. |
+| [Plugins/](./Plugins/) | **Os 5 sistemas de plugin** (Claude Code, Codex, GPTs→plugins, dsh, Gemini extensions), tabela comparativa e o único formato portátil: a skill `SKILL.md`. |
+| [Fine-tuning/](./Fine-tuning/) | **Treinar seu próprio modelo**: árvore de decisão fine-tuning x RAG x prompt, pipeline Unsloth → GGUF → Ollama e o calendário de deprecação do fine-tuning da OpenAI. |
 
 ### Desenvolvimento de Agentes e Skills
 
@@ -118,9 +158,9 @@ A lista de repositórios abaixo não é aleatória. Eles representam componentes
 | [upstash/context7](https://github.com/upstash/context7) | Documentação de código atualizada e específica de versão, injetada direto nos prompts de LLMs. |
 | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) | Framework para construir pipelines de RAG. |
 | [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory) | Memória de longo prazo para CLIs de agente, com handoff entre fornecedores de IA (Rust). |
-| [tamaratran/fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) | Plugin Claude Code que substitui o resumo de compactação por decisões pontuadas — descarta o obsoleto, mantém verbatim o que importa. |
-| [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) | Motor de memória e contexto para a era da IA — rápida, escalável e rodando 100% local. |
-| [RyanCodrai/turbovec](https://github.com/RyanCodrai/turbovec) | Índice vetorial em Rust com bindings Python (sobre TurboQuant) — busca semântica rápida. |
+| [tamaratran/fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) | Plugin Claude Code que substitui o resumo de compactação por decisões pontuadas: descarta o obsoleto, mantém verbatim o que importa. |
+| [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) | Motor de memória e contexto para a era da IA: rápida, escalável e rodando 100% local. |
+| [RyanCodrai/turbovec](https://github.com/RyanCodrai/turbovec) | Índice vetorial em Rust com bindings Python (sobre TurboQuant): busca semântica rápida. |
 
 ### Design e Mídia com Agentes
 
@@ -216,7 +256,7 @@ A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne ski
 
 ![Banner Hive](./assets/img/hive/banner_hive.webp)
 
-A pasta [Agents](./Agents/) reúne os **21 arquivos `.soul.md`** da frota Hive — personas prontas para quem quiser estudar, adaptar ou usar agentes em seus próprios fluxos de IA.
+A pasta [Agents](./Agents/) reúne os **21 arquivos `.soul.md`** da frota Hive: personas prontas para quem quiser estudar, adaptar ou usar agentes em seus próprios fluxos de IA.
 
 | Agente | Função |
 | :--- | :--- |
@@ -250,9 +290,9 @@ A pasta [Agents](./Agents/) reúne os **21 arquivos `.soul.md`** da frota Hive �
 
 ![Banner Foundry VTT](./assets/img/banner-04-foundry-vtt.webp)
 
-* **Guia da pasta:** [Foundry/README.md](./Foundry/README.md) — mapa dos guias e por onde começar.
+* **Guia da pasta:** [Foundry/README.md](./Foundry/README.md): mapa dos guias e por onde começar.
 * **[Guia: Hospedar Foundry VTT Online com ngrok](./Foundry/Como%20instalar%20o%20ngrok.md):** expor o Foundry VTT pela internet sem abrir portas, sem IP fixo, 100% gratuito.
-* **[dice-roller/rpg-dice-roller](https://github.com/dice-roller/rpg-dice-roller):** rolagem de dados avançada em JS — todos os tipos de dado, modificadores e equações matemáticas.
+* **[dice-roller/rpg-dice-roller](https://github.com/dice-roller/rpg-dice-roller):** rolagem de dados avançada em JS: todos os tipos de dado, modificadores e equações matemáticas.
 
 ### Módulos próprios
 
@@ -289,8 +329,8 @@ Módulos desenvolvidos para Foundry VTT, mantidos no GitHub [SoftMissT](https://
 | :--- | :--- |
 | **Contribuir** | [CONTRIBUTING.md](./CONTRIBUTING.md) · abrir issues e PRs |
 | **Conduta** | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) |
-| **Segurança** | [SECURITY.md](./SECURITY.md) — reporte vulnerabilidades em privado |
-| **Forks** | [FORKS.md](./FORKS.md) — política permissiva com checklist |
+| **Segurança** | [SECURITY.md](./SECURITY.md): reporte vulnerabilidades em privado |
+| **Forks** | [FORKS.md](./FORKS.md): política permissiva com checklist |
 | **Changelog** | [CHANGELOG.md](./CHANGELOG.md) |
 
 **Licença dual:** código sob [MIT](./LICENSE), conteúdo sob [CC BY 4.0](./LICENSE-CC-BY-4.0.txt).

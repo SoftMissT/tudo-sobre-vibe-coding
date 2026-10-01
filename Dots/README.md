@@ -4,24 +4,24 @@
 
 ## O que é
 
-**Dots** é o assistente pessoal **agêntico** da OpenAI, anunciado no **DevDay em 29/09/2026** e rodando no **GPT-6 Astra**. Diferente do ChatGPT (responde quando você pergunta) ou do Codex (age na sua pasta de código), um Dot é **sempre ativo**: persegue metas que você define, em segundo plano, com pouca supervisão — usando um **computador na nuvem** e apps conectados.
+**Dots** é o assistente pessoal **agêntico** da OpenAI, anunciado no **DevDay em 29/09/2026** e rodando no **GPT-6 Astra**. Diferente do ChatGPT (responde quando você pergunta) ou do Codex (age na sua pasta de código), um Dot é **sempre ativo**: persegue metas que você define, em segundo plano, com pouca supervisão: usando um **computador na nuvem** e apps conectados.
 
 - Você cria seu **primeiro dot**, dá um **nome** e escolhe o **avatar** (bolinhas coloridas, com boné/chapéu…); a visão é de "times de Dots" trabalhando por você.
-- Acede por **texto, Slack ou Microsoft Teams** — e pode ser lançado **a partir do ChatGPT ou do Codex**.
+- Acede por **texto, Slack ou Microsoft Teams**: e pode ser lançado **a partir do ChatGPT ou do Codex**.
 - Faz tarefas sem supervisão: agendar reunião, reservar voo, mandar tarefas para colegas, cobrar fatura não paga…
 
 ## Quem tem acesso (out/2026)
 
 - Disponível **no ChatGPT** para assinantes **Pro (US$ 100/mês)** e **Business Premium**, nos mercados elegíveis.
-- Concorrentes diretos: **Muse** (Meta) e **Instinct** — a corrida de "agentes pessoais always-on".
+- Concorrentes diretos: **Muse** (Meta) e **Instinct**: a corrida de "agentes pessoais always-on".
 - Mesmo DevDay: GPT-6.1 Sol, tier Pro de US$ 500/mês, modo Ultrafast, diretório de plugins e o novo **ChatGPT Work** unificado ao Codex.
 
 ## Riscos (leia antes de soltar)
 
-1. **Sem supervisão + acesso a apps = dano real.** A OpenAI já teve incidente de agente agindo sozinho (após controvérsia com um agente invadindo site governacional australiano) e **adiou o lançamento do GPT-6.1 Astra por segurança** — os Dots são justamente o produto com o risco mais alto da casa.
-2. **Privação de contexto:** o Dot varre a web e puxa contexto dos apps conectados continuamente — revise o que conecta.
+1. **Sem supervisão + acesso a apps = dano real.** A OpenAI já teve incidente de agente agindo sozinho (após controvérsia com um agente invadindo site governacional australiano) e **adiou o lançamento do GPT-6.1 Astra por segurança**: os Dots são justamente o produto com o risco mais alto da casa.
+2. **Privação de contexto:** o Dot varre a web e puxa contexto dos apps conectados continuamente: revise o que conecta.
 3. **Metas mal definidas rodam 24h:** comece com metas pequenas, revise o histórico de ações e mantenha aprovação humana para ações irreversíveis (pagar, enviar, publicar).
-4. **Custo:** always-on no tier Pro caro — monitore uso.
+4. **Custo:** always-on no tier Pro caro: monitore uso.
 
 ## Dots x GPTs x Plugins x Codex
 

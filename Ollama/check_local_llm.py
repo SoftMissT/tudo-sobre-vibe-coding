@@ -17,15 +17,15 @@ VRAM_RESERVE = 0.5
 
 # (tamanho_gb do modelo em q4, tag Ollama, descrição)
 MODELS = [
-    (0.5, "qwen2.5:0.5b", "0.5B — experimentar o runtime"),
-    (1.0, "llama3.2:1b", "1B — rápido, tarefas simples"),
-    (2.0, "llama3.2:3b", "3B — uso geral leve"),
-    (4.7, "llama3.1:8b", "8B — coding geral (padrão)"),
-    (4.7, "qwen2.5-coder:7b", "7B coder — foco em código"),
-    (4.7, "deepseek-r1:7b", "7B — raciocínio"),
-    (9.0, "qwen2.5:14b", "14B — coding intermediário"),
-    (20.0, "qwen2.5:32b", "32B — coding avançado"),
-    (42.0, "llama3.1:70b", "70B — próximo do frontier"),
+    (0.5, "qwen2.5:0.5b", "0.5B: experimentar o runtime"),
+    (1.0, "llama3.2:1b", "1B: rápido, tarefas simples"),
+    (2.0, "llama3.2:3b", "3B: uso geral leve"),
+    (4.7, "llama3.1:8b", "8B: coding geral (padrão)"),
+    (4.7, "qwen2.5-coder:7b", "7B coder: foco em código"),
+    (4.7, "deepseek-r1:7b", "7B: raciocínio"),
+    (9.0, "qwen2.5:14b", "14B: coding intermediário"),
+    (20.0, "qwen2.5:32b", "32B: coding avançado"),
+    (42.0, "llama3.1:70b", "70B: próximo do frontier"),
 ]
 
 
@@ -161,7 +161,7 @@ def main():
     disk = shutil.disk_usage(os.path.expanduser("~"))
 
     print("=" * 62)
-    print("BENCHMARK DE REQUISITOS — modelos locais (sem download)")
+    print("BENCHMARK DE REQUISITOS: modelos locais (sem download)")
     print("=" * 62)
     print(f"Sistema : {platform.system()} {platform.release()} | "
           f"{platform.machine()} | {os.cpu_count() or '?'} núcleos")
@@ -174,16 +174,16 @@ def main():
         for name, vram in gpus:
             print(f"GPU     : {name}" + (f" | {vram:.1f} GB VRAM" if vram else ""))
     else:
-        print("GPU     : não detectada (nvidia-smi ausente — VRAM ignorada)")
+        print("GPU     : não detectada (nvidia-smi ausente: VRAM ignorada)")
     print(f"Disco   : {disk.free / 2**30:.0f} GB livres em {os.path.expanduser('~')}")
     if ollama_exe:
-        print(f"Ollama  : instalado — {len(local_models)} modelo(s) local(is): "
+        print(f"Ollama  : instalado: {len(local_models)} modelo(s) local(is): "
               + (", ".join(local_models) or "nenhum (nada baixado ainda)"))
     else:
         print("Ollama  : NÃO instalado (ollama.com/download)")
 
     if not total_ram:
-        print("\nNão consegui ler a RAM deste sistema — veja a tabela de requisitos"
+        print("\nNão consegui ler a RAM deste sistema: veja a tabela de requisitos"
               "\nno README desta pasta.")
         return 1
 
@@ -204,14 +204,14 @@ def main():
     print("\n--- NO SEU PC VOCÊ CONSEGUE RODAR ---")
     if gpu_fit:
         via = "GPU unificada" if unified else f"GPU: {best_gpu}"
-        print(f"\n[100% GPU — rápido] ({via})")
+        print(f"\n[100% GPU: rápido] ({via})")
         for size, tag, desc in gpu_fit:
             print(f"  OK  ollama run {tag:<20} {size:>4.1f} GB  # {desc}")
     else:
-        print("\n[100% GPU — rápido]  (nenhum modelo cabe na VRAM detectada)")
+        print("\n[100% GPU: rápido]  (nenhum modelo cabe na VRAM detectada)")
     rest_cpu = [m for m in cpu_fit if m not in gpu_fit]
     if rest_cpu:
-        print("\n[Só CPU — lento, minutos por resposta em modelos grandes]")
+        print("\n[Só CPU: lento, minutos por resposta em modelos grandes]")
         for size, tag, desc in rest_cpu:
             print(f"  OK  ollama run {tag:<20} {size:>4.1f} GB  # {desc}")
     biggest = max((m for m in cpu_fit), key=lambda m: m[0], default=None)
@@ -222,7 +222,7 @@ def main():
         print(f"\nVeredicto: RAM {total_ram:.0f} GB não roda modelos úteis locais —"
               "\nuse APIs nuvem (context7, Codex, Claude Code).")
     if disk.free / 2**30 < 10:
-        print("Atenção: menos de 10 GB livres — modelos ocupam de 0,5 a 40+ GB.")
+        print("Atenção: menos de 10 GB livres: modelos ocupam de 0,5 a 40+ GB.")
     if not ollama_exe:
         print("Próximo passo: instale o Ollama (ollama.com/download) e rode"
               "\n  ollama run <tag>  (só baixa o que você escolher)")

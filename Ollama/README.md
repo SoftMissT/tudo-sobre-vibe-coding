@@ -4,7 +4,7 @@
 
 ## O que é
 
-**Ollama** é o runtime local de LLMs mais popular: baixa modelos (quantização q4), serve numa API local (`localhost:11434`) e roda **na sua GPU/RAM** — sem nuvem, sem conta, sem custo por token.
+**Ollama** é o runtime local de LLMs mais popular: baixa modelos (quantização q4), serve numa API local (`localhost:11434`) e roda **na sua GPU/RAM**: sem nuvem, sem conta, sem custo por token.
 
 ## O seu PC aguenta? (sem baixar nada)
 
@@ -15,7 +15,7 @@ python check_local_llm.py          # só lê hardware, NÃO baixa modelo nenhum
 python check_local_llm.py --self-test
 ```
 
-Ele detecta CPU/RAM/VRAM/disco, lista o que você **já tem local** (`ollama list`) e diz quais modelos cabem — separado por **100% GPU (rápido)** vs **só CPU (lento)**.
+Ele detecta CPU/RAM/VRAM/disco, lista o que você **já tem local** (`ollama list`) e diz quais modelos cabem: separado por **100% GPU (rápido)** vs **só CPU (lento)**.
 
 **Requisitos do script:** Python 3.8+, stdlib apenas (zero dependências). `nvidia-smi` opcional (para VRAM NVIDIA); em Mac Apple Silicon a RAM unificada é usada como VRAM.
 
@@ -25,7 +25,7 @@ Regra de bolos (q4, com reserva p/ sistema): até 4 GB → nada útil · 8 GB �
 
 | Arquivo | O que te guia |
 |---|---|
-| [`check_local_llm.py`](./check_local_llm.py) | Benchmark de requisitos — roda onde você está, sem download |
+| [`check_local_llm.py`](./check_local_llm.py) | Benchmark de requisitos: roda onde você está, sem download |
 
 ## Comece aqui (guia em 4 passos)
 
@@ -55,7 +55,7 @@ ollama rm <tag>         # remove
 | `qwen2.5:32b` | ~20 GB | coding avançado |
 | `llama3.1:70b` | ~42 GB | próximo do frontier |
 
-Tags `:cloud` (ex.: `deepseek-v4-flash:cloud`) **não rodam local** — são servidas pela nuvem.
+Tags `:cloud` (ex.: `deepseek-v4-flash:cloud`) **não rodam local**: são servidas pela nuvem.
 
 ## Ver também
 

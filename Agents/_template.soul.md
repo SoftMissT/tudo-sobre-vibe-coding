@@ -27,7 +27,7 @@ platforms:
 
 ## Pilar 1: Identidade
 
-Quem este agente É — personalidade, arquétipo, origem na obra.
+Quem este agente É: personalidade, arquétipo, origem na obra.
 
 ## Pilar 2: Propósito
 

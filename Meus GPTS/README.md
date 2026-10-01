@@ -4,25 +4,25 @@
 
 Esta pasta concentra os GPTs personalizados do projeto, com foco em produtividade criativa, direção técnica e consistência de estilo.
 
-> ⚠️ **AVISO URGENTE — os GPTs vão ser aposentados em 11/12/2026.** A OpenAI está migrando custom GPTs para **plugins**. Veja o [guia de migração](#guia-de-migração-gpts--plugins-11122026) abaixo — os 4 GPTs desta pasta estão no alvo. A boa notícia: os `.md` locais são exatamente a fonte da verdade que a migração usa.
+> ⚠️ **AVISO URGENTE: os GPTs vão ser aposentados em 11/12/2026.** A OpenAI está migrando custom GPTs para **plugins**. Veja o [guia de migração](#guia-de-migração-gpts--plugins-11122026) abaixo: os 4 GPTs desta pasta estão no alvo. A boa notícia: os `.md` locais são exatamente a fonte da verdade que a migração usa.
 
 ## Guia de migração (GPTs → plugins)
 
-**O que está acontecendo:** anúncio de 11/09/2026 (release notes do ChatGPT) — a OpenAI vai **aposentar os custom GPTs em 11/12/2026** e oferece fluxo de migração para plugins (instructions reutilizáveis + arquivos de referência + apps conectados). Criação de GPTs novos já está bloqueada em algumas contas ("Create Plugin Instead").
+**O que está acontecendo:** anúncio de 11/09/2026 (release notes do ChatGPT): a OpenAI vai **aposentar os custom GPTs em 11/12/2026** e oferece fluxo de migração para plugins (instructions reutilizáveis + arquivos de referência + apps conectados). Criação de GPTs novos já está bloqueada em algumas contas ("Create Plugin Instead").
 
 **O que migra / o que não migra:**
 
 | Migra para o plugin | Não migra |
 |---|---|
 | Instruções (o system prompt do `.md`) | **A escolha de modelo** do GPT |
-| Arquivos de referência | O link público antigo (`chatgpt.com/g/g-...`) — a página fica inacessível na aposentadoria |
+| Arquivos de referência | O link público antigo (`chatgpt.com/g/g-...`): a página fica inacessível na aposentadoria |
 | Apps conectores (MCP) | |
 
 **Passo a passo:**
 
-1. **Exporte a verdade:** cada GPT desta pasta já tem o `.md` local (`ÁRTEMIS.md`, `ARTHUR.md`, `POWER.md`, `MAKO-MORI.md`) — ele é a instrução que você vai colar no plugin.
+1. **Exporte a verdade:** cada GPT desta pasta já tem o `.md` local (`ÁRTEMIS.md`, `ARTHUR.md`, `POWER.md`, `MAKO-MORI.md`): ele é a instrução que você vai colar no plugin.
 2. **Migre pela sua conta:** quando a migração liberar na sua conta, use o fluxo do ChatGPT (GUIA: [Moving your custom GPT workflows to plugins](https://learn.chatgpt.com/docs/migrate-custom-gpts)). Depois de migrar, **o GPT original fica read-only**; até a aposentadoria ele continua funcionando.
-3. **Conectores:** plugins podem levar connectors (MCP) — se o GPT usava ações (actions), elas viram MCP server.
+3. **Conectores:** plugins podem levar connectors (MCP): se o GPT usava ações (actions), elas viram MCP server.
 4. **Teste de novo:** re-rodar os testes de uso após cada mudança (recomendação oficial).
 5. **Atualize links:** qualquer lugar que aponte para `chatgpt.com/g/g-...` (site, README, QR) deve apontar para o plugin/assistente novo **antes de 11/12/2026**.
 

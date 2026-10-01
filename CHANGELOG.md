@@ -3,11 +3,23 @@
 Todas as mudanças notáveis deste repositório.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [1.3.0] - 2026-10-01
+
+### Adicionado
+
+- Guias novos: `MCP/README.md` (spec 2026-07-28, Linux Foundation, configs por cliente, 1º servidor em Python/TypeScript), `Fine-tuning/README.md` (pipeline Unsloth → GGUF → Ollama, OpenAI em deprecação, hiperparâmetros e avaliação) e `Plugins/README.md` (Claude Code/Codex/GPTs→plugins/dsh/Gemini extensions, migração até 11/12/2026)
+- README raiz: seção "Mapa por Empresa e por Assunto" + subseção "Conectores, Plugins e Treinamento"
+- `index.html`: seção `#mapa`, 3 cards novos (MCP, Plugins, Fine-tuning) e link "Mapa" na nav
+
+### Atualizado
+
+- Travessões " — " removidos da prosa publicada (README, guias, CHANGELOG, almas, comentários de CSS); fora de escopo: skills de terceiros e specs de banner
+
 ## [1.2.0] - 2026-10-01
 
 ### Adicionado
 
-- `Ollama/check_local_llm.py`: benchmark de requisitos em Python (stdlib, **sem download**) — CPU/RAM/VRAM/disco → modelos Ollama que o PC roda (GPU vs CPU) + `--self-test`
+- `Ollama/check_local_llm.py`: benchmark de requisitos em Python (stdlib, **sem download**), com CPU/RAM/VRAM/disco → modelos Ollama que o PC roda (GPU vs CPU) + `--self-test`
 - Guias `Ollama/README.md`, `Codex/README.md` e `DeepSeek Harness/README.md` (instalação, comandos, encaixe no fluxo)
 - `Dots/README.md`: guia dos agentes always-on da OpenAI (DevDay 29/09/2026, GPT-6 Astra) com riscos e comparativo Dots x GPTs x Plugins x Codex
 - `Meus GPTS/README.md`: guia de migração GPTs → plugins (aposentadoria 11/12/2026; modelo não migra, original fica read-only)
@@ -23,7 +35,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 ### Adicionado
 
 - Guia `GSD 2/README.md` com o estado atual do GSD (`open-gsd/gsd-pi`, `gsd-core`, comandos e workflow)
-- `Claude Code/Configuração de Memória Persistente.md` — guia das duas camadas de memória (3 arquivos manuais + `/memory`, `#`, `CLAUDE.md`, `.claude/rules/`)
+- `Claude Code/Configuração de Memória Persistente.md`: guia das duas camadas de memória (3 arquivos manuais + `/memory`, `#`, `CLAUDE.md`, `.claude/rules/`)
 - READMEs-guia explicando e orientando em `Claude Code/`, `Foundry/` e `Geração de imagens/`
 - 11 repositórios novos no ecossistema: `open-gsd/gsd-pi`, `open-gsd/gsd-core`, `affaan-m/ECC`, `tamaratran/fast-jev-compaction`, `supermemoryai/supermemory`, `RyanCodrai/turbovec`, `nexu-io/open-design`, `eugeniughelbur/obsidian-second-brain`, `NamVr/DiscordBot-Template`, `Mini-Kraken/Bot-Template`, `dice-roller/rpg-dice-roller`
 - Seções **Design e Mídia com Agentes** e **Automação e Bots** no README
@@ -38,7 +50,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
 ### Removido
 
-- `GSD 2/GSD_2.md` — snapshot obsoleto (estatísticas antigas + resíduo de transcrição de LLM)
+- `GSD 2/GSD_2.md`: snapshot obsoleto (estatísticas antigas + resíduo de transcrição de LLM)
 
 ## [1.0.0] - 2026-10-01
 

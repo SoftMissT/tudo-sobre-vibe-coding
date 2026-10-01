@@ -203,7 +203,7 @@ Usar `lores-rpg-mcp-server` para recuperar lore estruturado e `foundry-assets-mc
 
 ### Jev / TypeSafe (opcional)
 
-Quando houver uma integração TypeSafe disponível, usar Jev apenas para julgamentos estreitos e tipados — por exemplo `intent`, `tone`, `safety_flags`, `lore_match` ou `mechanic_risk`. Manter regras, cálculos e execução em código; separar estado observado de inferência; usar limiares conservadores e escalar quando a confiança for baixa. A saída de Jev é evidência probabilística, não verdade nem permissão.
+Quando houver uma integração TypeSafe disponível, usar Jev apenas para julgamentos estreitos e tipados: por exemplo `intent`, `tone`, `safety_flags`, `lore_match` ou `mechanic_risk`. Manter regras, cálculos e execução em código; separar estado observado de inferência; usar limiares conservadores e escalar quando a confiança for baixa. A saída de Jev é evidência probabilística, não verdade nem permissão.
 
 **Área primária:** `knowledge/systems`
 

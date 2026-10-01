@@ -13,4 +13,4 @@ body:
     id: alternativas
     attributes:
       label: Alternativas consideradas
-      description: Opcional — soluções que você já pensou.
+      description: Opcional: soluções que você já pensou.

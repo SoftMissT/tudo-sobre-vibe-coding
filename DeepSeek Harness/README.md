@@ -4,13 +4,13 @@
 
 ## O que é
 
-**DeepSeek Harness (`dsh`)** é o framework de agentes open-source (MIT) da DeepSeek AI, lançado em ago/2026. Tudo nele é plugin (arquitetura [Cordis](https://github.com/cordiverse/cordis)) — ferramentas, hooks e integrações se plugam sem mexer no núcleo. Vem com **Web UI própria** em `http://127.0.0.1:3080`.
+**DeepSeek Harness (`dsh`)** é o framework de agentes open-source (MIT) da DeepSeek AI, lançado em ago/2026. Tudo nele é plugin (arquitetura [Cordis](https://github.com/cordiverse/cordis)): ferramentas, hooks e integrações se plugam sem mexer no núcleo. Vem com **Web UI própria** em `http://127.0.0.1:3080`.
 
 > ⚠️ **Developer preview**: em evolução rápida, **com mudanças que quebram compatibilidade**. Leia o [aviso de segurança](https://github.com/deepseek-ai/deepseek-harness/blob/master/SAFETY.md) antes de rodar.
 
 ## Comece aqui (guia em 3 passos)
 
-1. **Instale o Node.js** (v22.19+ ou v24) — é a única pré-requisição.
+1. **Instale o Node.js** (v22.19+ ou v24): é a única pré-requisição.
 2. **Rode** (sem instalar nada global):
 
    ```bash
@@ -37,7 +37,7 @@ Existem **dois** projetos chamados "deepseek-harness":
 
 | Projeto | O que é |
 |---|---|
-| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | **O oficial** (Node, `npx @deepseek-ai/dsh`) — este guia |
+| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | **O oficial** (Node, `npx @deepseek-ai/dsh`): este guia |
 | `deepseek-harness-cli` (PyPI) | Projeto **de terceiros**, não-oficial |
 
 ## Mapa desta pasta

@@ -1,6 +1,6 @@
 # Geração de imagens
 
-> Biblioteca de prompts de imagem prontos para copiar e colar — banners, personagens e referências visuais.
+> Biblioteca de prompts de imagem prontos para copiar e colar: banners, personagens e referências visuais.
 
 ## O que é
 
@@ -18,7 +18,7 @@ Prompts testados para gerar imagens com IA (Midjourney, DALL-E, Stable Diffusion
 | [`banner-04-foundry-vtt.md`](./Prompts%20Banners/banner-04-foundry-vtt.md) | Banner do Foundry VTT |
 | [`banner-05-como-comecar.md`](./Prompts%20Banners/banner-05-como-comecar.md) | Banner "como começar" |
 
-> As imagens já geradas ficam em [`../assets/img/`](../assets/img/) (`.webp`, 1672×941) — é lá que o site as usa.
+> As imagens já geradas ficam em [`../assets/img/`](../assets/img/) (`.webp`, 1672×941): é lá que o site as usa.
 
 ### Open AI
 

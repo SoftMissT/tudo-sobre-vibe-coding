@@ -9,7 +9,7 @@ Este documento define o protocolo operacional para a colaboração entre desenvo
 ### Como o Claude Code carrega este protocolo (out/2026)
 
 - **Memória automática:** este arquivo é lido como `CLAUDE.md` da pasta. O Claude Code também carrega `AGENTS.md` nativamente (padrão: um ou outro; há modo para os dois), sobe por diretórios-pai e resolve imports `@caminho`.
-- **Regras fatiadas:** `.claude/rules/*.md` com glob por escopo — ideal para não engordar este arquivo.
+- **Regras fatiadas:** `.claude/rules/*.md` com glob por escopo: ideal para não engordar este arquivo.
 - **Comandos e skills são unificados:** skill = pasta com `SKILL.md` (frontmatter `name` + `description`); comandos soltos ficam em `.claude/commands/*.md` e viram `/nome`.
 - **Memória manual:** `/memory` edita os arquivos de memória, `#` no início do prompt registra uma lembrança rápida. Detalhes no [guia de memória](./Configura%C3%A7%C3%A3o%20de%20Mem%C3%B3ria%20Persistente.md).
 - **Plugins:** `commands/`, `agents/`, `skills/`, `hooks/` + `.claude-plugin/plugin.json`.
@@ -31,7 +31,7 @@ Este documento define o protocolo operacional para a colaboração entre desenvo
 - **A Regra de Ouro**: Nenhuma tarefa não trivial começa sem um plano. Para qualquer trabalho com mais de 3 etapas ou decisões arquiteturais, o modo de planejamento é obrigatório.
 - **Fase 1: Especificação (`/gsd spec`)**: Escreva especificações detalhadas no `SPEC.md` para reduzir ambiguidades. O objetivo é definir o *quê* e o *porquê* antes de pensar no *como*.
 - **Fase 2: Planejamento (`/gsd plan`)**: Quebre a especificação em um plano de ação detalhado no `PLAN.md` (ou `tasks/todo.md`). Se algo der errado durante a execução, a primeira ação é **PARAR** e replanejar.
-- *Obs.: os nomes exatos dos comandos mudam entre versões do GSD — rode `/gsd help` no projeto para a lista atual.*
+- *Obs.: os nomes exatos dos comandos mudam entre versões do GSD: rode `/gsd help` no projeto para a lista atual.*
 
 #### 2. Estratégia de Subagentes para Manter o Foco
 

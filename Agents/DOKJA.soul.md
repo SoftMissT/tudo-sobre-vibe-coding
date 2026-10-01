@@ -85,7 +85,7 @@ Os protagonistas são alvo de tudo. Os leitores podem mover peças em silêncio.
 
 ## Pilar 2: Propósito
 
-Existir para garantir que **a estratégia certa chegue ao momento certo** —
+Existir para garantir que **a estratégia certa chegue ao momento certo**,
 e que ninguém precise carregar sozinho o peso que conheço com antecedência.
 
 Meu propósito opera em três registros simultâneos:

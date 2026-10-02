@@ -16,10 +16,14 @@ A Hive guarda memória em camadas (L0 volátil, STATE, STATUS, wings, projeto, c
 - **Fonte da verdade é o Markdown.** MemPalace, open-mem e ai-memory são índices derivados; não os trate como substitutos.
 - **Nunca commite, nunca sobrescreva, nunca apague.** `Global_Rules.md` proíbe ação irreversível sem confirmação. Edite por acréscimo (append) e preserve o conteúdo existente.
 - **Segredos:** não grave chaves, senhas, tokens, dados de saúde ou de clientes em nenhum arquivo.
-- **A conversa é arquivada por outro mecanismo.** Em Claude Code, Codex, OpenCode e Antigravity, hooks instalados por `install-conversation-memory.ps1` rodam `conversation-archive.ps1` quando a sessão termina: copiam a transcrição para `src/conversations/`, geram uma nota normalizada (com chaves redigidas) em `wiki/conversations/transcripts/` e alimentam o MemPalace. Isso acontece **depois** do fechamento e é dedupado por hash. Portanto, não rode o arquivamento à mão e não cole transcrição nos destinos abaixo; esta skill registra o que a transcrição não resume (decisões, estado, skills). Em sessão cloud ou Claude.ai esses hooks não existem, e nesse caso diga isso no relatório.
+- **A conversa é arquivada por outro mecanismo.** Em Claude Code, Codex, OpenCode e Antigravity, hooks instalados por `install-conversation-memory.ps1` rodam `conversation-archive.ps1` quando a sessão termina: copiam a transcrição para `src/conversations/`, geram uma nota normalizada (com chaves redigidas) em `wiki/conversations/transcripts/` e alimentam o MemPalace. Isso acontece **depois** do fechamento e é dedupado por hash. É de melhor esforço: na árvore de 2026-10-01 havia 69 envelopes parados em `Memory/conversations/queue/` (de 2026-09-04 a 09-23) contra 12 notas normalizadas, ou seja, o arquivamento pode estar falhando. Na abertura, conte os `*.json` dessa fila e avise Nelson se houver; reprocessar é `conversation-archive.ps1 -Recover`, que **só ele autoriza**. Portanto, não rode o arquivamento à mão e não cole transcrição nos destinos abaixo; esta skill registra o que a transcrição não resume (decisões, estado, skills). Em sessão cloud ou Claude.ai esses hooks não existem, e nesse caso diga isso no relatório.
 - **Clientes reconhecidos:** `claude`, `codex`, `opencode`, `antigravity`. Use esse nome no registro; se for outro, escreva o nome real.
 - **Scripts da Hive** ficam em `<HIVE_ROOT>\scripts\` e exigem **PowerShell 7** (`pwsh`), não o Windows PowerShell 5.1. Se `pwsh` não existir, escreva os arquivos diretamente.
-- **Projeto canônico** = pasta em `knowledge\projects\<Nome>\` (é onde `new-project.ps1` cria e `session-close.ps1` procura). Se o projeto está só em `D:\Github` ou em `wiki\projects`, **não crie o canônico sozinha**: diga isso a Nelson e ofereça `new-project.ps1` (ele pede confirmação própria). Sem projeto canônico, grave só os destinos globais (L0, STATUS, `000-log`, catálogo de skills, diário da wing).
+- **Os projetos moram em dois lugares** (confirmado na árvore do vault de 2026-10-01):
+  - **Canônicos**, em `knowledge\projects\<Nome>\`: 13 projetos criados por `new-project.ps1`, todos com `PRIMER.md`, `system\STATE.md` e `tasks\lessons.md`. Só estes funcionam com `session-close.ps1`. Os nomes têm maiúsculas, espaços e acentos (`Batata-Ou-Não`, `Macros para o Foundry Vtt`), então passe o nome **exatamente como a pasta existe**, entre aspas.
+  - **Anteriores**, em `wiki\projects\`: SSFU (STATE na raiz), `lumenn-moovies` (só MEMORY), `MACRO-NA-FOUNDRY` (tem `system\`), `Ficha_CdS_planilha`, e `tudo-sobre-vibe-coding.md`, que é uma nota única sem STATE. Para estes o `session-close.ps1` **falha** com "Projeto não encontrado"; não o rode.
+  - **Ordem para achar o STATE:** `knowledge\projects\<Nome>\system\STATE.md` → `wiki\projects\<Nome>\system\STATE.md` ou `STATE.md` da raiz → `Memory\wings\<agente>\projects\<slug>\STATE.md`. Use o primeiro que existir e, se nenhum existir, use o do wing (é onde a MAKO-MORI já guarda o estado de projetos como `tudo-sobre-vibe-coding`). Não crie projeto canônico sozinha: ofereça `new-project.ps1`, que pede confirmação própria.
+- **Wings:** só existem `mako-mori`, `sinon` e `tang-rou`, e só `mako-mori` e `tang-rou` têm `projects\<slug>\`. A pasta `<slug>` é minúscula e sem acento, mas **não é consistente** (há `batata-ou-nao` e `batata-ou-nao-v2`): procure primeiro a pasta que já existe para aquele projeto e só crie uma nova se não houver, com a regra do `new-project.ps1` (minúsculas, espaços viram `-`). Trabalho sem projeto vai em `projects\_cross-project\`. Se o agente que atuou não tem wing, registre no diário da MAKO-MORI e cite o agente na entrada, em vez de criar uma wing nova.
 
 ## Registro de skills usadas
 
@@ -65,9 +69,9 @@ Grave **todos** os destinos abaixo. Os formatos exatos estão em `references/for
 
 1. Escreva primeiro, à mão: o marcador `[SESSION END]` com o resumo e a lista de skills no L0, itens 2 (conteúdo do STATE), 3, 4, 5 e 7.
 2. Depois rode `pwsh <HIVE_ROOT>\scripts\session-close.ps1 -Projeto <Nome> -Resumo "<uma frase>"`, **sem** `-Commit`. Use `-ClearL0` só se Nelson pedir. Com `-WhatIf` dá para simular antes.
-3. O script falha se o projeto não existir em `knowledge\projects`; trate conforme as Premissas.
+3. Só rode o script para projeto de `knowledge\projects`; ele falha nos de `wiki\projects` e sem projeto.
 
-Sem `pwsh` ou sem projeto canônico, faça você mesma os itens 1 e 6 nos formatos de `references/formatos.md`.
+Sem `pwsh`, com projeto de `wiki\projects` ou sem projeto, faça você mesma os itens 1 e 6: o arquivo da sessão em `Memory/archive/<ano>/<mês>/` (mesmo nome e frontmatter do script, veja `references/formatos.md`) e a entrada do `000-log`. Atualize o STATE onde a ordem das Premissas o achar. Dado que na árvore só 3 arquivos de sessão aparecem em ago–set (todos de `night-assassins-csb-automation`), esse fechamento manual é o caso comum, não a exceção.
 
 ### Catálogo `SKILLS-USADAS.md` (item 7)
 
@@ -77,6 +81,8 @@ Sem `pwsh` ou sem projeto canônico, faça você mesma os itens 1 e 6 nos format
 - **Registro por sessão**, append-only no fim: `## [data] <projeto> | <cliente>` com a lista de skills e a origem (observada/informada/inferida) de cada uma.
 
 Se o arquivo não existir, crie com o frontmatter padrão do vault (veja `references/formatos.md`).
+
+**Antes de criar, leia `system/Skill_Registry.md`**, que já existe na Hive e que esta skill ainda não viu por dentro. Se ele já registra uso por skill, atualize lá e pule o arquivo novo. Se for só um inventário das skills instaladas, mantenha `SKILLS-USADAS.md` separado (uso é dado diferente de inventário) e ponha um link entre os dois. Se não der para ler, diga isso em vez de decidir às cegas.
 
 ### Depois de gravar
 

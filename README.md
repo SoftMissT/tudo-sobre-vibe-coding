@@ -1,13 +1,13 @@
-![Banner principal](./assets/img/banner-header.png)
+![Banner principal](./assets/img/banner-header.webp)
 
 # Tudo Sobre Vibe Coding
 
-[![Stars](https://img.shields.io/github/stars/SoftMissT/tudo-sobre-vibe-coding?style=flat-square)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/stargazers)
-[![Forks](https://img.shields.io/github/forks/SoftMissT/tudo-sobre-vibe-coding?style=flat-square)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/network/members)
-[![Issues](https://img.shields.io/github/issues/SoftMissT/tudo-sobre-vibe-coding?style=flat-square)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/issues)
-[![Last commit](https://img.shields.io/github/last-commit/SoftMissT/tudo-sobre-vibe-coding?style=flat-square)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/commits/main)
-[![Website](https://img.shields.io/badge/site-GitHub%20Pages-c026d3?style=flat-square)](https://softmisst.github.io/tudo-sobre-vibe-coding/)
-[![License: MIT + CC BY 4.0](https://img.shields.io/badge/license-MIT%20%2B%20CC%20BY%204.0-86efac?style=flat-square)](./LICENSE)
+[![Stars](https://img.shields.io/github/stars/SoftMissT/tudo-sobre-vibe-coding?style=flat-square&color=D01452)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/stargazers)
+[![Forks](https://img.shields.io/github/forks/SoftMissT/tudo-sobre-vibe-coding?style=flat-square&color=5E80A0)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/network/members)
+[![Issues](https://img.shields.io/github/issues/SoftMissT/tudo-sobre-vibe-coding?style=flat-square&color=00D4F5)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/issues)
+[![Last commit](https://img.shields.io/github/last-commit/SoftMissT/tudo-sobre-vibe-coding?style=flat-square&color=C8A84B)](https://github.com/SoftMissT/tudo-sobre-vibe-coding/commits/main)
+[![Website](https://img.shields.io/badge/site-GitHub%20Pages-D01452?style=flat-square)](https://softmisst.github.io/tudo-sobre-vibe-coding/)
+[![License: MIT + CC BY 4.0](https://img.shields.io/badge/license-MIT%20%2B%20CC%20BY%204.0-46D369?style=flat-square)](./LICENSE)
 
 **Um hub de conhecimento sobre programação guiada por IA, orquestração de agentes e engenharia de contexto.**
 
@@ -27,7 +27,6 @@ Este repositório reúne guias, configurações e experimentos focados em workfl
 - [🔗 Repositórios de Apoio](#repositórios-de-apoio)
 - [🤖 Meus GPTs](#meus-gpts)
 - [⚡ Claude Skills](#claude-skills)
-- [🌐 Agents](#agents)
 - [🎲 Foundry VTT](#foundry-vtt)
 - [🚀 Como Começar](#como-começar)
 - [🤝 Comunidade e Licença](#comunidade-e-licença)
@@ -35,6 +34,8 @@ Este repositório reúne guias, configurações e experimentos focados em workfl
 ---
 
 ## 🧠 A Filosofia: O que é "Vibe Coding"?
+
+![Banner Filosofia](./assets/img/banner-06-filosofia.webp)
 
 > **Vibe Coding** é um paradigma onde o desenvolvedor define a "vibe" a visão, as especificações e as regras do projeto e uma orquestra de agentes de IA executa as tarefas, mantendo o contexto e aprendendo continuamente. O objetivo é elevar o papel do desenvolvedor de "codificador" para **arquiteto de sistemas cognitivos**.
 
@@ -83,6 +84,8 @@ Baseado nos princípios de `Claude Code/Claude.md`, este é o fluxo de trabalho 
 
 ## 🗺️ Mapa por Empresa e por Assunto
 
+![Banner Mapa do Repositório](./assets/img/banner-07-mapa.webp)
+
 Duas leituras do mesmo repositório: escolha a que te interessa agora.
 
 ### Por empresa
@@ -104,8 +107,7 @@ Duas leituras do mesmo repositório: escolha a que te interessa agora.
 | :--- | :--- | :--- |
 | **Filosofia e execução** | [GSD 2/](./GSD%202/) | Spec-driven development: nenhuma linha sem `SPEC.md`. |
 | **Memória persistente** | [Claude Code/Configuração de Memória Persistente.md](./Claude%20Code/Configura%C3%A7%C3%A3o%20de%20Mem%C3%B3ria%20Persistente.md) | `primer.md`, histórico e autoaprendizado. |
-| **Orquestração de agentes** | [Agents/](./Agents/) | 4 skills da frota e 20 almas (`.soul.md`) da frota Hive. |
-| **Skills portáteis** | [Skills/](./Skills/) | 14 skills (`SKILL.md`) para harnesses e agentes: design, subagentes, Obsidian, TypeSafe. |
+| **Skills portáteis** | [Skills/](./Skills/) | 15 skills (`SKILL.md`) para harnesses e agentes: design, subagentes, Obsidian, TypeSafe e a skill autoral TANG-ROU. |
 | **Conectores e ferramentas** | [MCP/](./MCP/) | Model Context Protocol do conceito ao primeiro servidor, com configs por cliente. |
 | **Distribuição de capacidade** | [Plugins/](./Plugins/) | Comparativo dos 5 sistemas de plugin e a migração dos GPTs. |
 | **Treinar modelos** | [Fine-tuning/](./Fine-tuning/) | Quando fine-tunar x RAG x prompt, com pipeline local até o Ollama. |
@@ -250,39 +252,6 @@ A pasta [Claude Code/Claude Skills](./Claude%20Code/Claude%20Skills/) reúne ski
 | [Writing Clearly and Concisely](./Claude%20Code/Claude%20Skills/writing-clearly-and-concisely/writing-clearly-and-concisely/SKILL.md) | Escrita clara para documentação, mensagens e textos técnicos. |
 
 **Guia da pasta:** [Claude Code/Claude Skills/README.md](./Claude%20Code/Claude%20Skills/README.md)
-
----
-
-## 🌐 Agents
-
-![Banner Hive](./assets/img/hive/banner_hive.webp)
-
-A pasta [Agents](./Agents/) reúne as **20 almas (`.soul.md`)** da frota Hive — mais o [`_template`](./Agents/almas/_template.soul.md) para criar novas — personas prontas para quem quiser estudar, adaptar ou usar em seus próprios fluxos de IA — e as **4 skills da frota** ([`Agents/agentes/`](./Agents/agentes/)), com definição executável e status de prontidão. Alma não é skill: skill executa, alma inspira.
-
-| Alma | Função |
-| :--- | :--- |
-| [MAKO-MORI](./Agents/almas/MAKO-MORI.soul.md) | Comandante e orquestradora da frota. |
-| [SAGA](./Agents/almas/SAGA.soul.md) | Estratégia, estrutura e leitura de longo prazo. |
-| [AKENO](./Agents/almas/AKENO.soul.md) | Direção visual, UI e design. |
-| [SHAKA](./Agents/almas/SHAKA.soul.md) | Crítica, precisão e julgamento rigoroso. |
-| [ALICE](./Agents/almas/ALICE.soul.md) | Análise, organização e suporte conceitual. |
-| [SINON](./Agents/almas/SINON.soul.md) | Programação, backend e precisão técnica. |
-| [ARTEMIS](./Agents/almas/ARTEMIS.soul.md) | Estratégia, prompts visuais e direção criativa. |
-| [SYLVIE](./Agents/almas/SYLVIE.soul.md) | Memória, restauração de contexto e continuidade. |
-| [ARTHUR](./Agents/almas/ARTHUR.soul.md) | Arquitetura, narrativa, RPG e sistemas. |
-| [ASUNA](./Agents/almas/ASUNA.soul.md) | Execução cuidadosa, suporte e clareza operacional. |
-| [TESSIA](./Agents/almas/TESSIA.soul.md) | Validação de intenção, integridade e alinhamento. |
-| [CARDINAL](./Agents/almas/CARDINAL.soul.md) | Lore, consistência e regras do mundo. |
-| [XENOVIA](./Agents/almas/XENOVIA.soul.md) | Força operacional, segurança e decisão. |
-| [DOKJA](./Agents/almas/DOKJA.soul.md) | Narrativa, leitura de sistemas e metacognição. |
-| [YUI](./Agents/almas/YUI.soul.md) | Cuidado, UX emocional e suporte discreto. |
-| [GANDALF](./Agents/almas/GANDALF.soul.md) | Mentoria, decisões difíceis e sabedoria estratégica. |
-| [YUNA](./Agents/almas/YUNA.soul.md) | QA, observabilidade, bugs e experiência do usuário. |
-| [JIN](./Agents/almas/JIN.soul.md) | Planejamento, decomposição de tarefas e execução. |
-| [KIRITO](./Agents/almas/KIRITO.soul.md) | Execução técnica, foco e combate a bloqueios. |
-| [POWER](./Agents/almas/POWER.soul.md) | Impacto visual, presença e energia criativa. |
-
-**Guia da pasta:** [Agents/README.md](./Agents/README.md)
 
 ---
 

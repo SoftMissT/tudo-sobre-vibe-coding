@@ -1,6 +1,8 @@
 # Skills
 
-Catálogo de skills usadas pela Hive (formato `SKILL.md` por pasta; pacotes `.skill` empacotados na raiz).
+[← Tudo Sobre Vibe Coding](../README.md)
+
+Catálogo das **15 skills** do repositório (formato `SKILL.md` por pasta; pacotes `.skill` empacotados na raiz). Inclui a skill autoral [tang-rou](./tang-rou/), da frota Hive.
 
 | Skill | O que faz |
 |---|---|
@@ -16,9 +18,8 @@ Catálogo de skills usadas pela Hive (formato `SKILL.md` por pasta; pacotes `.sk
 | [redesign-existing-projects](./redesign-existing-projects/) | Upgrade de design de sites existentes sem quebrar função. |
 | [stitch-design-taste](./stitch-design-taste/) | DESIGN.md semântico para Google Stitch (tipografia, cor, motion). |
 | [subagent-driven-development](./subagent-driven-development/) | Executar planos com subagentes (implementer, spec-reviewer, quality-reviewer). |
+| [tang-rou](./tang-rou/) | **Skill autoral da frota:** Foundry VTT — pesquisa, macros, módulos e auditoria. |
 | [typesafe-ai](./typesafe-ai/) | TypeSafe/Jev: julgamentos tipados + probabilidades como primitivos. |
 | [using-superpowers](./using-superpowers/) | Achar e usar skills — invocar skill antes de responder. |
 
-Pacotes: `subagent-driven-development.skill`, `sdd-obsidian.skill` (`sdd-obsidian` tem só o pacote). O pacote `tang-rou.skill` vive junto da skill com [`../Agents/tang-rou-foundry-agent/`](../Agents/tang-rou-foundry-agent/).
-
-Relação com a frota: ver [`../Agents/README.md`](../Agents/README.md) — as skills da frota (TANG-ROU etc.) usam estas skills.
+Pacotes: `subagent-driven-development.skill`, `sdd-obsidian.skill` (`sdd-obsidian` tem só o pacote).

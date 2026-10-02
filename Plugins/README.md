@@ -1,5 +1,7 @@
 # Ecossistema de Plugins de agentes
 
+[← Tudo Sobre Vibe Coding](../README.md)
+
 > Todo mundo agora distribui capacidade como plugin. Compare os cinco sistemas que existem hoje, saiba o que migra dos GPTs (e o que não migra) e descubra o único formato que é realmente portável.
 
 ## O que é um plugin (e o que não é)

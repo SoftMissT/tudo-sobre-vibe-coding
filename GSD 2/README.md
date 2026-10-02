@@ -1,5 +1,7 @@
 # GSD: Get Shit Done
 
+[← Tudo Sobre Vibe Coding](../README.md)
+
 > Spec-driven development: nenhuma linha de código sem `SPEC.md` aprovada. Aqui você entende o GSD **de hoje** e começa a usá-lo em 3 comandos.
 
 ## O que é

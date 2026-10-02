@@ -1,5 +1,7 @@
 # Codex
 
+[← Tudo Sobre Vibe Coding](../README.md)
+
 > O agente de código da OpenAI rodando no seu terminal: instalação, `AGENTS.md`, skills e plugins.
 
 ## O que é

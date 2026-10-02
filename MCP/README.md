@@ -1,5 +1,7 @@
 # MCP na prática (Model Context Protocol)
 
+[← Tudo Sobre Vibe Coding](../README.md)
+
 > O "USB-C da IA": um protocolo aberto que conecta qualquer agente a qualquer ferramenta. Este guia leva do conceito ao seu primeiro servidor rodando, com configs reais para Claude Code, Claude Desktop, Codex e Gemini CLI.
 
 ## O que é

@@ -32,3 +32,5 @@ __pycache__/
 /Geração de imagens/Open Ai/Prompts Banners/
 /.specs
 /A fazer
+/.local/
+/tasks

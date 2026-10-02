@@ -1,5 +1,7 @@
 # Claude Code
 
+[← Tudo Sobre Vibe Coding](../README.md)
+
 > O que é o Claude Code, como configurá-lo e como trabalhar com ele: do zero ao workflow da Hive.
 
 ## O que é

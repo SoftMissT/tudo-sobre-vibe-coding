@@ -1,5 +1,7 @@
 # Dots (OpenAI)
 
+[← Tudo Sobre Vibe Coding](../README.md)
+
 > Os agentes always-on da OpenAI: o que são, o que mudam e os riscos de deixar um agente solto 24/7.
 
 ## O que é

@@ -1,5 +1,7 @@
 # Fine-tuning de LLMs na prática
 
+[← Tudo Sobre Vibe Coding](../README.md)
+
 > Quando (e quando NÃO) treinar seu próprio modelo, mais o pipeline local completo: Unsloth no Colab → GGUF → Ollama, com hiperparâmetros padrão e avaliação séria.
 
 ## Antes de tudo: você precisa de fine-tuning?

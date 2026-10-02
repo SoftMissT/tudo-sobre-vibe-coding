@@ -1,5 +1,7 @@
 # DeepSeek Harness
 
+[← Tudo Sobre Vibe Coding](../README.md)
+
 > O `dsh`: agente harness open-source da DeepSeek com arquitetura "everything is a plugin".
 
 ## O que é

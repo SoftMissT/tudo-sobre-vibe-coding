@@ -1,5 +1,7 @@
 # Foundry VTT
 
+[← Tudo Sobre Vibe Coding](../README.md)
+
 > Tudo sobre Foundry Virtual Tabletop neste repositório: e por onde começar.
 
 ## O que é
@@ -15,7 +17,7 @@
 ## Guias relacionados no repositório
 
 - **Banner e fluxo Foundry:** [`../Geração de imagens/Prompts Banners/banner-04-foundry-vtt.md`](../Gera%C3%A7%C3%A3o%20de%20imagens/Prompts%20Banners/banner-04-foundry-vtt.md)
-- **Agente da frota:** `../Agents/TANG-ROU.soul.md`: automação, macros e Foundry VTT
+- **Skill autoral:** `../Skills/tang-rou/`: automação, macros e Foundry VTT
 - **ECO (GPT):** `../Meus GPTS/`: narrativa e fichas para Foundry
 
 ## Comece aqui (guia em 3 passos)

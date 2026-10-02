@@ -22,6 +22,29 @@ agents_allowed: ["ALL"]
 
 Termine notas novas com a seção `## Conexões` e wikilinks reais (ex.: `[[BRAIN]]`, `[[Memory/shared/STATUS]]`).
 
+## Marcadores do L0 (`Memory/shared/L0_working_memory.md`)
+
+Formato que o `open-mem-to-hive.ps1` escreve e depois relê com a regex `\[SESSION (START|END)\]` para comprimir o L1. Use o mesmo, senão a sessão some da compressão:
+
+```markdown
+[YYYY-MM-DD HH:mm] [SESSION START] [<cliente>] | <projeto>
+- Skills: hive-sessao (observada)
+
+[YYYY-MM-DD HH:mm] [SESSION END] [<cliente>] | <título curto>
+- Feito: ...
+- Decisões: ...
+- Skills: <skill> (origem), ...
+- Próximo passo: ...
+```
+
+## `system/MEMORY.md` global (L1)
+
+Estrutura que o script de open-mem espera: uma seção `## Sessões Recentes (open-mem)` (regravada pelo script) e `## Log de Atualizações` (onde esta skill acrescenta). Limite ~2.200 caracteres de conteúdo.
+
+## Onde a conversa em si é arquivada (não escreva aqui)
+
+Bruta: `src/conversations/<cliente>/<yyyy>/<MM>/`. Normalizada: `wiki/conversations/transcripts/<yyyy>/<MM>/<yyyy-MM-dd>-<cliente>-<workspace>-<hash12>.md`, com `sensitive: true/false` no frontmatter. Controle: `Memory/conversations/` (`queue/`, `logs/`, `archive-ledger.jsonl`, `graphify-pending.json`).
+
 ## `Memory/shared/SKILLS-USADAS.md` (caminho escolhido por esta skill; *a confirmar com Nelson*)
 
 ```markdown

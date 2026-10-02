@@ -16,7 +16,8 @@ A Hive guarda memória em camadas (L0 volátil, STATE, STATUS, wings, projeto, c
 - **Fonte da verdade é o Markdown.** MemPalace, open-mem e ai-memory são índices derivados; não os trate como substitutos.
 - **Nunca commite, nunca sobrescreva, nunca apague.** `Global_Rules.md` proíbe ação irreversível sem confirmação. Edite por acréscimo (append) e preserve o conteúdo existente.
 - **Segredos:** não grave chaves, senhas, tokens, dados de saúde ou de clientes em nenhum arquivo.
-- **Projeto novo** não é criado aqui: use `new-project.ps1` e só depois volte.
+- **Scripts da Hive** ficam em `<HIVE_ROOT>\scripts\` e exigem **PowerShell 7** (`pwsh`), não o Windows PowerShell 5.1. Se `pwsh` não existir, escreva os arquivos diretamente.
+- **Projeto canônico** = pasta em `knowledge\projects\<Nome>\` (é onde `new-project.ps1` cria e `session-close.ps1` procura). Se o projeto está só em `D:\Github` ou em `wiki\projects`, **não crie o canônico sozinha**: diga isso a Nelson e ofereça `new-project.ps1` (ele pede confirmação própria). Sem projeto canônico, grave só os destinos globais (L0, STATUS, `000-log`, catálogo de skills, diário da wing).
 
 ## Registro de skills usadas
 
@@ -32,9 +33,9 @@ Esta skill (`hive-sessao`) e `hive-mako-mori` entram na lista quando usadas. No 
 
 ## Modo ABRIR
 
-1. **Boot canônico**, nesta ordem (ler, não modificar): `BRAIN.md` → `system/HIVE.md` → `system/Global_Rules.md` → `000-index.md` → `Memory/shared/STATUS.md` → `system/STATE.md` → `souls/MAKO-MORI.soul.md`. Se um arquivo faltar, registre a falta e siga com o que existe.
+1. **Boot canônico**, nesta ordem (ler, não modificar): `BRAIN.md` → `system/HIVE.md` → `system/Global_Rules.md` → `000-index.md` → `Memory/shared/STATUS.md` → `system/STATE.md` → `souls/MAKO-MORI.soul.md`. Se um arquivo faltar, registre a falta e siga com o que existe. Se houver `pwsh`, `scripts\hive-status.ps1` (somente leitura) dá um snapshot rápido: projetos com `last_updated`, última entrada do `000-log`, CLIs e memória recente.
 2. **Resolver o projeto.** Se Nelson nomeou um projeto ou o diretório atual bate com um dos rastreados no BRAIN (seção Projetos), use-o. Se não, pergunte qual. Não carregue memória de vários projetos.
-3. **Carregar memória do projeto:** `knowledge/projects/<slug>/system/MEMORY.md`, `STATE.md`, `tasks/lessons.md`, `tasks/todo.md`. Leia as lições antes de começar para não repetir erro já registrado.
+3. **Carregar memória do projeto** em `knowledge/projects/<Nome>/`: `system/MEMORY.md`, `system/STATE.md`, `tasks/lessons.md`, `tasks/todo.md`. Se o STATE não estiver em `system/`, tente `STATE.md` na raiz do projeto (o `hive-status.ps1` também aceita essa variante) e, por fim, `wiki/projects/<Nome>/STATE.md`, que é onde o wrapper do DSH procura. Leia as lições antes de começar para não repetir erro já registrado.
 4. **Abrir o registro da sessão:** crie (ou retome) a seção da sessão em `Memory/shared/L0_working_memory.md` com data, cliente, projeto e a lista de skills usadas (começando com `hive-sessao`). Acrescente; não apague o L0 existente sem Nelson confirmar.
 5. **Devolver um briefing curto** (máx. ~10 linhas): projeto e fase, último estado, gates pendentes, riscos, próximo passo sugerido, e o que faltou no boot. Termine perguntando o objetivo da sessão se ele ainda não foi dito.
 
@@ -47,16 +48,22 @@ Grave **todos** os destinos abaixo. Os formatos exatos estão em `references/for
 | # | Destino | O que entra |
 |---|---|---|
 | 1 | `Memory/shared/L0_working_memory.md` + arquivo em `Memory/archive/<ano>/<mês>/` | Registro completo da sessão. Preserve o L0 salvo se Nelson pedir `-ClearL0`. |
-| 2 | `knowledge/projects/<slug>/system/STATE.md` | Estado atual do projeto. |
-| 3 | `knowledge/projects/<slug>/tasks/lessons.md` e `todo.md` | Lições novas e pendências. |
+| 2 | `knowledge/projects/<Nome>/system/STATE.md` | Estado atual do projeto (fase, marco, gates, próximo passo) e `last_updated`. |
+| 3 | `knowledge/projects/<Nome>/tasks/lessons.md` e `todo.md` | Lições novas e pendências. |
 | 4 | `Memory/wings/<agente>/diary.md` e `projects/<slug>/diary.md` | Diário da sessão do(s) agente(s) que atuaram, com as skills usadas. |
 | 5 | `Memory/shared/STATUS.md` | Uma linha: data, projeto, resultado, gates pendentes. |
-| 6 | `000-log.md` | `## [YYYY-MM-DD] [sessão] \| <título>` (append-only). |
+| 6 | `000-log.md` | `## [YYYY-MM-DD] session \| <Nome> encerrado` com `- Hora:` e `- Resumo:` (append-only; é o formato do `session-close.ps1`). |
 | 7 | **`Memory/shared/SKILLS-USADAS.md`** | Catálogo acumulado de skills (ver abaixo). |
 | 8 | `system/MEMORY.md` | Só se houver contexto permanente de alto valor. Limite ~2.200 caracteres: resuma, não acumule. |
 | 9 | `system/Decisions.md` | Só se surgiu uma decisão arquitetural (ADR). |
 
-Se o `session-close.ps1` estiver disponível e fizer parte do que já está nos itens 1, 2 e 6, rode-o **sem** `-Commit` em vez de duplicar o trabalho, e complete à mão o que ele não cobre (itens 3, 4, 5, 7). Se não puder rodar scripts, escreva os arquivos diretamente.
+**Ordem importa por causa do `session-close.ps1`.** Ele cobre só três coisas: arquiva o L0 inteiro como `<yyyyMMdd-HHmmss>-<projeto>-session.md`, troca `last_updated:` no STATE (se existir no frontmatter) e acrescenta a entrada no `000-log`. Não toca em fase/gates do STATE, lessons, todo, diário, STATUS nem no catálogo de skills. E como ele **copia o L0 no momento em que roda** (e pode limpá-lo com `-ClearL0`), tudo que deve ficar no arquivo da sessão precisa estar no L0 antes. Portanto:
+
+1. Escreva primeiro, à mão: seção final da sessão e lista de skills no L0, itens 2 (conteúdo do STATE), 3, 4, 5 e 7.
+2. Depois rode `pwsh <HIVE_ROOT>\scripts\session-close.ps1 -Projeto <Nome> -Resumo "<uma frase>"`, **sem** `-Commit`. Use `-ClearL0` só se Nelson pedir. Com `-WhatIf` dá para simular antes.
+3. O script falha se o projeto não existir em `knowledge\projects`; trate conforme as Premissas.
+
+Sem `pwsh` ou sem projeto canônico, faça você mesma os itens 1 e 6 nos formatos de `references/formatos.md`.
 
 ### Catálogo `SKILLS-USADAS.md` (item 7)
 

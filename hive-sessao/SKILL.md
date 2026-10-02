@@ -5,94 +5,86 @@ description: Abre e fecha sessões de trabalho na Fluctlight Hive de Nelson/Soft
 
 # hive-sessao
 
-Dois modos: **ABRIR** (boot e abertura do registro da sessão) e **FECHAR** (catalogar e salvar tudo, inclusive as skills usadas). Escolha o modo pelo pedido de Nelson; se estiver ambíguo, pergunte.
+Dois modos: **ABRIR** (boot e abertura do registro da sessão) e **FECHAR** (catalogar e salvar tudo, inclusive as skills usadas). Escolha pelo pedido de Nelson; se estiver ambíguo, pergunte.
 
-A Hive guarda memória em camadas (L0 volátil, STATE, STATUS, wings, projeto, catálogo). O problema que esta skill resolve: as skills usadas numa sessão se perdiam porque nenhum fluxo as registrava. Por isso o registro de skills é aberto no início e **gravado à força** no fim.
+Por que existe: o fechamento da Hive quase não é feito (em ago–set só 3 arquivos de sessão, todos de um projeto), e as skills usadas não ficam registradas em lugar nenhum, o que a regra 17 do `Skill_Registry` chama de skill órfã. Esta skill abre um registro de skills no início e o **grava à força** no fim.
 
 ## Premissas (leia antes de agir)
 
-- **Raiz da Hive:** `D:\fluctlight-vault\Hive`. Se o caminho não existir (outro SO, mount diferente), procure a variável `HIVE_ROOT` ou pergunte a Nelson. Não invente caminho.
-- **Sem acesso ao vault** (sessão cloud, sem o disco): não finja que gravou. Gere os blocos `.md` prontos, com o caminho de destino de cada um, e diga explicitamente que nada foi gravado.
-- **Fonte da verdade é o Markdown.** MemPalace, open-mem e ai-memory são índices derivados; não os trate como substitutos.
-- **Nunca commite, nunca sobrescreva, nunca apague.** `Global_Rules.md` proíbe ação irreversível sem confirmação. Edite por acréscimo (append) e preserve o conteúdo existente.
-- **Segredos:** não grave chaves, senhas, tokens, dados de saúde ou de clientes em nenhum arquivo.
-- **A conversa é arquivada por outro mecanismo.** Em Claude Code, Codex, OpenCode e Antigravity, hooks instalados por `install-conversation-memory.ps1` rodam `conversation-archive.ps1` quando a sessão termina: copiam a transcrição para `src/conversations/`, geram uma nota normalizada (com chaves redigidas) em `wiki/conversations/transcripts/` e alimentam o MemPalace. Isso acontece **depois** do fechamento e é dedupado por hash. É de melhor esforço: na árvore de 2026-10-01 havia 69 envelopes parados em `Memory/conversations/queue/` (de 2026-09-04 a 09-23) contra 12 notas normalizadas, ou seja, o arquivamento pode estar falhando. Na abertura, conte os `*.json` dessa fila e avise Nelson se houver; reprocessar é `conversation-archive.ps1 -Recover`, que **só ele autoriza**. Portanto, não rode o arquivamento à mão e não cole transcrição nos destinos abaixo; esta skill registra o que a transcrição não resume (decisões, estado, skills). Em sessão cloud ou Claude.ai esses hooks não existem, e nesse caso diga isso no relatório.
-- **Clientes reconhecidos:** `claude`, `codex`, `opencode`, `antigravity`. Use esse nome no registro; se for outro, escreva o nome real.
-- **Scripts da Hive** ficam em `<HIVE_ROOT>\scripts\` e exigem **PowerShell 7** (`pwsh`), não o Windows PowerShell 5.1. Se `pwsh` não existir, escreva os arquivos diretamente.
-- **Os projetos moram em dois lugares** (confirmado na árvore do vault de 2026-10-01):
-  - **Canônicos**, em `knowledge\projects\<Nome>\`: 13 projetos criados por `new-project.ps1`, todos com `PRIMER.md`, `system\STATE.md` e `tasks\lessons.md`. Só estes funcionam com `session-close.ps1`. Os nomes têm maiúsculas, espaços e acentos (`Batata-Ou-Não`, `Macros para o Foundry Vtt`), então passe o nome **exatamente como a pasta existe**, entre aspas.
-  - **Anteriores**, em `wiki\projects\`: SSFU (STATE na raiz), `lumenn-moovies` (só MEMORY), `MACRO-NA-FOUNDRY` (tem `system\`), `Ficha_CdS_planilha`, e `tudo-sobre-vibe-coding.md`, que é uma nota única sem STATE. Para estes o `session-close.ps1` **falha** com "Projeto não encontrado"; não o rode.
-  - **Ordem para achar o STATE:** `knowledge\projects\<Nome>\system\STATE.md` → `wiki\projects\<Nome>\system\STATE.md` ou `STATE.md` da raiz → `Memory\wings\<agente>\projects\<slug>\STATE.md`. Use o primeiro que existir e, se nenhum existir, use o do wing (é onde a MAKO-MORI já guarda o estado de projetos como `tudo-sobre-vibe-coding`). Não crie projeto canônico sozinha: ofereça `new-project.ps1`, que pede confirmação própria.
-- **Wings:** só existem `mako-mori`, `sinon` e `tang-rou`, e só `mako-mori` e `tang-rou` têm `projects\<slug>\`. A pasta `<slug>` é minúscula e sem acento, mas **não é consistente** (há `batata-ou-nao` e `batata-ou-nao-v2`): procure primeiro a pasta que já existe para aquele projeto e só crie uma nova se não houver, com a regra do `new-project.ps1` (minúsculas, espaços viram `-`). Trabalho sem projeto vai em `projects\_cross-project\`. Se o agente que atuou não tem wing, registre no diário da MAKO-MORI e cite o agente na entrada, em vez de criar uma wing nova.
+- **Raiz da Hive:** `D:\fluctlight-vault\Hive`. Se não existir (outro SO, mount diferente), procure `HIVE_ROOT` ou pergunte. Não invente caminho.
+- **Sem acesso ao vault** (sessão cloud): não finja que gravou. Gere os blocos `.md` prontos, com o caminho de cada um, e diga que nada foi gravado.
+- **Fonte da verdade é o Markdown.** MemPalace, open-mem e ai-memory são derivados. O open-mem está inerte desde 2026-08-26 e seu export não deve ser rodado; se o `ai-memory` gerar um handoff, cite o id no registro, mas não crie um.
+- **Nunca commite, sobrescreva ou apague.** Edite por acréscimo e preserve o existente. Respeite `agents_allowed` no frontmatter do arquivo-alvo (o diário da MAKO-MORI só aceita ela; o da TANG-ROU aceita as duas).
+- **Segredos e dados sensíveis** (chaves, senhas, saúde, clientes): não grave em nenhum arquivo. Não leia `Memory/shared/USER.md` sem necessidade.
+- **Scripts** ficam em `<HIVE_ROOT>\scripts\` e exigem **PowerShell 7** (`pwsh`). Sem `pwsh`, escreva os arquivos direto.
+- **Projetos moram em dois lugares:**
+  - *Canônicos*, `knowledge\projects\<Nome>\`: 13 projetos de `new-project.ps1`, com `PRIMER.md`, `system\STATE.md`, `tasks\lessons.md`. Só estes funcionam com `session-close.ps1`. Passe o nome exatamente como a pasta (tem espaços e acentos: `Batata-Ou-Não`), entre aspas.
+  - *Anteriores*, `wiki\projects\`: SSFU, `lumenn-moovies`, `MACRO-NA-FOUNDRY`, `Ficha_CdS_planilha`, e `tudo-sobre-vibe-coding.md` (nota única, sem STATE). O `session-close.ps1` **falha** neles; não o rode.
+  - *Achar o STATE:* `knowledge\projects\<Nome>\system\STATE.md` → `wiki\projects\<Nome>\system\STATE.md` ou `STATE.md` da raiz → `Memory\wings\<agente>\projects\<slug>\STATE.md`. Não crie projeto canônico sozinha: ofereça `new-project.ps1`.
+- **Wings** (`Memory\wings\`): só `mako-mori`, `sinon`, `tang-rou`; só as duas primeiras têm `projects\<slug>\`. Cada agente tem 3 papéis de arquivo:
+  - `<agente>\STATE.md` = **roteador** (frontmatter `active_project`, `project_memory`, `last_updated`; só roteamento).
+  - `<agente>\diary.md` = **índice** por projeto (tabela Projeto | Entradas | Entrada mais recente | Memória). Sessão nova **não** vai aqui, e sim no diário do projeto (o `diary.md` da TANG-ROU tem uma entrada solta no fim, de 2026-09-09, que é o exemplo do que evitar).
+  - `<agente>\projects\<slug>\STATE.md` e `diary.md` = estado e diário do projeto.
+  - O `<slug>` é minúsculo e sem acento, mas inconsistente (`batata-ou-nao` e `batata-ou-nao-v2`): use a pasta que já existe para o projeto; só crie com a regra do `new-project.ps1` se não houver. Sem projeto, `projects\_cross-project\`. Agente sem wing: registre na da MAKO-MORI e cite o agente.
+- **Conversas** são arquivadas por outro mecanismo (hooks → `conversation-archive.ps1` → `src/conversations/` e `wiki/conversations/transcripts/`), depois do fechamento. Está falhando muito: 69 envelopes parados em `Memory/conversations/queue/`, e o ledger tem só 12 capturas (Claude Code: 2, de 1 e 3 mensagens). Causas vistas nos logs: o hook entrega `transcript_path` vazio (52 envelopes, que `-Recover` **nunca** resolve), o hook do Claude dispara em sessões do Codex e o normalizador não acha mensagens (17), e o Claude Code é "ignorado sem transcrição materializada" (15 só em 2026-10-01). Portanto não conte com a transcrição como prova, não rode o arquivamento por conta própria, e na abertura avise Nelson se a fila tiver `*.json`. Em sessão cloud não há hook; diga isso no relatório.
 
 ## Registro de skills usadas
 
-Mantenha, durante toda a sessão, a lista de skills usadas. Cada item tem **skill**, **para quê** e **origem**:
+Mantenha durante a sessão a lista de skills usadas: **skill**, **para quê**, **origem**.
 
-- `observada`: você viu a skill ser carregada/invocada nesta conversa (chamada da ferramenta Skill, comando `/nome`, ou instrução explícita de uma skill que você seguiu).
-- `informada`: Nelson disse que usou, ou o cliente não expõe o histórico.
+- `observada`: você viu a skill ser carregada nesta conversa (ferramenta Skill, `/nome`, ou instrução de skill que você seguiu, inclusive lida pelo sistema de arquivos).
+- `informada`: Nelson disse, ou o cliente não expõe o histórico.
 - `inferida`: palpite por indícios. Marque como tal; nunca promova a observada.
 
-Esta skill (`hive-sessao`) e `hive-mako-mori` entram na lista quando usadas. No fechamento, releia a conversa inteira para completar a lista antes de gravar, porque skills carregadas no meio da sessão são as mais esquecidas.
-
-Verificação cruzada, quando houver transcrição arquivada de uma sessão anterior: nas notas de `wiki/conversations/transcripts/`, as chamadas de ferramenta aparecem como JSON, então uma busca por `"name": "Skill"` e pelo campo `skill` ao lado mostra quais skills foram de fato carregadas. Use isso para confirmar ou corrigir o registro daquela sessão e promova a `observada` o que bater. (Isso decorre da leitura do normalizador; não foi testado com uma transcrição real.) Se o cliente não permite ver o histórico, pergunte a Nelson em uma linha: "Usou alguma skill que eu não vi?".
+`hive-sessao` e `hive-mako-mori` entram quando usadas. No fechamento, releia a conversa inteira antes de gravar: skills carregadas no meio são as mais esquecidas. Se o cliente não mostra o histórico, pergunte em uma linha: "Usou alguma skill que eu não vi?". Não use transcrições arquivadas para conferir (ver Conversas acima).
 
 ---
 
 ## Modo ABRIR
 
-1. **Boot canônico**, nesta ordem (ler, não modificar): `BRAIN.md` → `system/HIVE.md` → `system/Global_Rules.md` → `000-index.md` → `Memory/shared/STATUS.md` → `system/STATE.md` → `souls/MAKO-MORI.soul.md`. Se um arquivo faltar, registre a falta e siga com o que existe. Se houver `pwsh`, `scripts\hive-status.ps1` (somente leitura) dá um snapshot rápido: projetos com `last_updated`, última entrada do `000-log`, CLIs e memória recente.
-2. **Resolver o projeto.** Se Nelson nomeou um projeto ou o diretório atual bate com um dos rastreados no BRAIN (seção Projetos), use-o. Se não, pergunte qual. Não carregue memória de vários projetos.
-3. **Carregar memória do projeto** em `knowledge/projects/<Nome>/`: `PRIMER.md` (contexto essencial), `system/MEMORY.md`, `system/STATE.md`, `tasks/lessons.md`, `tasks/todo.md`. Leia também as últimas ~25 linhas de `Memory/shared/L0_working_memory.md`: é a sessão anterior, e era o que o antigo `Show-FluctlightMemory` mostrava. Se o repositório de código tiver `.specs/STATE*` ou `.planning/`, leia-os e avise se divergirem do STATE da Hive (são duas fontes; não reconcilie sozinha). Se o STATE não estiver em `system/`, tente `STATE.md` na raiz do projeto (o `hive-status.ps1` também aceita essa variante) e, por fim, `wiki/projects/<Nome>/STATE.md`, que é onde o wrapper do DSH procura. Leia as lições antes de começar para não repetir erro já registrado.
-4. **Abrir o registro da sessão:** acrescente ao fim de `Memory/shared/L0_working_memory.md` o marcador `[YYYY-MM-DD HH:mm] [SESSION START] [<cliente>] | <projeto>` (formato em `references/formatos.md`; o `open-mem-to-hive.ps1` procura exatamente esses marcadores) e a lista de skills usadas, começando com `hive-sessao`. Acrescente; não apague o L0 existente sem Nelson confirmar.
-5. **Devolver um briefing curto** (máx. ~10 linhas): projeto e fase, último estado, gates pendentes, riscos, próximo passo sugerido, e o que faltou no boot. Termine perguntando o objetivo da sessão se ele ainda não foi dito.
+1. **Boot** (ler, não modificar): `BRAIN.md` → `system/HIVE.md` → `system/Global_Rules.md` → `000-index.md` → `Memory/shared/STATUS.md` → `system/STATE.md` → `souls/MAKO-MORI.soul.md`. Faltou arquivo: registre e siga. Com `pwsh`, `scripts\hive-status.ps1` (leitura) dá snapshot de projetos, último log e CLIs. No `STATUS.md` e no L0, **leia o começo e o fim** (~40 e ~30 linhas): as entradas mais novas ficam em qualquer das pontas; ordene pela data, não pela posição.
+2. **Resolver o projeto:** o que Nelson nomeou ou o diretório atual (projetos rastreados no BRAIN). Na dúvida, pergunte. Não carregue memória de vários projetos.
+3. **Carregar a memória do projeto** (achar o STATE pela ordem das Premissas): `PRIMER.md`, `system/MEMORY.md`, `system/STATE.md`, `tasks/lessons.md`, `tasks/todo.md`; na wing do agente, `<agente>\STATE.md` (roteador) e as últimas linhas do diário do projeto. Se o repositório de código tiver `.specs/STATE*` ou `.planning/`, leia e avise se divergir do STATE da Hive (não reconcilie sozinha). Leia as lições antes de começar.
+4. **Abrir o registro:** acrescente ao fim do L0 um bloco `## AAAA-MM-DD — <Projeto> — sessão aberta` (formato em `references/formatos.md`) com cliente, baseline conhecida e a lista de skills, começando por `hive-sessao`. Não apague o L0 existente.
+5. **Briefing curto** (~10 linhas): projeto e fase, último estado, gates pendentes, riscos, próximo passo, o que faltou no boot e, se houver, a fila de conversas parada. Pergunte o objetivo se ainda não foi dito.
 
 ## Modo FECHAR
 
-Antes de gravar, monte o resumo em memória: objetivo, o que foi feito, decisões (com motivo), erros e correções (formato Erro / Causa / Correção / Regra preventiva), pendências, próximo passo e **lista final de skills usadas**. Mostre o resumo em poucas linhas e grave em seguida (Nelson autorizou salvar tudo sem perguntar; só pergunte se algo estiver ambíguo, como qual é o projeto).
-
-Grave **todos** os destinos abaixo. Os formatos exatos estão em `references/formatos.md`; leia o arquivo-alvo antes e copie a convenção que ele já usa.
+Monte antes o resumo: objetivo, feito, decisões (com motivo), erros (Erro / Causa / Correção / Regra preventiva), pendências, próximo passo e a **lista final de skills**. Mostre em poucas linhas e grave (Nelson autorizou salvar tudo sem perguntar; só pergunte se algo for ambíguo, como o projeto). Afirme só o que foi verificado: gate runtime não rodado entra como **Aberto/Pendência**, nunca como validado. Os formatos estão em `references/formatos.md`; leia o arquivo-alvo e copie a convenção dele.
 
 | # | Destino | O que entra |
 |---|---|---|
-| 1 | `Memory/shared/L0_working_memory.md` + arquivo em `Memory/archive/<ano>/<mês>/` | Registro completo da sessão. Preserve o L0 salvo se Nelson pedir `-ClearL0`. |
-| 2 | `knowledge/projects/<Nome>/system/STATE.md` | Estado atual do projeto (fase, marco, gates, próximo passo) e `last_updated`. |
-| 3 | `knowledge/projects/<Nome>/tasks/lessons.md` e `todo.md` | Lições novas e pendências. |
-| 4 | `Memory/wings/<agente>/diary.md` e `projects/<slug>/diary.md` | Diário da sessão do(s) agente(s) que atuaram, com as skills usadas. |
-| 5 | `Memory/shared/STATUS.md` | Uma linha: data, projeto, resultado, gates pendentes. |
-| 6 | `000-log.md` | `## [YYYY-MM-DD] session \| <Nome> encerrado` com `- Hora:` e `- Resumo:` (append-only; é o formato do `session-close.ps1`). |
-| 7 | **`Memory/shared/SKILLS-USADAS.md`** | Catálogo acumulado de skills (ver abaixo). |
-| 8 | `system/MEMORY.md` (global da Hive, não a do projeto) | Só se houver contexto permanente de alto valor, por acréscimo em `## Log de Atualizações`. Limite ~2.200 caracteres: resuma, não acumule. **Não toque** na seção `## Sessões Recentes (open-mem)`, que o `open-mem-to-hive.ps1` regrava sozinho. |
-| 9 | `system/Decisions.md` | Só se surgiu uma decisão arquitetural (ADR). |
+| 1 | `Memory/shared/L0_working_memory.md` e arquivo da sessão em `Memory/archive/<ano>/<mês>/` | Bloco `sessão encerrada` no fim do L0 (com skills e, se houver, id do handoff ai-memory); o arquivo da sessão copia o L0. |
+| 2 | STATE do projeto (ordem das Premissas) | Fase, marco, gates, próximo passo e `last_updated`. |
+| 3 | `knowledge/projects/<Nome>/tasks/lessons.md` e `todo.md` | Só em projeto canônico. |
+| 4 | Wing: **(a)** `projects/<slug>/diary.md` e/ou `STATE.md` do projeto, **(b)** linha do projeto no índice `<agente>/diary.md` (Entradas +1, Entrada mais recente), **(c)** roteador `<agente>/STATE.md` (`active_project`, `project_memory`, `last_updated`, linha Sessão) | Faça (a), (b) e (c). Entrada de sessão só em (a). |
+| 5 | `Memory/shared/STATUS.md` | Bloco da sessão logo abaixo do título `# 00_STATUS.md`, e `last_updated`. |
+| 6 | `000-log.md` | `## [AAAA-MM-DD] session \| <Nome> encerrado`, `- Hora:`, `- Resumo:` (formato do `session-close.ps1`). |
+| 7 | `system/Skill_Registry.md` | **Obrigatório** (regra 17): linha para toda skill usada que ainda não esteja lá. |
+| 8 | `Memory/shared/SKILLS-USADAS.md` | Catálogo de **uso** (contagem e histórico), separado do inventário. |
+| 9 | `system/MEMORY.md` (global) | Só contexto permanente, em `## Log de Atualizações`; ~2.200 caracteres; **não toque** em `## Sessões Recentes (open-mem)`. |
+| 10 | `system/Decisions.md` | Só se houve decisão arquitetural. |
+| 11 | `Memory/shared/CHANGELOG.md` | Só se a sessão mudou código ou sistema; entrada no topo. |
 
-**Ordem importa por causa do `session-close.ps1`.** Ele cobre só três coisas: arquiva o L0 inteiro como `<yyyyMMdd-HHmmss>-<projeto>-session.md`, troca `last_updated:` no STATE (se existir no frontmatter) e acrescenta a entrada no `000-log`. Não toca em fase/gates do STATE, lessons, todo, diário, STATUS nem no catálogo de skills. E como ele **copia o L0 no momento em que roda** (e pode limpá-lo com `-ClearL0`), tudo que deve ficar no arquivo da sessão precisa estar no L0 antes. Portanto:
+**Ordem por causa do `session-close.ps1`.** Ele só arquiva o L0 inteiro, troca `last_updated:` no STATE (se a chave existir) e acrescenta ao `000-log`; não toca nos demais destinos. Como copia o L0 no instante em que roda (e `-ClearL0` o esvazia), escreva antes, à mão, o bloco de encerramento no L0 e os itens 2 a 5, 7 e 8. Depois: `pwsh <HIVE_ROOT>\scripts\session-close.ps1 -Projeto "<Nome>" -Resumo "<uma frase>"`, **sem** `-Commit` (`-WhatIf` simula; `-ClearL0` só se Nelson pedir). Rode só para projeto de `knowledge\projects`. Sem `pwsh`, com projeto de `wiki\projects` ou sem projeto, faça você mesma os itens 1 e 6 (arquivo da sessão com o mesmo nome e frontmatter do script). Este segundo caso é o comum.
 
-1. Escreva primeiro, à mão: o marcador `[SESSION END]` com o resumo e a lista de skills no L0, itens 2 (conteúdo do STATE), 3, 4, 5 e 7.
-2. Depois rode `pwsh <HIVE_ROOT>\scripts\session-close.ps1 -Projeto <Nome> -Resumo "<uma frase>"`, **sem** `-Commit`. Use `-ClearL0` só se Nelson pedir. Com `-WhatIf` dá para simular antes.
-3. Só rode o script para projeto de `knowledge\projects`; ele falha nos de `wiki\projects` e sem projeto.
+### Skill_Registry (item 7)
 
-Sem `pwsh`, com projeto de `wiki\projects` ou sem projeto, faça você mesma os itens 1 e 6: o arquivo da sessão em `Memory/archive/<ano>/<mês>/` (mesmo nome e frontmatter do script, veja `references/formatos.md`) e a entrada do `000-log`. Atualize o STATE onde a ordem das Premissas o achar. Dado que na árvore só 3 arquivos de sessão aparecem em ago–set (todos de `night-assassins-csb-automation`), esse fechamento manual é o caso comum, não a exceção.
+O registro é um inventário de 3 colunas (skill, path físico, propósito), agrupado por seção de missão. Para cada skill usada sem linha: acrescente `| \`nome\` | \`path físico\` | propósito |` sob uma seção da missão atual (crie `## Skills de <tema> (missão <nome> — AAAA-MM-DD)` se não houver) e atualize `last_updated`. Não mude linhas existentes. Ache o path real (`~/.claude/skills`, `~/.opencode/skills`, `~/.agents/skills`); **nunca invente**: sem achar, escreva `(path não verificado)`. Hoje há lacunas: o registro tem 8 skills de design, e `ponytail-audit` e `web-performance-optimization`, citadas no STATE de `tudo-sobre-vibe-coding`, não estão nele.
 
-### Catálogo `SKILLS-USADAS.md` (item 7)
+### SKILLS-USADAS (item 8)
 
-É a peça nova. Duas partes:
-
-- **Tabela acumulada**, uma linha por skill: nome, nº de sessões, última vez usada, projetos em que apareceu, para-quê típico. Ao fechar, some +1 às skills desta sessão e atualize a data. Skill nova ganha linha nova.
-- **Registro por sessão**, append-only no fim: `## [data] <projeto> | <cliente>` com a lista de skills e a origem (observada/informada/inferida) de cada uma.
-
-Se o arquivo não existir, crie com o frontmatter padrão do vault (veja `references/formatos.md`).
-
-**Antes de criar, leia `system/Skill_Registry.md`**, que já existe na Hive e que esta skill ainda não viu por dentro. Se ele já registra uso por skill, atualize lá e pule o arquivo novo. Se for só um inventário das skills instaladas, mantenha `SKILLS-USADAS.md` separado (uso é dado diferente de inventário) e ponha um link entre os dois. Se não der para ler, diga isso em vez de decidir às cegas.
+Tabela acumulada (skill, sessões, última vez, projetos, para quê) mais registro por sessão em append-only (`## [data] <projeto> | <cliente>`, com a origem de cada skill). Some +1 às desta sessão. Crie o arquivo com o frontmatter padrão se não existir e ponha um link para `system/Skill_Registry`.
 
 ### Depois de gravar
 
-1. **Validar:** rode a skill `integrity-vault` se existir (frontmatter e wikilinks) nos `.md` tocados; senão, confira à mão que o frontmatter está íntegro e os links `[[...]]` apontam para arquivos reais.
-2. **Relatório final** com, para cada destino, uma destas marcas: `gravado`, `não gravado (motivo)` ou `pulado (não se aplica)`. Inclua a lista final de skills com a origem de cada uma. Não diga "salvo" para o que não foi gravado.
-3. **Dizer o que acontece depois:** "A transcrição será arquivada pelo hook ao sair" (ou, se não houver hook neste cliente, que ela não será arquivada).
-4. **Lembrar, sem agir:** "Nada foi commitado. Para versionar: `vault: sessão <data> <projeto>`." O commit é decisão de Nelson.
+1. Valide os `.md` tocados (skill `integrity-vault` se existir; senão confira frontmatter e `[[links]]`).
+2. **Relatório:** para cada destino, `gravado`, `não gravado (motivo)` ou `pulado`. Inclua a lista de skills com a origem e quais entraram no Registry. Não diga "salvo" para o que não gravou.
+3. Diga o que acontece depois: a transcrição só é arquivada se este cliente tiver hook funcionando (ver Conversas).
+4. Lembre, sem agir: "Nada foi commitado. Para versionar: `vault: sessão <data> <projeto>`."
 
 ## Quando algo dá errado
 
-- Arquivo-alvo ausente: crie só se for um destino novo desta skill (`SKILLS-USADAS.md`); para os demais, avise e use o template de `references/formatos.md` apenas com autorização.
-- Escrita falhou ou sem permissão: continue com os outros destinos e liste a falha no relatório; não interrompa o fechamento inteiro.
-- Dúvida sobre fato da sessão (o que foi decidido, qual projeto): diga "Não sei" e pergunte; não preencha por palpite, porque a memória errada contamina as próximas sessões.
+- Destino ausente: crie só os que são desta skill (`SKILLS-USADAS.md`); nos demais avise.
+- Escrita falhou: siga com os outros destinos e liste a falha; não aborte o fechamento.
+- Dúvida sobre fato da sessão (o que foi decidido, qual projeto): diga "Não sei" e pergunte. Memória errada contamina as próximas sessões.

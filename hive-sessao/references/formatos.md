@@ -1,104 +1,161 @@
 # Formatos de gravação
 
-Regra geral: **leia o arquivo-alvo antes de escrever e siga a convenção que ele já usa.** Os modelos abaixo são o padrão quando o arquivo é novo ou não tem convenção visível. Fontes: BRAIN.md v7.1, o documento "Hive, MAKO-MORI e os sistemas de memória" (2026-10-02) e os scripts `session-close.ps1`, `new-project.ps1`, `link-start.ps1`, `hive-status.ps1`, `conversation-archive.ps1` e `conversation-index.ps1`. Detalhes que nenhuma dessas fontes mostra (STATUS.md, diários das wings) estão marcados como *a confirmar*.
+Regra geral: **leia o arquivo-alvo e copie a convenção que ele já usa.** Os modelos abaixo vêm de arquivos reais da Hive (`Memory.rar`, `Skill_Registry.md`, `STATUS.md` e scripts, lidos em 2026-10-01) e valem como padrão. A Hive tem drift de formato entre agentes; na dúvida, siga o arquivo.
 
-## Frontmatter padrão de nota nova
+## Frontmatter de nota nova
 
 ```yaml
 ---
 title: "<título>"
-created: "<YYYY-MM-DD>"
-updated: "<YYYY-MM-DD>"
-status: "active"
-maturity: "reference"
-type: "registro de sessão"
-tags:
-  - "#hive"
-  - "#sessao"
-  - "#skills"
+created: "<AAAA-MM-DD>"
+last_updated: "<AAAA-MM-DD>"
+status: active
+maturity: permanent
+type: sistema
+tags: [hive/memory, <agente>, <projeto>]
 agents_allowed: ["ALL"]
 ---
 ```
 
-Termine notas novas com a seção `## Conexões` e wikilinks reais (ex.: `[[BRAIN]]`, `[[Memory/shared/STATUS]]`).
+Termine notas novas com `## Conexões` e wikilinks para arquivos que existem.
 
-## Marcadores do L0 (`Memory/shared/L0_working_memory.md`)
+## L0 — `Memory/shared/L0_working_memory.md`
 
-Formato que o `open-mem-to-hive.ps1` escreve e depois relê com a regex `\[SESSION (START|END)\]` para comprimir o L1. Use o mesmo, senão a sessão some da compressão:
+Blocos H2 em português; as sessões mais novas foram **acrescentadas no fim** (as do começo do arquivo são mais antigas). Acrescente no fim.
 
 ```markdown
-[YYYY-MM-DD HH:mm] [SESSION START] [<cliente>] | <projeto>
+## AAAA-MM-DD — <Projeto> <versão> — <tema> — sessão aberta
+- Cliente: <claude|codex|opencode|antigravity>. Baseline: <commit/tag se souber>.
 - Skills: hive-sessao (observada)
 
-[YYYY-MM-DD HH:mm] [SESSION END] [<cliente>] | <título curto>
-- Feito: ...
-- Decisões: ...
+## AAAA-MM-DD — <Projeto> <versão> — <tema> — sessão encerrada
+- Release/entrega: ...
+- Decisão: ... (motivo)
+- Gate: <o que rodou e resultado>. Foundry/runtime pendente quando não rodou.
 - Skills: <skill> (origem), ...
-- Próximo passo: ...
+- ai-memory handoff: <id, se existir>
+- Próximo gate: ...
 ```
 
-## `system/MEMORY.md` global (L1)
+Os marcadores `[SESSION START|END]` eram do `open-mem-to-hive.ps1`, inerte desde 2026-08-26; não use.
 
-Estrutura que o script de open-mem espera: uma seção `## Sessões Recentes (open-mem)` (regravada pelo script) e `## Log de Atualizações` (onde esta skill acrescenta). Limite ~2.200 caracteres de conteúdo.
+## STATUS — `Memory/shared/STATUS.md`
 
-## Onde a conversa em si é arquivada (não escreva aqui)
-
-Bruta: `src/conversations/<cliente>/<yyyy>/<MM>/`. Normalizada: `wiki/conversations/transcripts/<yyyy>/<MM>/<yyyy-MM-dd>-<cliente>-<workspace>-<hash12>.md`, com `sensitive: true/false` no frontmatter. Controle: `Memory/conversations/` (`queue/`, `logs/`, `archive-ledger.jsonl`, `graphify-pending.json`).
-
-## `Memory/shared/SKILLS-USADAS.md` (caminho escolhido por esta skill; *a confirmar com Nelson*)
+Sem ordem única: blocos novos foram inseridos no topo (abaixo do `# 00_STATUS.md`) **e** outros acrescentados no fim. Escolha desta skill: inserir no topo, mais novo primeiro, e atualizar `last_updated` do frontmatter. Formato recente:
 
 ```markdown
-# Skills usadas na Hive
+## AAAA-MM-DD — <Projeto> <versão> (<tema>) — sessão encerrada
 
-## Acumulado
-| Skill | Sessões | Última vez | Projetos | Para quê |
-|---|---:|---|---|---|
-| hive-sessao | 1 | 2026-10-02 | tudo-sobre-vibe-coding | abrir/fechar sessão |
-
-## Registro por sessão (append-only)
-## [2026-10-02] tudo-sobre-vibe-coding | claude-code
-- hive-sessao (observada): abertura e fechamento
-- skill-creator (observada): criação da skill
-- <skill> (informada): <motivo>
+- **Souls:** @MAKO-MORI (coordenação) + @TANG-ROU (execução Foundry).
+- **Projeto:** `<slug>` — <uma linha>.
+- **Baseline:** `<tag>`, commit `<hash>`; release/`/latest` verificado (só se verificou).
+- **Entrega:** ...
+- **Gate:** <resultado>.
+- **Aberto:** QA runtime no Foundry com o operador; não declarado como validado.
+- **Próximo:** ...
 ```
 
-## Linha de `000-log.md`
-
-Formato real do `session-close.ps1` (confirmado no script). O `hive-status.ps1` lê a última linha que casa `^\s*## \[`, então mantenha esse prefixo:
+## `000-log.md` (formato do `session-close.ps1`)
 
 ```markdown
-## [YYYY-MM-DD] session | <Nome> encerrado
+## [AAAA-MM-DD] session | <Nome> encerrado
 - Hora: HH:mm
 - Resumo: <uma frase>
 ```
 
-Se você mesma escrever a entrada (sem o script), acrescente uma linha `- Skills: <lista>` ao final. Outros tipos em uso: `feat` (criação de projeto, via `new-project.ps1`).
+O `hive-status.ps1` lê a última linha que casa `^\s*## \[`. Se você escrever à mão, acrescente `- Skills: <lista>`.
 
-## Arquivo de sessão (gerado pelo `session-close.ps1`, para referência)
+## Arquivo da sessão (gerado pelo `session-close.ps1`)
 
-Caminho: `Memory/archive/<yyyy>/<MM>/<yyyyMMdd-HHmmss>-<nome-minúsculo>-session.md`. Frontmatter: `type: session-archive`, `project`, `created`, `status: archived`, `tags: [session, archive, hive]`; corpo: Resumo, link `[[knowledge/projects/<Nome>/_index]]`, link `[[Memory/shared/STATUS]]`, e o L0 inteiro.
+`Memory/archive/<AAAA>/<MM>/<yyyyMMdd-HHmmss>-<nome-minúsculo>-session.md`. Frontmatter: `type: session-archive`, `project`, `created`, `status: archived`, `tags: [session, archive, hive]`. Corpo: `# Sessão: <Nome> <data> <hora>`, `- **Resumo:**`, `- **Projeto:** [[knowledge/projects/<Nome>/_index]]`, `- **Estado coletivo:** [[Memory/shared/STATUS]]`, `---` e o L0 inteiro.
 
 ## `last_updated` do STATE
 
-O script só troca a linha `last_updated: "..."` do frontmatter (e só se ela existir). Mantenha essa chave no formato `last_updated: "YYYY-MM-DD"`, que também é o que o `hive-status.ps1` lê.
+O script só troca a linha `last_updated: "..."` (e só se existir). Mantenha essa chave no frontmatter.
 
-## Diário de wing (`Memory/wings/<agente>/diary.md`)
+## Wings
+
+**Roteador `Memory/wings/<agente>/STATE.md`**: só roteamento. Atualize no frontmatter `active_project`, `project_memory` (`Memory/wings/<agente>/projects/<slug>/`), `last_updated`, e em `## Roteamento atual` a linha `- Sessão: <data> — <resumo e próximo passo>`. Não coloque histórico aqui.
+
+**Índice `Memory/wings/<agente>/diary.md`**: uma linha por projeto na tabela. Atualize a do projeto, sem criar sessão nova no corpo:
 
 ```markdown
-### [YYYY-MM-DD] <projeto> | <título>
-- Feito: ...
-- Decisões: ... (motivo)
-- Skills usadas: <skill> (origem), ...
-- Próximo passo: ...
+| `<slug>` | <Entradas +1> | [AAAA-MM-DD] <título curto> — <versão ou resultado> | [[Memory/wings/<agente>/projects/<slug>/diary|diário]] |
 ```
 
-Use o mesmo bloco em `projects/<slug>/diary.md`, com mais detalhe. Se a sessão foi só coordenação, o agente é `mako-mori`; execução Foundry/macros, `tang-rou`. *Nome exato das pastas a confirmar lendo `Memory/wings/`.*
+(Na MAKO-MORI alguns projetos apontam o link para `STATE` em vez de `diary`; mantenha o que já está.)
 
-## Linha de `Memory/shared/STATUS.md`
+**Diário do projeto, MAKO-MORI** (`projects/<slug>/diary.md`): tabela `| Data | Entrada |`; acrescente uma linha antes de `## Conexões`:
 
-Uma linha por sessão: `YYYY-MM-DD · <projeto> · <resultado> · gates pendentes: <lista ou nenhum>`. *Se o arquivo tiver tabela ou seções, insira na estrutura existente.*
+```markdown
+| [AAAA-MM-DD] | <Título> — <o que foi feito, decisão, próximo gate; skills usadas> |
+```
 
-## Registro de erro (para `tasks/lessons.md`)
+**Diário do projeto, TANG-ROU**: blocos narrativos com voz própria:
+
+```markdown
+## [AAAA-MM-DD] — <título>
+
+**O que foi feito:**
+- ...
+
+**Pendências:**
+- ...
+
+**Observações:**
+- ...
+
+*"<frase de encerramento da persona>"*
+```
+
+**STATE do projeto na wing** (`projects/<slug>/STATE.md`): bullets de estado (`**Baseline publicada:**`, gates, riscos). Atualize só o que mudou e `last_updated`.
+
+## `system/Skill_Registry.md`
+
+```markdown
+## Skills de <tema> (missão <nome> — AAAA-MM-DD)
+
+| Skill | Path físico | Propósito |
+|---|---|---|
+| `<skill>` | `C:\Users\monge\.opencode\skills\<skill>\SKILL.md` | <uma linha> |
+
+Missão: <o que, em qual projeto>. Projeto Hive: `<slug>`.
+```
+
+Locais já usados no registro: `C:\Users\monge\.opencode\skills\` e `C:\Users\monge\.agents\skills\`. Para a própria `hive-sessao`, o path depende de onde Nelson a instalar; escreva `(path não verificado)` até confirmar.
+
+## `Memory/shared/SKILLS-USADAS.md`
+
+```markdown
+# Skills usadas na Hive
+
+Inventário: [[system/Skill_Registry]].
+
+## Acumulado
+| Skill | Sessões | Última vez | Projetos | Para quê |
+|---|---:|---|---|---|
+
+## Registro por sessão (append-only)
+## [AAAA-MM-DD] <projeto> | <cliente>
+- <skill> (observada|informada|inferida): <para quê>
+```
+
+## `Memory/shared/CHANGELOG.md` (entrada no topo)
+
+```markdown
+## [AAAA-MM-DD] <AGENTE> — <Projeto> <versão> · <tema>
+
+**Tipo:** feature | correção | ...
+**Projeto:** `<slug>`
+**Mudança:** ...
+**Validação:** <o que rodou>; QA runtime pendente quando for o caso.
+```
+
+## `system/MEMORY.md` global (L1)
+
+Seções: `## Sessões Recentes (open-mem)` (regravada pelo script, não toque) e `## Log de Atualizações` (onde acrescentar). ~2.200 caracteres.
+
+## Registro de erro (para `lessons.md`)
 
 ```markdown
 - **Erro:** ...
@@ -107,6 +164,6 @@ Uma linha por sessão: `YYYY-MM-DD · <projeto> · <resultado> · gates pendente
 - **Regra preventiva:** ...
 ```
 
-## `STATE.md` do projeto
+## Conversas arquivadas (não escreva aqui)
 
-Atualize só os campos que mudaram (fase, último marco, gates, riscos, próximo passo). Não reescreva o arquivo inteiro.
+Bruta: `src/conversations/<cliente>/<AAAA>/<MM>/`. Normalizada: `wiki/conversations/transcripts/<AAAA>/<MM>/<data>-<cliente>-<workspace>-<hash12>.md`. Controle: `Memory/conversations/` (`queue/`, `logs/archive.jsonl`, `archive-ledger.jsonl`, `graphify-pending.json`).
